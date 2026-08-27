@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>便利屋まち助｜美濃加茂市・可児市の便利屋・草刈り・不用品回収</title>
+    <meta
+      name="description"
+      content="草刈り・不用品回収・家具の移動・力仕事・軽作業など、日常のさまざまなお困りごとをお手伝いする、美濃加茂市・可児市の地域密着の便利屋です。"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "machisuke-orange": "#E8833A",
+              "machisuke-green": "#5FA246",
+              "machisuke-green-dark": "#4A8A38",
+              "machisuke-title-green": "#3F5A3A",
+              "machisuke-cream": "#F7F1E4",
+              "machisuke-cream-light": "#FFFAF0",
+              "machisuke-card-warm-white": "#FFFAF0",
+              "machisuke-white": "#FFFFFF",
+              "machisuke-brown-footer": "#4A3B2C",
+              "machisuke-footer-label": "#EDEDED",
+              "machisuke-footer-address": "#C9C2B8",
+              "machisuke-text": "#3A3A3A",
+              "machisuke-text-gray": "#7A7A7A",
+              "machisuke-blue": "#3E7FB0",
+              "machisuke-border-light": "#E0E0E0",
+              "machisuke-logo-red": "#A8302A",
+            },
+            fontFamily: {
+              display: ['"Zen Maru Gothic"', "sans-serif"],
+              body: ['"Zen Kaku Gothic New"', "sans-serif"],
+              label: ['"Kosugi Maru"', "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Zen+Maru+Gothic:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="m-0 overflow-x-hidden bg-machisuke-cream-light font-label text-machisuke-text">
+    <header class="relative bg-machisuke-cream-light">
+      <div
+        class="flex w-full items-center justify-between px-4 py-2.5 md:px-8 md:py-4 lg:px-16 lg:py-5"
+      >
+        <a href="index.html" class="relative block h-10 w-[114px] shrink-0 md:h-[71px] md:w-[180px]">
+          <img
+            src="01_house_logo_mark.png"
+            alt=""
+            class="absolute left-0 top-0 h-10 w-[34px] object-contain md:h-[71px] md:w-[82px]"
+          />
+          <img
+            src="02_machisuke_wordmark.png"
+            alt="便利屋まち助"
+            class="absolute left-7 top-0.5 h-9 w-[86px] object-contain md:left-[76px] md:top-0 md:h-[71px] md:w-[104px]"
+          />
+        </a>
+
+        <nav class="hidden flex-1 items-center justify-center gap-5 lg:flex" aria-label="メインメニュー">
+          <a href="index.html" class="whitespace-nowrap font-body text-[15px] font-medium text-machisuke-text">ホーム</a>
+          <span class="font-body text-[14px] font-normal text-machisuke-border-light" aria-hidden="true">｜</span>
+          <a href="#" class="whitespace-nowrap font-body text-[15px] font-medium text-machisuke-text">サービス内容・料金</a>
+          <span class="font-body text-[14px] font-normal text-machisuke-border-light" aria-hidden="true">｜</span>
+          <a href="#" class="whitespace-nowrap font-body text-[15px] font-medium text-machisuke-text">まち助について</a>
+          <span class="font-body text-[14px] font-normal text-machisuke-border-light" aria-hidden="true">｜</span>
+          <a href="#" class="whitespace-nowrap font-body text-[15px] font-medium text-machisuke-text">実績</a>
+          <span class="font-body text-[14px] font-normal text-machisuke-border-light" aria-hidden="true">｜</span>
+          <a href="#" class="whitespace-nowrap font-body text-[15px] font-medium text-machisuke-text">FAQ</a>
+          <span class="font-body text-[14px] font-normal text-machisuke-border-light" aria-hidden="true">｜</span>
+          <a href="#" class="whitespace-nowrap font-body text-[15px] font-medium text-machisuke-text">お問い合わせ</a>
+        </nav>
+
+        <div class="flex shrink-0 items-center gap-5">
+          <a href="#" class="block h-[41px] w-[119px] md:h-12 md:w-[140px] lg:h-[66px] lg:w-[200px]">
+            <img
+              src="05_line_button_compact.png"
+              alt="LINEで気軽に相談する"
+              class="h-full w-full object-contain"
+            />
+          </a>
+          <button
+            id="menu-toggle"
+            type="button"
+            class="cursor-pointer border-0 bg-transparent p-0 lg:hidden"
+            aria-controls="mobile-menu"
+            aria-expanded="false"
+            aria-label="メニューを開く"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#3A3A3A"
+              stroke-width="2.2"
+              stroke-linecap="round"
+              class="h-[22px] w-[22px] md:h-[26px] md:w-[26px]"
+            >
+              <path d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <nav
+        id="mobile-menu"
+        class="hidden border-t border-machisuke-border-light bg-machisuke-cream-light px-6 py-4 lg:hidden"
+        aria-label="モバイルメニュー"
+      >
+        <ul class="flex flex-col gap-3 font-body text-[15px] font-medium text-machisuke-text">
+          <li><a href="index.html" class="block py-1">ホーム</a></li>
+          <li><a href="#" class="block py-1">サービス内容・料金</a></li>
+          <li><a href="#" class="block py-1">まち助について</a></li>
+          <li><a href="#" class="block py-1">実績</a></li>
+          <li><a href="#" class="block py-1">FAQ</a></li>
+          <li><a href="#" class="block py-1">お問い合わせ</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section class="relative w-full overflow-hidden bg-machisuke-cream-light">
+        <h1 class="sr-only">暮らしの「困った」を、まち助が解決！</h1>
+        <img
+          src="55_hero_mobile_2.png"
+          alt=""
+          class="h-[400px] w-full object-cover object-center md:hidden"
+        />
+        <img
+          src="53_hero.png"
+          alt=""
+          class="hidden h-[340px] w-full object-cover object-center md:block lg:h-[640px]"
+        />
+        <a
+          href="#"
+          class="absolute left-1/2 z-10 w-[324px] -translate-x-1/2 top-[329px] md:top-[203px] md:w-[min(662px,86%)] lg:left-[159px] lg:top-[387px] lg:w-[561px] lg:translate-x-0"
+        >
+          <img
+            src="24_line_button_wide.png"
+            alt="LINEで気軽に相談する"
+            class="h-[47px] w-full object-contain md:h-[56px] lg:h-[106px]"
+          />
+        </a>
+      </section>
+
+      <!-- IntroSection -->
+      <section class="flex w-full flex-col items-center bg-machisuke-cream-light p-[15px] md:p-[30px] lg:p-12">
+        <div
+          class="relative flex w-full flex-col items-center gap-2.5 rounded-[28px] bg-[#FAF4DF] p-5 md:w-[600px] md:gap-4 md:rounded-[32px] md:p-9 lg:w-[820px] lg:gap-5 lg:rounded-[36px] lg:p-12"
+        >
+          <div class="relative flex w-full items-center justify-center">
+            <img
+              src="09_character_holding_heart.png"
+              alt=""
+              class="absolute -left-[5px] top-0 z-0 h-[70px] w-[70px] object-contain md:-left-[23px] md:-top-[23px] md:h-[86px] md:w-[83px] lg:-left-[18px] lg:-top-8 lg:h-[110px] lg:w-[110px]"
+            />
+            <h2
+              class="relative z-[1] flex-1 text-center font-label text-[17px]/[26px] font-extrabold text-machisuke-title-green md:text-[24px]/[36px] lg:text-[30px]/[45px]"
+            >
+              地域の暮らしを、<br class="md:hidden" />やさしくサポート。
+            </h2>
+          </div>
+          <img
+            src="31_nature_leaf_cluster.png"
+            alt=""
+            class="pointer-events-none absolute right-4 top-[15px] z-[1] h-[41px] w-12 rotate-[25deg] object-contain md:right-6 md:top-[19px] md:h-[51px] md:w-[58px] lg:right-[68px] lg:top-[29px] lg:h-[61px] lg:w-[68px]"
+          />
+          <p
+            class="relative z-[2] w-[222px] text-center font-label text-[11px]/[19px] font-bold text-machisuke-text md:w-[490px] md:text-[15px]/[26px] lg:w-[560px] lg:text-[17px]/[29px]"
+          >
+            草刈り・不用品回収・家具の移動・力仕事・軽作業など、<br class="hidden md:inline" />日常のさまざまなお困りごとをお手伝いする、地域密着の便利屋です。
+          </p>
+          <p
+            class="relative z-[3] w-[222px] text-center font-label text-[11px]/[19px] font-bold text-machisuke-text md:w-[440px] md:text-[15px]/[26px] lg:w-[560px] lg:text-[17px]/[29px]"
+          >
+            「これくらい頼んでいいのかな？」と思うことも、<br class="hidden md:inline" />どうぞお気軽にご相談ください。
+          </p>
+          <img
+            src="52_character_thumbs_up_flipped.png"
+            alt=""
+            class="pointer-events-none absolute -right-2 bottom-[-8px] z-[4] h-[60px] w-[60px] object-contain md:right-[30px] md:top-[148px] md:h-[87px] md:w-[100px] md:bottom-auto lg:right-8 lg:top-[191px] lg:h-[95px] lg:w-[118px]"
+          />
+        </div>
+      </section>
+
+      <!-- TroubleSection -->
+      <section
+        class="relative flex w-full flex-col items-center gap-3.5 bg-machisuke-cream-light px-5 py-6 md:gap-6 md:px-[60px] md:py-12 lg:gap-7 lg:p-16"
+      >
+        <h2 class="whitespace-nowrap text-center font-label text-[17px] font-extrabold text-machisuke-text md:text-2xl lg:text-[30px]">
+          こんなお困りごとはありませんか？
+        </h2>
+        <img
+          src="43_flyer_service_menu.jpeg"
+          alt="サービスメニュー。屋内サポート、屋外サポート、力仕事・作業系、不用品回収、その他、オプションの料金例"
+          class="h-[239px] w-full rounded-[10px] object-contain md:h-[462px] md:w-[648px] md:rounded-[14px] lg:h-[642px] lg:w-[900px] lg:rounded-2xl"
+        />
+        <a href="#" class="relative z-10 block h-[47px] w-[255px] md:h-[55px] md:w-[300px] lg:h-[62px] lg:w-[340px]">
+          <img
+            src="60_service_pricing_button.png"
+            alt="サービス内容と料金について"
+            class="h-full w-full object-contain"
+          />
+        </a>
+        <img
+          src="10_character_question.png"
+          alt=""
+          class="pointer-events-none absolute bottom-6 left-1 z-[3] h-[61px] w-12 object-contain md:bottom-10 md:left-5 md:h-[140px] md:w-[120px] lg:left-[217px] lg:h-[180px] lg:w-[150px]"
+        />
+        <img
+          src="11_character_thinking.png"
+          alt=""
+          class="pointer-events-none absolute bottom-6 right-1 z-[4] h-[61px] w-14 object-contain md:bottom-10 md:right-5 md:h-[140px] md:w-[110px] lg:right-[208px] lg:h-[180px] lg:w-[140px]"
+        />
+      </section>
+
+      <!-- ReasonSection -->
+      <section
+        class="flex w-full flex-col items-center gap-4 bg-machisuke-cream-light px-4 py-6 md:gap-6 md:px-[50px] md:py-10 lg:gap-8 lg:px-16 lg:py-14"
+      >
+        <div
+          class="flex w-full flex-col items-center gap-[9px] rounded-[21px] bg-machisuke-orange p-[10.5px] md:gap-4 md:rounded-[26px] md:p-5 lg:w-[1000px] lg:gap-5 lg:rounded-[32px] lg:p-[26px]"
+        >
+          <div class="rounded-[15px] bg-machisuke-orange px-[15px] py-1.5 md:rounded-[18px] md:px-5 md:py-2 lg:rounded-[22px] lg:px-[26px] lg:py-2.5">
+            <h2 class="whitespace-nowrap font-label text-[17px] font-extrabold text-white md:text-lg lg:text-[22px]">
+              まち助が選ばれる理由
+            </h2>
+          </div>
+          <div class="flex w-full flex-col gap-[7.5px] md:flex-row md:gap-3 lg:gap-4">
+            <div class="flex gap-[7.5px] md:contents">
+              <article
+                class="flex flex-1 items-center gap-2 rounded-[9px] bg-machisuke-card-warm-white p-3 md:h-[152px] md:flex-col md:justify-center md:rounded-xl md:p-3.5 lg:h-[150px] lg:rounded-2xl"
+              >
+                <img
+                  src="18_character_friendly_worker.png"
+                  alt=""
+                  class="h-12 w-12 shrink-0 object-contain md:h-[53px] md:w-[53px] lg:h-[62px] lg:w-[62px]"
+                />
+                <div class="flex flex-1 flex-col items-start gap-1.5 md:w-full md:items-center">
+                  <h3 class="w-full text-left font-label text-[13px] font-extrabold text-machisuke-orange md:text-center lg:text-sm">
+                    地域密着
+                  </h3>
+                  <p class="w-full text-left font-label text-[8px] font-bold text-machisuke-text-gray md:text-center md:text-[10px] lg:text-[11px]">
+                    <span class="md:hidden">地域密着だからすぐ<br />に駆けつけます！</span>
+                    <span class="hidden md:block lg:hidden">地域密着だから<br />すぐに<br />駆けつけます！</span>
+                    <span class="hidden lg:block">地域密着だからすぐに駆けつけます！</span>
+                  </p>
+                </div>
+              </article>
+              <article
+                class="flex flex-1 items-center gap-2 rounded-[9px] bg-machisuke-card-warm-white p-3 md:h-[152px] md:flex-col md:justify-center md:rounded-xl md:p-3.5 lg:h-[150px] lg:rounded-2xl"
+              >
+                <img
+                  src="15_icon_heart_in_hands.png"
+                  alt=""
+                  class="h-12 w-12 shrink-0 object-contain md:h-[53px] md:w-[53px] lg:h-[62px] lg:w-[62px]"
+                />
+                <div class="flex flex-1 flex-col items-start gap-1.5 md:w-full md:items-center">
+                  <h3 class="w-full text-left font-label text-[13px] font-extrabold text-machisuke-orange md:text-center lg:text-sm">
+                    親切・丁寧
+                  </h3>
+                  <p class="w-full text-left font-label text-[8px] font-bold text-machisuke-text-gray md:text-center md:text-[10px] lg:text-[11px]">
+                    <span class="lg:hidden">一つひとつの<br />ご依頼を大切に<br />対応します！</span>
+                    <span class="hidden lg:inline">一つひとつのご依頼を大切に対応します！</span>
+                  </p>
+                </div>
+              </article>
+            </div>
+            <div class="flex gap-[7.5px] md:contents">
+              <article
+                class="flex flex-1 items-center gap-2 rounded-[9px] bg-machisuke-card-warm-white p-3 md:h-[152px] md:flex-col md:justify-center md:rounded-xl md:p-3.5 lg:h-[150px] lg:rounded-2xl"
+              >
+                <img
+                  src="16_icon_yen_calculator.png"
+                  alt=""
+                  class="h-12 w-12 shrink-0 object-contain md:h-[53px] md:w-[53px] lg:h-[62px] lg:w-[62px]"
+                />
+                <div class="flex flex-1 flex-col items-start gap-1.5 md:w-full md:items-center">
+                  <h3 class="w-full text-left font-label text-[13px] font-extrabold text-machisuke-orange md:text-center lg:text-sm">
+                    明朗料金
+                  </h3>
+                  <p class="w-full text-left font-label text-[8px] font-bold text-machisuke-text-gray md:text-center md:text-[10px] lg:text-[11px]">
+                    <span class="md:hidden">事前にお見積もりを<br />提示し安心の<br />料金設定！</span>
+                    <span class="hidden md:block lg:hidden">事前にお見積もりを提示し<br />安心の料金設定！</span>
+                    <span class="hidden lg:block">事前にお見積もりを提示し安心の料金設定！</span>
+                  </p>
+                </div>
+              </article>
+              <article
+                class="flex flex-1 items-center gap-2 rounded-[9px] bg-machisuke-card-warm-white p-3 md:h-[152px] md:flex-col md:justify-center md:rounded-xl md:p-3.5 lg:h-[150px] lg:rounded-2xl"
+              >
+                <img
+                  src="12_character_thumbs_up.png"
+                  alt=""
+                  class="h-12 w-12 shrink-0 object-contain md:h-[53px] md:w-[53px] lg:h-[62px] lg:w-[62px]"
+                />
+                <div class="flex flex-1 flex-col items-start gap-1.5 md:w-full md:items-center">
+                  <h3 class="w-full text-left font-label text-[13px] font-extrabold text-machisuke-orange md:text-center lg:text-sm">
+                    安心・信頼
+                  </h3>
+                  <p class="w-full text-left font-label text-[8px] font-bold text-machisuke-text-gray md:text-center md:text-[10px] lg:text-[11px]">
+                    <span class="md:hidden">誠実な対応で安心<br />して任せられます！</span>
+                    <span class="hidden md:block lg:hidden">誠実な対応で<br />安心して<br />任せられます！</span>
+                    <span class="hidden lg:block">誠実な対応で安心して任せられます！</span>
+                  </p>
+                </div>
+              </article>
+            </div>
+            <div class="flex md:contents">
+              <article
+                class="flex flex-1 items-center gap-2 rounded-[9px] bg-machisuke-card-warm-white p-3 md:h-[152px] md:flex-col md:justify-center md:rounded-xl md:p-3.5 lg:h-[150px] lg:rounded-2xl"
+              >
+                <img
+                  src="06_character_phone_yellow.png"
+                  alt=""
+                  class="h-12 w-12 shrink-0 object-contain md:h-[53px] md:w-[53px] lg:h-[62px] lg:w-[62px]"
+                />
+                <div class="flex flex-1 flex-col items-start gap-1.5 md:w-full md:items-center">
+                  <h3 class="w-full text-left font-label text-[13px] font-extrabold text-machisuke-orange md:text-center lg:text-sm">
+                    <span class="md:hidden lg:inline">小さなご依頼大歓迎</span>
+                    <span class="hidden md:inline lg:hidden">小さな<br />ご依頼大歓迎</span>
+                  </h3>
+                  <p class="w-full text-left font-label text-[8px] font-bold text-machisuke-text-gray md:text-center md:text-[10px] lg:text-[11px]">
+                    「これくらい頼んでいいかな？」そんなご相談もお気軽に！
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="block h-[46px] w-[255px] md:h-[54px] md:w-[300px] lg:h-16 lg:w-[360px]">
+          <img
+            src="61_about_machisuke_button.png"
+            alt="まち助について"
+            class="h-full w-full object-contain"
+          />
+        </a>
+      </section>
+
+      <!-- AreaSection -->
+      <section
+        class="flex w-full flex-col items-center gap-3.5 bg-machisuke-cream-light px-4 pb-[34px] pt-[25px] md:gap-5 md:px-[50px] md:pb-[52px] md:pt-10 lg:gap-6 lg:px-16 lg:pb-16 lg:pt-14"
+      >
+        <div class="flex flex-col items-center gap-1 md:gap-1.5">
+          <h2 class="whitespace-nowrap text-center font-label text-[17px] font-extrabold text-machisuke-text md:text-2xl lg:text-[30px]">
+            対応エリア
+          </h2>
+          <p class="whitespace-nowrap text-center font-label text-[10px] font-bold text-machisuke-text md:text-sm lg:text-lg">
+            岐阜県の中濃地域を中心に対応しています！
+          </p>
+        </div>
+        <img
+          src="51_service_area_map_extended.png"
+          alt="対応エリアマップ（美濃加茂市・可児市・御嵩町・八百津町）"
+          class="h-[149px] w-[280px] rounded-[10px] object-contain md:h-[255px] md:w-[480px] md:rounded-[14px] lg:h-[341px] lg:w-[640px]"
+        />
+        <p class="w-full text-center font-label text-[10px] font-bold text-machisuke-text md:text-sm lg:text-lg">
+          美濃加茂市・可児市・御嵩町・八百津町<br />
+          周辺エリアに対応しています！
+        </p>
+      </section>
+
+      <!-- CtaWrap -->
+      <section class="flex w-full flex-col items-center bg-machisuke-cream-light py-2.5 md:py-[18px] lg:py-8">
+        <a href="#" class="block h-[88px] w-full md:h-[112px] md:w-[480px] lg:h-[211px] lg:w-[900px]">
+          <img
+            src="65_line_cta_banner_blue.png"
+            alt="小さなご依頼も大歓迎！LINEで気軽に相談する。相談・見積りだけでもOK！"
+            class="h-full w-full object-contain"
+          />
+        </a>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="relative h-[170px] overflow-hidden bg-machisuke-brown-footer md:h-[252px] lg:h-[321px]">
+      <img
+        src="47_footer_mowing_tree.png"
+        alt=""
+        class="pointer-events-none absolute -left-2 bottom-[-12px] z-0 h-[73px] w-[119px] object-contain md:-left-8 md:bottom-[-8px] md:h-[121px] md:w-[215px] lg:-left-12 lg:bottom-[-12px] lg:h-[182px] lg:w-[323px]"
+      />
+      <img
+        src="48_footer_sofa_movers.png"
+        alt=""
+        class="pointer-events-none absolute -right-2 bottom-[-24px] z-[1] h-[81px] w-[111px] object-contain md:right-[15%] md:bottom-[-8px] md:h-[113px] md:w-[199px] lg:right-[14%] lg:bottom-[-16px] lg:h-[191px] lg:w-[353px]"
+      />
+      <img
+        src="25_character_delivery_boxes.png"
+        alt=""
+        class="pointer-events-none absolute bottom-[-20px] right-[-8px] z-[2] hidden object-contain md:block md:h-[120px] md:w-[139px] lg:h-[205px] lg:w-[250px]"
+      />
+      <img
+        src="03_character_repair_worker.png"
+        alt=""
+        class="pointer-events-none absolute bottom-[-8px] left-[37%] z-[3] hidden object-contain md:block md:h-[113px] md:w-[63px] lg:left-[33%] lg:h-[193px] lg:w-[121px]"
+      />
+
+      <div
+        class="relative z-10 flex h-full items-center justify-center gap-2 px-3 pb-6 pt-8 md:gap-8 md:px-12 md:pb-10 md:pt-8 lg:gap-8 lg:px-16 lg:pb-14 lg:pt-10"
+      >
+        <img
+          src="49_logo_white_horizontal.png"
+          alt="便利屋まち助"
+          class="h-[88px] w-[159px] shrink-0 object-contain md:h-[140px] md:w-[252px] lg:h-[210px] lg:w-[378px]"
+        />
+        <div class="h-[100px] w-0.5 shrink-0 bg-white md:h-[90px] lg:h-[135px] lg:w-[3px]"></div>
+        <div class="flex flex-col items-center gap-1.5 md:gap-2 lg:min-w-[330px] lg:gap-3">
+          <p class="text-center font-label text-[9px] font-bold text-machisuke-footer-address md:text-[13px] lg:text-base">
+            〒505-0056<br />
+            岐阜県美濃加茂市加茂野町市橋
+          </p>
+          <p class="whitespace-nowrap text-center font-label text-[9px] font-bold text-machisuke-footer-address md:text-[13px] lg:text-base">
+            営業時間 9:00〜17:00
+          </p>
+          <a href="tel:09023439557" class="flex items-center justify-center gap-1 md:gap-1.5 lg:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3 w-3 md:h-4 md:w-4">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.81.32 1.6.57 2.36a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.72-1.14a2 2 0 0 1 2.11-.45c.76.25 1.55.44 2.36.57A2 2 0 0 1 22 16.92z" />
+            </svg>
+            <span class="whitespace-nowrap font-label text-xs font-bold text-white md:text-base">090-2343-9557</span>
+          </a>
+          <a href="mailto:machisuke.takato@gmail.com" class="flex items-center justify-center gap-1 md:gap-1.5 lg:gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3 w-3 md:h-4 md:w-4 lg:h-5 lg:w-5">
+              <rect width="20" height="16" x="2" y="4" rx="2" />
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+            </svg>
+            <span class="whitespace-nowrap font-label text-[9px] font-bold text-white md:text-[13px] lg:text-base">machisuke.takato@gmail.com</span>
+          </a>
+        </div>
+        <div class="hidden h-[135px] w-[3px] shrink-0 bg-white lg:block"></div>
+        <div class="hidden flex-col items-center gap-1.5 lg:flex">
+          <p class="whitespace-nowrap text-center font-label text-base font-bold text-machisuke-footer-address">
+            代表番号：
+          </p>
+          <a href="tel:09023439557" class="flex items-center justify-center gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-[30px] w-[30px]">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.81.32 1.6.57 2.36a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.72-1.14a2 2 0 0 1 2.11-.45c.76.25 1.55.44 2.36.57A2 2 0 0 1 22 16.92z" />
+            </svg>
+            <span class="whitespace-nowrap font-label text-[30px] font-bold text-white">090-2343-9557</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="pointer-events-none absolute bottom-0 left-0 right-0 z-[8] flex items-end justify-center gap-3 pb-0 md:gap-8 lg:gap-16">
+        <img src="30_nature_flower_white.png" alt="" class="h-[30px] w-[35px] object-contain md:h-9 md:w-[42px] lg:h-[54px] lg:w-[63px]" />
+        <img src="36_nature_bush_small.png" alt="" class="h-[33px] w-7 object-contain md:h-10 md:w-[34px] lg:h-[60px] lg:w-[51px]" />
+        <img src="30_nature_flower_white.png" alt="" class="h-[30px] w-[35px] object-contain md:h-9 md:w-[42px] lg:h-[54px] lg:w-[63px]" />
+        <img src="36_nature_bush_small.png" alt="" class="h-[33px] w-7 object-contain md:h-10 md:w-[34px] lg:h-[60px] lg:w-[51px]" />
+        <img src="30_nature_flower_white.png" alt="" class="h-[30px] w-[35px] object-contain md:hidden" />
+        <img src="36_nature_bush_small.png" alt="" class="hidden h-[33px] w-7 object-contain md:block md:h-10 md:w-[34px] lg:h-[60px] lg:w-[51px]" />
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        var toggle = document.getElementById("menu-toggle");
+        var menu = document.getElementById("mobile-menu");
+        if (!toggle || !menu) return;
+        toggle.addEventListener("click", function () {
+          var isHidden = menu.classList.toggle("hidden");
+          toggle.setAttribute("aria-expanded", String(!isHidden));
+          toggle.setAttribute("aria-label", isHidden ? "メニューを開く" : "メニューを閉じる");
+        });
+        menu.querySelectorAll("a").forEach(function (link) {
+          link.addEventListener("click", function () {
+            menu.classList.add("hidden");
+            toggle.setAttribute("aria-expanded", "false");
+            toggle.setAttribute("aria-label", "メニューを開く");
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>
