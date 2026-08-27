@@ -114,6 +114,31 @@
         line-height: 1.7;
         color: #3A3A3A;
       }
+      .footer-mobile-logo {
+        width: clamp(100px, 29.6vw, 159px);
+        height: auto;
+        aspect-ratio: 159 / 88;
+      }
+      .footer-mobile-rule {
+        height: clamp(52px, 16vw, 88px);
+      }
+      .footer-contact {
+        gap: clamp(2px, 1vw, 6px);
+        padding-inline: clamp(4px, 1.6vw, 8px);
+      }
+      .footer-contact-text {
+        font-size: clamp(6.5px, 2vw, 9px);
+        line-height: 1.3;
+      }
+      .footer-contact-phone {
+        font-size: clamp(8px, 2.6vw, 12px);
+        line-height: 1.3;
+      }
+      .footer-contact-icon {
+        width: 1em;
+        height: 1em;
+        flex-shrink: 0;
+      }
       .intro-char-heart {
         left: -2.2%;
         top: -3.9cqw;
@@ -471,7 +496,7 @@
         />
         <div class="absolute inset-x-0 top-0 bottom-[30%] z-10">
           <div
-            class="pointer-events-none absolute left-1/2 top-1/2 h-[100px] w-0.5 -translate-x-1/2 -translate-y-1/2 bg-white"
+            class="footer-mobile-rule pointer-events-none absolute left-1/2 top-1/2 w-0.5 -translate-x-1/2 -translate-y-1/2 bg-white"
             aria-hidden="true"
           ></div>
           <div class="grid h-full grid-cols-2 items-center">
@@ -479,29 +504,29 @@
               <img
                 src="public/49_logo_white_horizontal.png"
                 alt="便利屋まち助"
-                class="h-[88px] w-[159px] object-contain"
+                class="footer-mobile-logo object-contain"
               />
             </div>
-            <div class="flex min-w-0 flex-col items-center justify-center gap-1.5 px-2">
-              <p class="text-center font-label text-[9px] font-bold text-[#C9C2B8]">
+            <div class="footer-contact flex min-w-0 flex-col items-center justify-center">
+              <p class="footer-contact-text text-center font-label font-bold text-[#C9C2B8]">
                 〒505-0056<br />
                 岐阜県美濃加茂市加茂野町市橋
               </p>
-              <p class="whitespace-nowrap text-center font-label text-[9px] font-bold text-[#C9C2B8]">
+              <p class="footer-contact-text whitespace-nowrap text-center font-label font-bold text-[#C9C2B8]">
                 営業時間 9:00〜17:00
               </p>
-              <a href="tel:09023439557" class="flex items-center justify-center gap-1">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3 w-3">
+              <a href="tel:09023439557" class="footer-contact-phone flex items-center justify-center gap-[0.3em]">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="footer-contact-icon">
                   <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.81.32 1.6.57 2.36a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.72-1.14a2 2 0 0 1 2.11-.45c.76.25 1.55.44 2.36.57A2 2 0 0 1 22 16.92z" />
                 </svg>
-                <span class="whitespace-nowrap font-label text-xs font-bold text-white">090-2343-9557</span>
+                <span class="whitespace-nowrap font-label font-bold text-white">090-2343-9557</span>
               </a>
-              <a href="mailto:machisuke.takato@gmail.com" class="flex items-center justify-center gap-1">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3 w-3">
+              <a href="mailto:machisuke.takato@gmail.com" class="footer-contact-text flex items-center justify-center gap-[0.3em]">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="footer-contact-icon">
                   <rect width="20" height="16" x="2" y="4" rx="2" />
                   <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
                 </svg>
-                <span class="whitespace-nowrap font-label text-[9px] font-bold text-white">machisuke.takato@gmail.com</span>
+                <span class="whitespace-nowrap font-label font-bold text-white">machisuke.takato@gmail.com</span>
               </a>
             </div>
           </div>
