@@ -70,6 +70,21 @@
         width: clamp(18px, 5.87vw, 26px);
         height: clamp(18px, 5.87vw, 26px);
       }
+      .site-header {
+        background-color: #FFFAF0;
+        transition: opacity 0.2s ease;
+      }
+      @media (min-width: 768px) {
+        .site-header {
+          background-color: #FAF4DF;
+        }
+      }
+      .site-header.is-scrolled {
+        opacity: 0.7;
+      }
+      .site-header.is-menu-open {
+        opacity: 1;
+      }
       @media (min-width: 1024px) {
         .header-line {
           width: clamp(140px, 13.89vw, 200px);
@@ -166,8 +181,8 @@
       rel="stylesheet"
     />
   </head>
-  <body class="m-0 overflow-x-hidden bg-[#FFFAF0] font-label text-machisuke-text md:bg-[#FAF4DF]">
-    <header class="relative bg-[#FFFAF0] md:bg-[#FAF4DF]">
+  <body class="m-0 bg-[#FFFAF0] font-label text-machisuke-text md:bg-[#FAF4DF]">
+    <header class="site-header sticky top-0 z-50 shadow-[0_1px_0_rgba(0,0,0,0.06)]">
       <div class="header-bar flex w-full items-center justify-between">
         <a href="index.html" class="header-logo relative block shrink-0">
           <img
@@ -229,7 +244,7 @@
 
       <nav
         id="mobile-menu"
-        class="hidden border-t border-machisuke-border-light bg-[#FFFAF0] px-6 py-4 md:bg-[#FAF4DF] lg:hidden"
+        class="hidden border-t border-machisuke-border-light bg-transparent px-6 py-4 lg:hidden"
         aria-label="モバイルメニュー"
       >
         <ul class="flex flex-col gap-3 font-body text-[15px] font-medium text-machisuke-text">
@@ -243,7 +258,7 @@
       </nav>
     </header>
 
-    <main>
+    <main class="overflow-x-hidden">
       <!-- Hero -->
       <section class="relative w-full bg-[#FFFAF0] md:bg-[#FAF4DF]">
         <h1 class="sr-only">暮らしの「困った」を、まち助が解決！</h1>
@@ -601,6 +616,19 @@
 
     <script>
       (function () {
+        var header = document.querySelector(".site-header");
+        if (header) {
+          var scrolled = false;
+          var updateHeader = function () {
+            var next = window.scrollY > 8;
+            if (next === scrolled) return;
+            scrolled = next;
+            header.classList.toggle("is-scrolled", scrolled);
+          };
+          window.addEventListener("scroll", updateHeader, { passive: true });
+          updateHeader();
+        }
+
         var toggle = document.getElementById("menu-toggle");
         var menu = document.getElementById("mobile-menu");
         if (!toggle || !menu) return;
@@ -608,12 +636,14 @@
           var isHidden = menu.classList.toggle("hidden");
           toggle.setAttribute("aria-expanded", String(!isHidden));
           toggle.setAttribute("aria-label", isHidden ? "メニューを開く" : "メニューを閉じる");
+          if (header) header.classList.toggle("is-menu-open", !isHidden);
         });
         menu.querySelectorAll("a").forEach(function (link) {
           link.addEventListener("click", function () {
             menu.classList.add("hidden");
             toggle.setAttribute("aria-expanded", "false");
             toggle.setAttribute("aria-label", "メニューを開く");
+            if (header) header.classList.remove("is-menu-open");
           });
         });
       })();
