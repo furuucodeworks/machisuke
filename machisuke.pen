@@ -4992,7 +4992,8 @@
                   "content": "まちの困ったを、すぐそばで。\nABCDEFGHIJKLMNOPQRSTUVWXYZ 0123456789",
                   "lineHeight": 1.45,
                   "fontFamily": "Kosugi Maru",
-                  "fontSize": 23
+                  "fontSize": 23,
+                  "fontWeight": "normal"
                 }
               ]
             }
@@ -9072,8 +9073,8 @@
           "fill": {
             "type": "image",
             "enabled": true,
-            "url": "screenshot-site.png",
-            "mode": "fill"
+            "url": "public/index-render-mobile.jpg",
+            "mode": "stretch"
           },
           "width": 375,
           "height": 1958
@@ -9089,22 +9090,33 @@
       "clip": true,
       "width": 768,
       "height": 2881,
-      "layout": "none",
+      "layout": "vertical",
       "children": [
         {
           "type": "rectangle",
           "id": "FEO3U",
-          "x": 0,
-          "y": 0,
           "name": "index.html iPad 768px Render",
           "fill": {
             "type": "image",
             "enabled": true,
-            "url": "screenshot-site-1.png",
-            "mode": "fill"
+            "url": "public/index-render-ipad.jpg",
+            "mode": "stretch"
           },
           "width": 768,
-          "height": 2881
+          "height": 2000
+        },
+        {
+          "type": "rectangle",
+          "id": "n8LLN",
+          "name": "index.html iPad 768px Render / Part 2",
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "public/index-render-ipad-2.jpg",
+            "mode": "stretch"
+          },
+          "width": 768,
+          "height": 881
         }
       ]
     },
@@ -9126,11 +9138,11 @@
           "fill": {
             "type": "image",
             "enabled": true,
-            "url": "screenshot-site-1-1.png",
-            "mode": "fill"
+            "url": "public/index-render-pc.jpg",
+            "mode": "stretch"
           },
           "width": 1440,
-          "height": 4096
+          "height": 2000
         },
         {
           "type": "rectangle",
@@ -9139,11 +9151,24 @@
           "fill": {
             "type": "image",
             "enabled": true,
-            "url": "screenshot-site-2-1.png",
-            "mode": "fill"
+            "url": "public/index-render-pc-2.jpg",
+            "mode": "stretch"
           },
           "width": 1440,
-          "height": 26
+          "height": 2000
+        },
+        {
+          "type": "rectangle",
+          "id": "S1KYAy",
+          "name": "index.html PC 1440px Render / Part 3",
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "public/index-render-pc-3.jpg",
+            "mode": "stretch"
+          },
+          "width": 1440,
+          "height": 122
         }
       ]
     },
