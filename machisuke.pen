@@ -35629,6 +35629,56 @@
           ]
         }
       ]
+    },
+    {
+      "type": "frame",
+      "id": "blEIY",
+      "x": 4926,
+      "y": -4876,
+      "name": "ロゴ",
+      "width": 116,
+      "height": 42,
+      "layout": "none",
+      "children": [
+        {
+          "type": "group",
+          "id": "fp0VH",
+          "x": 0,
+          "y": 0,
+          "children": [
+            {
+              "type": "rectangle",
+              "id": "mKWtV",
+              "x": 0,
+              "y": 0,
+              "name": "家ロゴ",
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "public/01_house_logo_mark.png",
+                "mode": "fit"
+              },
+              "width": 36,
+              "height": 42
+            },
+            {
+              "type": "rectangle",
+              "id": "IJrXn",
+              "x": 30,
+              "y": 3,
+              "name": "まち助ワードマーク",
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "public/02_machisuke_wordmark.png",
+                "mode": "fit"
+              },
+              "width": 86,
+              "height": 36
+            }
+          ]
+        }
+      ]
     }
   ],
   "variables": {
