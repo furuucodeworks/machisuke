@@ -1,0 +1,942 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>まち助｜まち助について（PC版）</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kosugi+Maru%3Awght%40400&family=Zen+Kaku+Gothic+New%3Awght%40400%3B700&family=Zen+Maru+Gothic%3Awght%40500%3B700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      *, ::before, ::after {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body style="background-color: #FFFAF0">
+    <div
+      data-pencil-name="Web Design / PC / まち助について"
+      style="align-items: flex-start; background-color: #FFFAF0; box-sizing: border-box; display: flex; flex-direction: column; gap: 0px; height: fit-content; justify-content: flex-start; overflow: hidden; width: 1440px"
+    >
+      <div
+        data-pencil-name="ヘッダー"
+        style="align-items: center; background-color: #FFFAF0; box-sizing: border-box; display: flex; flex-direction: row; flex-shrink: 0; gap: 0px; height: 110px; justify-content: space-between; padding: 18px 70px; width: 100%"
+      >
+        <div
+          data-pencil-name="ロゴ"
+          style="box-sizing: border-box; flex-shrink: 0; height: 64px; position: relative; width: 200px"
+        >
+          <div
+            data-pencil-name="家ロゴ"
+            style="background-image: url('../public/01_house_logo_mark.png'); background-position: center; background-repeat: no-repeat; background-size: contain; box-sizing: border-box; height: 64px; left: 0px; position: absolute; top: 0px; width: 55px; z-index: 0"
+          ></div>
+          <div
+            data-pencil-name="まち助ワードマーク"
+            style="background-image: url('../public/02_machisuke_wordmark.png'); background-position: center; background-repeat: no-repeat; background-size: contain; box-sizing: border-box; height: 54px; left: 48px; position: absolute; top: 5px; width: 152px; z-index: 1"
+          ></div>
+        </div>
+        <div
+          data-pencil-name="PCナビゲーション"
+          style="align-items: center; box-sizing: border-box; display: flex; flex-direction: row; flex-shrink: 0; gap: 18px; height: fit-content; justify-content: flex-start; width: fit-content"
+        >
+          <div
+            data-pencil-name="ナビ / ホーム"
+            style="align-items: center; box-sizing: border-box; display: flex; flex-direction: column; flex-shrink: 0; gap: 5px; height: fit-content; justify-content: flex-start; width: fit-content"
+          >
+            <div
+              data-pencil-name="ナビテキスト / ホーム"
+              style='box-sizing: border-box; color: #3A3A3A; font-family: "Zen Maru Gothic", system-ui, sans-serif; font-size: 16px; font-style: normal; font-weight: 500; letter-spacing: 0px; line-height: normal; text-align: left; white-space: nowrap'
+            >
+              ホーム
+            </div>
+          </div>
+          <div
+            data-pencil-name="ナビ区切り線 1"
+            style="background-color: #7A7A7A; box-sizing: border-box; flex-shrink: 0; height: 16px; opacity: 0.6; width: 1px"
+          ></div>
+          <div
+            data-pencil-name="ナビ / サービス内容・料金"
+            style="align-items: center; box-sizing: border-box; display: flex; flex-direction: column; flex-shrink: 0; gap: 5px; height: fit-content; justify-content: flex-start; width: fit-content"
+          >
+            <div
+              data-pencil-name="ナビテキスト / サービス内容・料金"
+              style='box-sizing: border-box; color: #3A3A3A; font-family: "Zen Maru Gothic", system-ui, sans-serif; font-size: 16px; font-style: normal; font-weight: 500; letter-spacing: 0px; line-height: normal; text-align: left; white-space: nowrap'
+            >
+              サービス内容・料金
+            </div>
+          </div>
+          <div
+            data-pencil-name="ナビ区切り線 2"
+            style="background-color: #7A7A7A; box-sizing: border-box; flex-shrink: 0; height: 16px; opacity: 0.6; width: 1px"
+          ></div>
+          <div
+            data-pencil-name="ナビ / まち助について"
+            style="align-items: center; box-sizing: border-box; display: flex; flex-direction: column; flex-shrink: 0; gap: 5px; height: fit-content; justify-content: flex-start; width: fit-content"
+          >
+            <div
+              data-pencil-name="ナビテキスト / まち助について"
+              style='box-sizing: border-box; color: #E8833A; font-family: "Zen Maru Gothic", system-ui, sans-serif; font-size: 16px; font-style: normal; font-weight: 700; letter-spacing: 0px; line-height: normal; text-align: left; white-space: nowrap'
+            >
+              まち助について
+            </div>
+            <div
+              data-pencil-name="アクティブ表示"
+              style="background-color: #E8833A; border-radius: 1px; box-sizing: border-box; flex-shrink: 0; height: 2px; width: 54px"
+            ></div>
+          </div>
+          <div
+            data-pencil-name="ナビ区切り線 3"
+            style="background-color: #7A7A7A; box-sizing: border-box; flex-shrink: 0; height: 16px; opacity: 0.6; width: 1px"
+          ></div>
+          <div
+            data-pencil-name="ナビ / 実績"
+            style="align-items: center; box-sizing: border-box; display: flex; flex-direction: column; flex-shrink: 0; gap: 5px; height: fit-content; justify-content: flex-start; width: fit-content"
+          >
+            <div
+              data-pencil-name="ナビテキスト / 実績"
+              style='box-sizing: border-box; color: #3A3A3A; font-family: "Zen Maru Gothic", system-ui, sans-serif; font-size: 16px; font-style: normal; font-weight: 500; letter-spacing: 0px; line-height: normal; text-align: left; white-space: nowrap'
+            >
+              実績
+            </div>
+          </div>
+          <div
+            data-pencil-name="ナビ区切り線 4"
+            style="background-color: #7A7A7A; box-sizing: border-box; flex-shrink: 0; height: 16px; opacity: 0.6; width: 1px"
+          ></div>
+          <div
+            data-pencil-name="ナビ / FAQ"
+            style="align-items: center; box-sizing: border-box; display: flex; flex-direction: column; flex-shrink: 0; gap: 5px; height: fit-content; justify-content: flex-start; width: fit-content"
+          >
+            <div
+              data-pencil-name="ナビテキスト / FAQ"
+              style='box-sizing: border-box; color: #3A3A3A; font-family: "Zen Maru Gothic", system-ui, sans-serif; font-size: 16px; font-style: normal; font-weight: 500; letter-spacing: 0px; line-height: normal; text-align: left; white-space: nowrap'
+            >
+              FAQ
+            </div>
+          </div>
+          <div
+            data-pencil-name="ナビ区切り線 5"
+            style="background-color: #7A7A7A; box-sizing: border-box; flex-shrink: 0; height: 16px; opacity: 0.6; width: 1px"
+          ></div>
+          <div
+            data-pencil-name="ナビ / お問い合わせ"
+            style="align-items: center; box-sizing: border-box; display: flex; flex-direction: column; flex-shrink: 0; gap: 5px; height: fit-content; justify-content: flex-start; width: fit-content"
+          >
+            <div
+              data-pencil-name="ナビテキスト / お問い合わせ"
+              style='box-sizing: border-box; color: #3A3A3A; font-family: "Zen Maru Gothic", system-ui, sans-serif; font-size: 16px; font-style: normal; font-weight: 500; letter-spacing: 0px; line-height: normal; text-align: left; white-space: nowrap'
+            >
+              お問い合わせ
+            </div>
+          </div>
+        </div>
+        <div
+          data-pencil-name="ヘッダーアクション"
+          style="align-items: center; box-sizing: border-box; display: flex; flex-direction: row; flex-shrink: 0; gap: 10px; height: fit-content; justify-content: flex-start; width: fit-content"
+        >
+          <div
+            data-pencil-name="LINEお問い合わせ"
+            style="background-image: url('../public/05_line_button_compact.png'); background-position: center; background-repeat: no-repeat; background-size: contain; box-sizing: border-box; flex-shrink: 0; height: 55px; width: 150px"
+          ></div>
+        </div>
+      </div>
+      <div
+        data-pencil-name="ページ導入"
+        style="align-items: center; background-color: #FFFAF0; box-sizing: border-box; display: flex; flex-direction: column; flex-shrink: 0; gap: 18px; height: fit-content; justify-content: flex-start; padding: 56px 120px; width: 100%"
+      >
+        <div
+          data-pencil-name="ページラベル"
+          style="align-items: flex-start; background-color: #5FA246; border-radius: 20px; box-sizing: border-box; display: flex; flex-direction: row; flex-shrink: 0; gap: 0px; height: fit-content; justify-content: flex-start; padding: 8px 18px; width: fit-content"
+        >
+          <div
+            data-pencil-name="ページラベルテキスト"
+            style='box-sizing: border-box; color: #FFFFFF; font-family: "Kosugi Maru", system-ui, sans-serif; font-size: 13px; font-style: normal; font-weight: 700; letter-spacing: 1px; line-height: normal; text-align: left; white-space: nowrap'
+          >
+            ABOUT MACHI-SUKE
+          </div>
+        </div>
+        <div
+          data-pencil-name="ページタイトル"
+          style='box-sizing: border-box; color: #3F5A3A; font-family: "Zen Maru Gothic", system-ui, sans-serif; font-size: 42px; font-style: normal; font-weight: 700; letter-spacing: 0px; line-height: normal; text-align: left; white-space: nowrap'
+        >
+          まち助について
+        </div>
+        <div
+          data-pencil-name="導入メッセージ"
+          style='box-sizing: border-box; color: #E8833A; font-family: "Zen Maru Gothic", system-ui, sans-serif; font-size: 24px; font-style: normal; font-weight: 700; letter-spacing: 0px; line-height: 35px; text-align: center; width: 900px'
+        >
+          地域の皆さまにとって、身近で頼れる存在を目指しています。
+        </div>
+      </div>
+      <div
+        data-pencil-name="代表者紹介"
+        style="align-items: center; background-color: #FFFAF0; box-sizing: border-box; display: flex; flex-direction: row; flex-shrink: 0; gap: 64px; height: fit-content; justify-content: flex-start; padding: 80px 120px; width: 100%"
+      >
+        <div
+          data-pencil-name="代表者写真フレーム"
+          style="background-color: #FFFFFF; border-radius: 20px; box-sizing: border-box; flex-shrink: 0; height: 281px; outline-offset: -1px; outline: 2px solid #E8833A; overflow: hidden; position: relative; width: 500px"
+        >
+          <div
+            data-pencil-name="代表者写真44"
+            style="background-image: url('../public/44_photo_staff_smiling_river.png'); background-position: center; background-repeat: no-repeat; background-size: contain; box-sizing: border-box; height: 281px; left: 0px; position: absolute; top: 0px; width: 500px; z-index: 0"
+          ></div>
+        </div>
+        <div
+          data-pencil-name="代表者紹介情報"
+          style="align-items: flex-start; box-sizing: border-box; display: flex; flex-direction: column; flex: 1 1 0; gap: 20px; height: fit-content; justify-content: center"
+        >
+          <div
+            data-pencil-name="代表者紹介見出し"
+            style='box-sizing: border-box; color: #3F5A3A; font-family: "Zen Maru Gothic", system-ui, sans-serif; font-size: 34px; font-style: normal; font-weight: 700; letter-spacing: 0px; line-height: normal; text-align: left; width: 100%'
+          >
+            はじめまして、まち助です
+          </div>
+          <div
+            data-pencil-name="代表者名ラベル"
+            style="align-items: flex-start; background-color: #E8833A; border-radius: 16px; box-sizing: border-box; display: flex; flex-direction: row; flex-shrink: 0; gap: 0px; height: fit-content; justify-content: flex-start; padding: 8px 14px; width: fit-content"
+          >
+            <div
+              data-pencil-name="代表者名"
+              style='box-sizing: border-box; color: #FFFFFF; font-family: "Kosugi Maru", system-ui, sans-serif; font-size: 14px; font-style: normal; font-weight: 700; letter-spacing: 0px; line-height: normal; text-align: left; white-space: nowrap'
+            >
+              便利屋まち助　代表　三品
+            </div>
+          </div>
+          <div
+            data-pencil-name="代表者紹介導入文"
+            style='box-sizing: border-box; color: #3A3A3A; font-family: "Zen Kaku Gothic New", system-ui, sans-serif; font-size: 18px; font-style: normal; font-weight: 400; letter-spacing: 0px; line-height: 32px; text-align: left; width: 100%'
+          >
+            地域の皆さまにとって、身近で頼れる存在を目指しています。
+          </div>
+        </div>
+      </div>
+      <div
+        data-pencil-name="紹介文セクション"
+        style="align-items: center; background-color: #FFFAF0; box-sizing: border-box; display: flex; flex-direction: column; flex-shrink: 0; gap: 32px; height: fit-content; justify-content: flex-start; padding: 80px 120px; width: 100%"
+      >
+        <div
+          data-pencil-name="紹介文見出し"
+          style="align-items: center; box-sizing: border-box; display: flex; flex-direction: row; flex-shrink: 0; gap: 14px; height: fit-content; justify-content: flex-start; width: 840px"
+        >
+          <div
+            data-pencil-name="見出しアクセント"
+            style="background-color: #E8833A; border-radius: 3px; box-sizing: border-box; flex-shrink: 0; height: 36px; width: 6px"
+          ></div>
+          <div
+            data-pencil-name="紹介文タイトル"
+            style='box-sizing: border-box; color: #3F5A3A; font-family: "Zen Maru Gothic", system-ui, sans-serif; font-size: 30px; font-style: normal; font-weight: 700; letter-spacing: 0px; line-height: normal; text-align: left; white-space: nowrap'
+          >
+            まち助に込めた思い
+          </div>
+        </div>
+        <div
+          data-pencil-name="紹介文本文"
+          style="align-items: flex-start; box-sizing: border-box; display: flex; flex-direction: column; flex-shrink: 0; gap: 24px; height: fit-content; justify-content: flex-start; width: 840px"
+        >
+          <div
+            data-pencil-name="挨拶"
+            style='box-sizing: border-box; color: #3A3A3A; font-family: "Zen Kaku Gothic New", system-ui, sans-serif; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: 0px; line-height: 29px; text-align: left; width: 100%'
+          >
+            こんにちは。 便利屋まち助の三品です。
+          </div>
+          <div
+            data-pencil-name="経験について"
+            style='box-sizing: border-box; color: #3A3A3A; font-family: "Zen Kaku Gothic New", system-ui, sans-serif; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: 0px; line-height: 29px; text-align: left; width: 100%'
+          >
+            私は人と話すことや体を動かすことが好きで、これまで川のガイドや、さまざまな現場仕事を経験してきました。
+          </div>
+          <div
+            data-pencil-name="暮らしの困りごと導入"
+            style='box-sizing: border-box; color: #3A3A3A; font-family: "Zen Kaku Gothic New", system-ui, sans-serif; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: 0px; line-height: 29px; text-align: left; width: 100%'
+          >
+            日々の暮らしのなかには、
+          </div>
+          <div
+            data-pencil-name="ご依頼例"
+            style="align-items: flex-start; background-color: #FFFAF0; border-radius: 16px; box-sizing: border-box; display: flex; flex-direction: row; flex-shrink: 0; gap: 16px; height: fit-content; justify-content: flex-start; width: 100%"
+          >
+            <div
+              data-pencil-name="『電球を交換してほしい』"
+              style="align-items: center; background-color: #FFFFFF; border-radius: 18px; box-sizing: border-box; display: flex; flex-direction: column; flex: 1 1 0; gap: 10px; height: 116px; justify-content: center; outline-offset: -0.5px; outline: 1px solid #E0E0E0; padding: 20px"
+            >
+              <svg
+                data-pencil-name="『電球を交換してほしい』アイコン"
+                data-icon-name="message-circle"
+                data-icon-set="lucide"
+                viewBox="0 0 13.99993896484375 14"
+                preserveAspectRatio="xMidYMid meet"
+                xmlns="http://www.w3.org/2000/svg"
+                style="box-sizing: border-box; flex-shrink: 0; height: 16px; width: 16px"
+              >
+                <path
+                  d="M6.80518 0.58789q-0.5332 0.01367-1.10059 0.1333-0.56738 0.11963-1.06982 0.31445-1.3877 0.56055-2.396 1.67481-1.0083 1.11084-1.41162 2.55322-0.30762 1.09375-0.22559 2.21485 0.08545 1.11768 0.54688 2.15332l0.01367 0.04101q0.06836 0.14014 0.07519 0.22559 0.01025 0.08203-0.04785 0.29394-0.04102 0.15381-0.20849 0.66992l-0.05811 0.14014q-0.30762 0.98096-0.33496 1.1211-0.01367 0.16748 0.02734 0.37255 0.04443 0.20166 0.14014 0.35547 0.05811 0.09912 0.17432 0.21875 0.11963 0.11621 0.21875 0.17432 0.16748 0.0957 0.3623 0.14014 0.19824 0.04101 0.3794 0.02734 0.12646-0.02734 1.14843-0.32129l0.14014-0.04443q0.54688-0.15381 0.70068-0.19483 0.22217-0.05469 0.29737-0.04785 0.07861 0.00684 0.20508 0.06152l0.02734 0.01368q0.88184 0.37939 1.97559 0.50586 0.16748 0.02734 0.59472 0.02734 0.42725 0 0.62207-0.02734 0.85449-0.08545 1.64405-0.3794 0.79297-0.29395 1.47998-0.78271 0.93652-0.65967 1.5791-1.60987 0.646-0.95361 0.92627-2.05761 0.28027-1.10742 0.15381-2.23877-0.12647-1.13477-0.646-2.17383-0.66992-1.35693-1.90381-2.27979-1.23047-0.92627-2.72754-1.17578-0.63232-0.11279-1.30224-0.09912z m0.58789 1.17578q1.38428 0.11279 2.5122 0.86133 1.12793 0.74854 1.77051 1.98242 0.40674 0.79639 0.5332 1.75 0.02734 0.22217 0.02735 0.64258 0 0.42041-0.02735 0.65967-0.16748 1.24414-0.85449 2.26611-0.68701 1.02197-1.76367 1.63721-0.57422 0.32471-1.24756 0.50586-0.66992 0.18115-1.32959 0.18115-1.07666 0-2.12597-0.44775-0.19824-0.08545-0.31788-0.11963-0.11621-0.03418-0.28711-0.04785-0.23584-0.01367-0.45458 0.02734-0.21533 0.04102-1.04249 0.28027-1.0083 0.29395-1.01513 0.28711-0.00684-0.00684 0.30078-0.95703 0.30762-0.95361 0.32129-1.10742 0.07178-0.44775-0.14014-0.9126l-0.14014-0.34863q-0.38965-0.96729-0.3623-2.03711 0.02734-1.06982 0.46143-2.02344 0.44775-0.99463 1.25097-1.72265 0.80664-0.72803 1.82178-1.0835 1.01514-0.35547 2.10889-0.27344z"
+                  fill="#E8833A"
+                ></path>
+              </svg>
+              <div
+                data-pencil-name="『電球を交換してほしい』テキスト"
+                style='box-sizing: border-box; color: #3A3A3A; font-family: "Zen Kaku Gothic New", system-ui, sans-serif; font-size: 15px; font-style: normal; font-weight: 700; letter-spacing: 0px; line-height: 27px; text-align: center; width: 100%'
+              >
+                『電球を交換してほしい』
+              </div>
+            </div>
+            <div
+              data-pencil-name="『草むしりを手伝ってほしい』"
+              style="align-items: center; background-color: #FFFFFF; border-radius: 18px; box-sizing: border-box; display: flex; flex-direction: column; flex: 1 1 0; gap: 10px; height: 116px; justify-content: center; outline-offset: -0.5px; outline: 1px solid #E0E0E0; padding: 20px"
+            >
+              <svg
+                data-pencil-name="『草むしりを手伝ってほしい』アイコン"
+                data-icon-name="message-circle"
+                data-icon-set="lucide"
+                viewBox="0 0 13.99993896484375 14"
+                preserveAspectRatio="xMidYMid meet"
+                xmlns="http://www.w3.org/2000/svg"
+                style="box-sizing: border-box; flex-shrink: 0; height: 16px; width: 16px"
+              >
+                <path
+                  d="M6.80518 0.58789q-0.5332 0.01367-1.10059 0.1333-0.56738 0.11963-1.06982 0.31445-1.3877 0.56055-2.396 1.67481-1.0083 1.11084-1.41162 2.55322-0.30762 1.09375-0.22559 2.21485 0.08545 1.11768 0.54688 2.15332l0.01367 0.04101q0.06836 0.14014 0.07519 0.22559 0.01025 0.08203-0.04785 0.29394-0.04102 0.15381-0.20849 0.66992l-0.05811 0.14014q-0.30762 0.98096-0.33496 1.1211-0.01367 0.16748 0.02734 0.37255 0.04443 0.20166 0.14014 0.35547 0.05811 0.09912 0.17432 0.21875 0.11963 0.11621 0.21875 0.17432 0.16748 0.0957 0.3623 0.14014 0.19824 0.04101 0.3794 0.02734 0.12646-0.02734 1.14843-0.32129l0.14014-0.04443q0.54688-0.15381 0.70068-0.19483 0.22217-0.05469 0.29737-0.04785 0.07861 0.00684 0.20508 0.06152l0.02734 0.01368q0.88184 0.37939 1.97559 0.50586 0.16748 0.02734 0.59472 0.02734 0.42725 0 0.62207-0.02734 0.85449-0.08545 1.64405-0.3794 0.79297-0.29395 1.47998-0.78271 0.93652-0.65967 1.5791-1.60987 0.646-0.95361 0.92627-2.05761 0.28027-1.10742 0.15381-2.23877-0.12647-1.13477-0.646-2.17383-0.66992-1.35693-1.90381-2.27979-1.23047-0.92627-2.72754-1.17578-0.63232-0.11279-1.30224-0.09912z m0.58789 1.17578q1.38428 0.11279 2.5122 0.86133 1.12793 0.74854 1.77051 1.98242 0.40674 0.79639 0.5332 1.75 0.02734 0.22217 0.02735 0.64258 0 0.42041-0.02735 0.65967-0.16748 1.24414-0.85449 2.26611-0.68701 1.02197-1.76367 1.63721-0.57422 0.32471-1.24756 0.50586-0.66992 0.18115-1.32959 0.18115-1.07666 0-2.12597-0.44775-0.19824-0.08545-0.31788-0.11963-0.11621-0.03418-0.28711-0.04785-0.23584-0.01367-0.45458 0.02734-0.21533 0.04102-1.04249 0.28027-1.0083 0.29395-1.01513 0.28711-0.00684-0.00684 0.30078-0.95703 0.30762-0.95361 0.32129-1.10742 0.07178-0.44775-0.14014-0.9126l-0.14014-0.34863q-0.38965-0.96729-0.3623-2.03711 0.02734-1.06982 0.46143-2.02344 0.44775-0.99463 1.25097-1.72265 0.80664-0.72803 1.82178-1.0835 1.01514-0.35547 2.10889-0.27344z"
+                  fill="#E8833A"
+                ></path>
+              </svg>
+              <div
+                data-pencil-name="『草むしりを手伝ってほしい』テキスト"
+                style='box-sizing: border-box; color: #3A3A3A; font-family: "Zen Kaku Gothic New", system-ui, sans-serif; font-size: 15px; font-style: normal; font-weight: 700; letter-spacing: 0px; line-height: 27px; text-align: center; width: 100%'
+              >
+                『草むしりを手伝ってほしい』
+              </div>
+            </div>
+            <div
+              data-pencil-name="『家具を移動したい』"
+              style="align-items: center; background-color: #FFFFFF; border-radius: 18px; box-sizing: border-box; display: flex; flex-direction: column; flex: 1 1 0; gap: 10px; height: 116px; justify-content: center; outline-offset: -0.5px; outline: 1px solid #E0E0E0; padding: 20px"
+            >
+              <svg
+                data-pencil-name="『家具を移動したい』アイコン"
+                data-icon-name="message-circle"
+                data-icon-set="lucide"
+                viewBox="0 0 13.99993896484375 14"
+                preserveAspectRatio="xMidYMid meet"
+                xmlns="http://www.w3.org/2000/svg"
+                style="box-sizing: border-box; flex-shrink: 0; height: 16px; width: 16px"
+              >
+                <path
+                  d="M6.80518 0.58789q-0.5332 0.01367-1.10059 0.1333-0.56738 0.11963-1.06982 0.31445-1.3877 0.56055-2.396 1.67481-1.0083 1.11084-1.41162 2.55322-0.30762 1.09375-0.22559 2.21485 0.08545 1.11768 0.54688 2.15332l0.01367 0.04101q0.06836 0.14014 0.07519 0.22559 0.01025 0.08203-0.04785 0.29394-0.04102 0.15381-0.20849 0.66992l-0.05811 0.14014q-0.30762 0.98096-0.33496 1.1211-0.01367 0.16748 0.02734 0.37255 0.04443 0.20166 0.14014 0.35547 0.05811 0.09912 0.17432 0.21875 0.11963 0.11621 0.21875 0.17432 0.16748 0.0957 0.3623 0.14014 0.19824 0.04101 0.3794 0.02734 0.12646-0.02734 1.14843-0.32129l0.14014-0.04443q0.54688-0.15381 0.70068-0.19483 0.22217-0.05469 0.29737-0.04785 0.07861 0.00684 0.20508 0.06152l0.02734 0.01368q0.88184 0.37939 1.97559 0.50586 0.16748 0.02734 0.59472 0.02734 0.42725 0 0.62207-0.02734 0.85449-0.08545 1.64405-0.3794 0.79297-0.29395 1.47998-0.78271 0.93652-0.65967 1.5791-1.60987 0.646-0.95361 0.92627-2.05761 0.28027-1.10742 0.15381-2.23877-0.12647-1.13477-0.646-2.17383-0.66992-1.35693-1.90381-2.27979-1.23047-0.92627-2.72754-1.17578-0.63232-0.11279-1.30224-0.09912z m0.58789 1.17578q1.38428 0.11279 2.5122 0.86133 1.12793 0.74854 1.77051 1.98242 0.40674 0.79639 0.5332 1.75 0.02734 0.22217 0.02735 0.64258 0 0.42041-0.02735 0.65967-0.16748 1.24414-0.85449 2.26611-0.68701 1.02197-1.76367 1.63721-0.57422 0.32471-1.24756 0.50586-0.66992 0.18115-1.32959 0.18115-1.07666 0-2.12597-0.44775-0.19824-0.08545-0.31788-0.11963-0.11621-0.03418-0.28711-0.04785-0.23584-0.01367-0.45458 0.02734-0.21533 0.04102-1.04249 0.28027-1.0083 0.29395-1.01513 0.28711-0.00684-0.00684 0.30078-0.95703 0.30762-0.95361 0.32129-1.10742 0.07178-0.44775-0.14014-0.9126l-0.14014-0.34863q-0.38965-0.96729-0.3623-2.03711 0.02734-1.06982 0.46143-2.02344 0.44775-0.99463 1.25097-1.72265 0.80664-0.72803 1.82178-1.0835 1.01514-0.35547 2.10889-0.27344z"
+                  fill="#E8833A"
+                ></path>
+              </svg>
+              <div
+                data-pencil-name="『家具を移動したい』テキスト"
+                style='box-sizing: border-box; color: #3A3A3A; font-family: "Zen Kaku Gothic New", system-ui, sans-serif; font-size: 15px; font-style: normal; font-weight: 700; letter-spacing: 0px; line-height: 27px; text-align: center; width: 100%'
+              >
+                『家具を移動したい』
+              </div>
+            </div>
+            <div
+              data-pencil-name="『高齢の親の様子を見てきてほしい』"
+              style="align-items: center; background-color: #FFFFFF; border-radius: 18px; box-sizing: border-box; display: flex; flex-direction: column; flex: 1 1 0; gap: 10px; height: 116px; justify-content: center; outline-offset: -0.5px; outline: 1px solid #E0E0E0; padding: 20px"
+            >
+              <svg
+                data-pencil-name="『高齢の親の様子を見てきてほしい』アイコン"
+                data-icon-name="message-circle"
+                data-icon-set="lucide"
+                viewBox="0 0 13.99993896484375 14"
+                preserveAspectRatio="xMidYMid meet"
+                xmlns="http://www.w3.org/2000/svg"
+                style="box-sizing: border-box; flex-shrink: 0; height: 16px; width: 16px"
+              >
+                <path
+                  d="M6.80518 0.58789q-0.5332 0.01367-1.10059 0.1333-0.56738 0.11963-1.06982 0.31445-1.3877 0.56055-2.396 1.67481-1.0083 1.11084-1.41162 2.55322-0.30762 1.09375-0.22559 2.21485 0.08545 1.11768 0.54688 2.15332l0.01367 0.04101q0.06836 0.14014 0.07519 0.22559 0.01025 0.08203-0.04785 0.29394-0.04102 0.15381-0.20849 0.66992l-0.05811 0.14014q-0.30762 0.98096-0.33496 1.1211-0.01367 0.16748 0.02734 0.37255 0.04443 0.20166 0.14014 0.35547 0.05811 0.09912 0.17432 0.21875 0.11963 0.11621 0.21875 0.17432 0.16748 0.0957 0.3623 0.14014 0.19824 0.04101 0.3794 0.02734 0.12646-0.02734 1.14843-0.32129l0.14014-0.04443q0.54688-0.15381 0.70068-0.19483 0.22217-0.05469 0.29737-0.04785 0.07861 0.00684 0.20508 0.06152l0.02734 0.01368q0.88184 0.37939 1.97559 0.50586 0.16748 0.02734 0.59472 0.02734 0.42725 0 0.62207-0.02734 0.85449-0.08545 1.64405-0.3794 0.79297-0.29395 1.47998-0.78271 0.93652-0.65967 1.5791-1.60987 0.646-0.95361 0.92627-2.05761 0.28027-1.10742 0.15381-2.23877-0.12647-1.13477-0.646-2.17383-0.66992-1.35693-1.90381-2.27979-1.23047-0.92627-2.72754-1.17578-0.63232-0.11279-1.30224-0.09912z m0.58789 1.17578q1.38428 0.11279 2.5122 0.86133 1.12793 0.74854 1.77051 1.98242 0.40674 0.79639 0.5332 1.75 0.02734 0.22217 0.02735 0.64258 0 0.42041-0.02735 0.65967-0.16748 1.24414-0.85449 2.26611-0.68701 1.02197-1.76367 1.63721-0.57422 0.32471-1.24756 0.50586-0.66992 0.18115-1.32959 0.18115-1.07666 0-2.12597-0.44775-0.19824-0.08545-0.31788-0.11963-0.11621-0.03418-0.28711-0.04785-0.23584-0.01367-0.45458 0.02734-0.21533 0.04102-1.04249 0.28027-1.0083 0.29395-1.01513 0.28711-0.00684-0.00684 0.30078-0.95703 0.30762-0.95361 0.32129-1.10742 0.07178-0.44775-0.14014-0.9126l-0.14014-0.34863q-0.38965-0.96729-0.3623-2.03711 0.02734-1.06982 0.46143-2.02344 0.44775-0.99463 1.25097-1.72265 0.80664-0.72803 1.82178-1.0835 1.01514-0.35547 2.10889-0.27344z"
+                  fill="#E8833A"
+                ></path>
+              </svg>
+              <div
+                data-pencil-name="『高齢の親の様子を見てきてほしい』テキスト"
+                style='box-sizing: border-box; color: #3A3A3A; font-family: "Zen Kaku Gothic New", system-ui, sans-serif; font-size: 15px; font-style: normal; font-weight: 700; letter-spacing: 0px; line-height: 27px; text-align: center; width: 100%'
+              >
+                『高齢の親の様子を見てきてほしい』
+              </div>
+            </div>
+          </div>
+          <div
+            data-pencil-name="困りごとの背景"
+            style='box-sizing: border-box; color: #3A3A3A; font-family: "Zen Kaku Gothic New", system-ui, sans-serif; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: 0px; line-height: 29px; text-align: left; width: 100%'
+          >
+            といった、大きな工事や専門業者を呼ぶほどではないけれど、一人では大変なことや、時間がなくて困ってしまうことがたくさんあります。
+          </div>
+          <div
+            data-pencil-name="地域密着の便利屋"
+            style='box-sizing: border-box; color: #3A3A3A; font-family: "Zen Kaku Gothic New", system-ui, sans-serif; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: 0px; line-height: 29px; text-align: left; width: 100%'
+          >
+            まち助は、そんな日常の『ちょっと困った』を気軽に頼める、地域密着の便利屋です。
+          </div>
+          <div
+            data-pencil-name="相談への呼びかけ"
+            style="align-items: center; background-color: #E8833A; border-radius: 16px; box-sizing: border-box; display: flex; flex-direction: column; flex-shrink: 0; gap: 9px; height: fit-content; justify-content: flex-start; padding: 16px; width: 100%"
+          >
+            <div
+              data-pencil-name="相談への呼びかけ引用"
+              style='box-sizing: border-box; color: #FFFFFF; font-family: "Zen Maru Gothic", system-ui, sans-serif; font-size: 16px; font-style: normal; font-weight: 700; letter-spacing: 0px; line-height: 29px; text-align: center; width: 100%'
+            >
+              『こんなことを頼んでもいいのかな？』
+            </div>
+          </div>
+          <div
+            data-pencil-name="相談への思い"
+            style='box-sizing: border-box; color: #3A3A3A; font-family: "Zen Kaku Gothic New", system-ui, sans-serif; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: 0px; line-height: 29px; text-align: left; width: 100%'
+          >
+            そう思うような小さなことでも、まずはお気軽にご相談ください。お客様一人ひとりのお困りごとに寄り添い、これまでの経験を生かしながら、丁寧で誠実に対応いたします。
+          </div>
+          <div
+            data-pencil-name="目指す存在"
+            style='box-sizing: border-box; color: #3A3A3A; font-family: "Zen Kaku Gothic New", system-ui, sans-serif; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: 0px; line-height: 29px; text-align: left; width: 100%'
+          >
+            困ったときに『まち助に頼んでみよう』と思っていただけるような、地域の皆さまにとって身近で頼れる存在を目指しています。
+          </div>
+          <div
+            data-pencil-name="結びの言葉"
+            style='box-sizing: border-box; color: #3A3A3A; font-family: "Zen Kaku Gothic New", system-ui, sans-serif; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: 0px; line-height: 29px; text-align: left; width: 100%'
+          >
+            皆さまの暮らしを支えるお手伝いができるよう、一つひとつのご依頼に全力で取り組んでまいります。
+          </div>
+        </div>
+      </div>
+      <div
+        data-pencil-name="プロフィールセクション"
+        style="align-items: flex-start; background-color: #FFFAF0; box-sizing: border-box; display: flex; flex-direction: column; flex-shrink: 0; gap: 28px; height: fit-content; justify-content: flex-start; padding: 80px 120px; width: 100%"
+      >
+        <div
+          data-pencil-name="プロフィール見出し"
+          style="align-items: center; box-sizing: border-box; display: flex; flex-direction: row; flex-shrink: 0; gap: 14px; height: fit-content; justify-content: flex-start; width: 100%"
+        >
+          <div
+            data-pencil-name="プロフィール見出しアクセント"
+            style="background-color: #E8833A; border-radius: 3px; box-sizing: border-box; flex-shrink: 0; height: 36px; width: 6px"
+          ></div>
+          <div
+            data-pencil-name="プロフィールタイトル"
+            style='box-sizing: border-box; color: #3F5A3A; font-family: "Zen Maru Gothic", system-ui, sans-serif; font-size: 30px; font-style: normal; font-weight: 700; letter-spacing: 0px; line-height: normal; text-align: left; white-space: nowrap'
+          >
+            プロフィール
+          </div>
+        </div>
+        <div
+          data-pencil-name="プロフィール項目一覧"
+          style="align-items: flex-start; box-sizing: border-box; display: flex; flex-direction: column; flex-shrink: 0; gap: 24px; height: fit-content; justify-content: flex-start; width: 100%"
+        >
+          <div
+            data-pencil-name="得意な仕事カード"
+            style="align-items: flex-start; background-color: #FFFFFF; border-radius: 18px; box-sizing: border-box; display: flex; flex-direction: row; flex-shrink: 0; gap: 20px; height: fit-content; justify-content: flex-start; outline-offset: -0.5px; outline: 1px solid #E0E0E0; padding: 32px; width: 100%"
+          >
+            <div
+              data-pencil-name="得意な仕事アイコン背景"
+              style="align-items: center; background-color: #FFFAF0; border-radius: 21px; box-sizing: border-box; display: flex; flex-direction: row; flex-shrink: 0; gap: 0px; height: 42px; justify-content: center; width: 42px"
+            >
+              <svg
+                data-pencil-name="得意な仕事アイコン"
+                data-icon-name="briefcase-business"
+                data-icon-set="lucide"
+                viewBox="0 0 13.99993896484375 14"
+                preserveAspectRatio="xMidYMid meet"
+                xmlns="http://www.w3.org/2000/svg"
+                style="box-sizing: border-box; flex-shrink: 0; height: 20px; width: 20px"
+              >
+                <path
+                  d="M5.65674 0.60156q-0.44775 0.04102-0.84766 0.32129-0.3999 0.28027-0.58105 0.70069-0.08545 0.21191-0.1128 0.37939-0.02734 0.16748-0.02734 0.50244l-0.01367 0.42041-0.96729 0q-0.79639 0-1.00146 0.01367-0.20166 0.01367-0.41016 0.09912-0.37939 0.15381-0.65967 0.46143-0.28027 0.30762-0.39306 0.70068-0.02734 0.14014-0.04102 0.32129-0.01367 0.23926-0.02734 0.92285l0.01367 4.84668q0.01367 0.48877 0.02734 0.5708 0.12646 0.54688 0.50928 0.90577 0.38623 0.35547 0.91944 0.45459 0.16748 0.02734 4.95605 0.02734 4.78857 0 4.95605-0.02734 0.5332-0.09912 0.91602-0.45459 0.38623-0.35889 0.5127-0.90577 0.01367-0.08203 0.02734-0.5708l0.01367-4.84668q-0.01367-0.68359-0.02734-0.92285-0.01367-0.18115-0.04102-0.32129-0.11279-0.39307-0.39307-0.70068-0.28027-0.30762-0.65966-0.46143-0.2085-0.08545-0.41358-0.09912-0.20166-0.01367-0.99804-0.01367l-0.96729 0-0.01367-0.42041q0-0.28027-0.00684-0.37598-0.00684-0.09912-0.03418-0.21191-0.15381-0.56055-0.57422-0.91602-0.42041-0.35889-0.99462-0.41357-0.16748-0.01367-1.31592-0.00684-1.14844 0.00684-1.32959 0.02051z m2.74463 1.20313q0.19482 0.09912 0.29394 0.29394 0.02734 0.07178 0.03418 0.13672 0.00684 0.06152 0.02051 0.32813l0 0.3623-3.5 0 0-0.3623q0.01367-0.2666 0.02051-0.32813 0.00684-0.06494 0.03418-0.13672 0.08545-0.18115 0.22558-0.24951l0-0.01367q0.08203-0.04443 0.16748-0.05811 0.08545-0.01367 0.36573-0.02734l2.23877 0.01367 0.09912 0.04102z m3.35986 2.29687q0.30762 0.04102 0.43408 0.32129l0.04102 0.09912 0 2.74463-0.19483 0.12647q-0.32471 0.18115-0.77246 0.39306-0.44775 0.2085-0.79638 0.34864-1.20312 0.43408-2.51905 0.57421-0.29395 0.02734-0.95361 0.02735-0.65967 0-0.95361-0.02735-1.31592-0.14014-2.51905-0.57421-0.34863-0.14014-0.79638-0.34864-0.44775-0.21191-0.77246-0.39306l-0.19483-0.12647 0-2.74463 0.04102-0.09912q0.05811-0.12646 0.16748-0.21533 0.11279-0.09229 0.23242-0.11279 0.11963-0.02051 4.78174-0.02051 4.66211 0 4.7749 0.02734z m-4.91504 2.33789q-0.25293 0.08545-0.37939 0.30762-0.04102 0.08545-0.04102 0.23926 0 0.15381 0.03418 0.23926 0.0376 0.08203 0.1333 0.18115 0.15381 0.15381 0.3999 0.16748 0.24609 0.01367 0.42041-0.16065 0.17432-0.17432 0.17432-0.41357 0-0.23926-0.16748-0.3999-0.16748-0.16064-0.39307-0.17432-0.14014 0-0.18115 0.01367z m-4.39551 2.50537q1.55176 0.70068 3.24707 0.89551 0.4751 0.05811 1.09717 0.07178 0.62549 0.01367 1.03223-0.02734 2.25244-0.19824 4.15625-1.14844l0.2666-0.12647-0.01367 2.04395-0.04102 0.09912q-0.11279 0.2085-0.32471 0.29394l-0.0957 0.02735-9.5498 0-0.09571-0.02735q-0.21191-0.08545-0.3247-0.29394l-0.04102-0.09912-0.01367-2.04395 0.2666 0.12647q0.25293 0.12646 0.43408 0.20849z"
+                  fill="#5FA246"
+                ></path>
+              </svg>
+            </div>
+            <div
+              data-pencil-name="得意な仕事内容"
+              style="align-items: flex-start; box-sizing: border-box; display: flex; flex-direction: column; flex: 1 1 0; gap: 8px; height: fit-content; justify-content: flex-start"
+            >
+              <div
+                data-pencil-name="得意な仕事"
+                style='box-sizing: border-box; color: #3F5A3A; font-family: "Zen Maru Gothic", system-ui, sans-serif; font-size: 22px; font-style: normal; font-weight: 700; letter-spacing: 0px; line-height: normal; text-align: left; width: 100%'
+              >
+                得意な仕事・これまでの経験
+              </div>
+              <div
+                data-pencil-name="得意な仕事・経験本文"
+                style='box-sizing: border-box; color: #3A3A3A; font-family: "Zen Kaku Gothic New", system-ui, sans-serif; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: 0px; line-height: 29px; text-align: left; width: 100%'
+              >
+                高校時代から、不用品回収や家の片付けのアルバイトを経験してきました。
+                <br />
+                <br />
+                社会人になってからは、木造住宅の現場監督として約4年間勤務。これまでの経験を生かし、不用品回収や片付けをはじめ、住まいに関するさまざまなお困りごとに対応します。
+              </div>
+            </div>
+          </div>
+          <div
+            data-pencil-name="資格・免許カード"
+            style="align-items: flex-start; background-color: #FFFFFF; border-radius: 18px; box-sizing: border-box; display: flex; flex-direction: row; flex-shrink: 0; gap: 20px; height: fit-content; justify-content: flex-start; outline-offset: -0.5px; outline: 1px solid #E0E0E0; padding: 32px; width: 100%"
+          >
+            <div
+              data-pencil-name="資格・免許アイコン背景"
+              style="align-items: center; background-color: #FFFAF0; border-radius: 21px; box-sizing: border-box; display: flex; flex-direction: row; flex-shrink: 0; gap: 0px; height: 42px; justify-content: center; width: 42px"
+            >
+              <svg
+                data-pencil-name="資格・免許アイコン"
+                data-icon-name="badge-check"
+                data-icon-set="lucide"
+                viewBox="0 0 13.99993896484375 14"
+                preserveAspectRatio="xMidYMid meet"
+                xmlns="http://www.w3.org/2000/svg"
+                style="box-sizing: border-box; flex-shrink: 0; height: 20px; width: 20px"
+              >
+                <path
+                  d="M6.56592 0.61523q-0.4751 0.07178-0.90918 0.3042-0.43408 0.229-0.76904 0.57764l-0.1128 0.11279-0.22558 0q-0.37598 0-0.72803 0.08545-0.72803 0.18115-1.26807 0.68018-0.53662 0.49561-0.78955 1.19287-0.08203 0.25293-0.11279 0.4375-0.02734 0.18115-0.04102 0.44775l0 0.32129-0.09912 0.08203q-0.0957 0.08545-0.22217 0.23926-0.50586 0.60156-0.65966 1.37061-0.04102 0.21191-0.04102 0.5332 0 0.32129 0.04102 0.5332 0.15381 0.76904 0.65966 1.37061 0.12646 0.15381 0.22217 0.23926l0.09912 0.08203 0 0.32129q0.01367 0.2666 0.04102 0.45117 0.03076 0.18115 0.11279 0.43408 0.22559 0.61523 0.68701 1.09033 0.22217 0.22559 0.43067 0.37256 0.21191 0.14697 0.49219 0.2666 0.28027 0.11621 0.52294 0.16748 0.24609 0.04785 0.55713 0.06153l0.32129 0 0.15381 0.15381q0.64258 0.65967 1.59619 0.84082 0.18115 0.02734 0.48194 0.02734 0.30078 0 0.46826-0.02734 0.90918-0.16748 1.56885-0.81348l0.18115-0.18115 0.32129 0q0.23926-0.01367 0.36572-0.02735 0.12646-0.01367 0.30762-0.07177 0.65967-0.16748 1.16211-0.6084 0.50244-0.44092 0.76904-1.05616 0.23926-0.54688 0.23926-1.1621l0-0.23926 0.11279-0.1128q0.30762-0.29395 0.52978-0.69043 0.22559-0.3999 0.32471-0.83398 0.15381-0.72803-0.07861-1.45605-0.23242-0.72803-0.76221-1.23047l-0.12646-0.12647 0-0.23926q0-1.18945-0.81348-2.03027-0.34863-0.3623-0.78271-0.58789-0.34863-0.16748-0.65967-0.23584-0.30762-0.07178-0.6836-0.07178l-0.22558 0-0.1128-0.11279q-0.27686-0.30762-0.67675-0.52978-0.3999-0.22559-0.80664-0.30762-0.22217-0.05811-0.52979-0.06494-0.30762-0.00684-0.5332 0.0205z m0.75537 1.17579q0.32129 0.04443 0.6084 0.23242 0.28711 0.18799 0.51269 0.4956 0.15381 0.21191 0.32129 0.2666 0.09912 0.04102 0.16748 0.04102 0.07178 0 0.19824-0.01367 0.46143-0.08203 0.86475 0.04443 0.40674 0.12305 0.71436 0.43408 0.31104 0.30762 0.43408 0.7212 0.12646 0.41016 0.04443 0.85791-0.02734 0.21191 0.02734 0.37255 0.05469 0.16064 0.26661 0.31446 0.48877 0.35205 0.66992 0.86816 0.08545 0.25293 0.08545 0.57422 0 0.32129-0.08545 0.57422-0.19482 0.5332-0.68359 0.88183-0.19824 0.14014-0.25294 0.30079-0.05469 0.16064-0.02734 0.37255 0.06836 0.38965-0.02392 0.76221-0.08887 0.36914-0.31446 0.66309-0.41699 0.51953-1.06299 0.64599-0.11279 0.02734-0.30078 0.02051-0.18799-0.00684-0.34179-0.02051-0.25293-0.04102-0.39991 0.02051-0.14697 0.06152-0.31445 0.30078-0.29395 0.37939-0.70752 0.56738-0.41357 0.18799-0.86816 0.15381-0.45459-0.03418-0.84766-0.31445-0.23584-0.15381-0.44775-0.43408-0.14014-0.21191-0.29395-0.27344-0.15381-0.06152-0.37597-0.03418-0.35205 0.05469-0.59131 0.02734-0.58789-0.09912-0.99121-0.48876-0.646-0.63232-0.49219-1.56885 0.01367-0.16748 0.00683-0.25977-0.00684-0.09229-0.06152-0.18799-0.04102-0.08545-0.09912-0.14013-0.05469-0.05811-0.19482-0.15381-0.48877-0.36572-0.67334-0.99463-0.02734-0.12646-0.02735-0.42041 0-0.29395 0.02735-0.42041 0.18457-0.62891 0.65966-0.98096 0.23584-0.16748 0.29737-0.28369 0.06494-0.11963 0.07177-0.21191 0.00684-0.09229-0.00683-0.25977-0.08203-0.50244 0.07861-0.94336 0.16064-0.44092 0.54004-0.73486 0.33496-0.2666 0.75537-0.35205 0.10938-0.02734 0.31787-0.02735 0.21191 0 0.36573 0.02735 0.12646 0.01367 0.16748 0.01367 0.04443 0 0.11279-0.01367 0.14014-0.02734 0.22217-0.08887 0.08545-0.06494 0.18457-0.20508 0.25293-0.34863 0.56738-0.52978 0.31445-0.18457 0.74854-0.22559 0.16748-0.01367 0.44775 0.02735z m1.28857 3.47265q-0.06836 0.02734-0.12646 0.05127-0.05469 0.02051-1.06299 1.02539l-0.99463 0.99463-0.40674-0.40332q-0.2666-0.2666-0.3623-0.33838-0.12646-0.11279-0.19824-0.14013-0.06836-0.02734-0.19483-0.02735-0.12646 0-0.16748 0.01367-0.04102 0.01367-0.09912 0.04102-0.18115 0.09912-0.28027 0.2666-0.04102 0.08545-0.04102 0.25293l0 0.01367q0 0.14014 0.03418 0.21192 0.0376 0.06836 0.17774 0.22216 0.0957 0.11279 0.48876 0.50586l0.04102 0.04102q0.42041 0.42041 0.55371 0.54687 0.1333 0.12305 0.20166 0.15381 0.14014 0.06836 0.29395 0.05469 0.15381-0.01367 0.28027-0.09912 0.07178-0.05469 1.28857-1.27149 0.86816-0.86816 1.04932-1.06298 0.18457-0.19824 0.21191-0.27002 0.0957-0.27686-0.0581-0.52295-0.15381-0.24609-0.44775-0.25977-0.12646-0.01367-0.18116 0z"
+                  fill="#5FA246"
+                ></path>
+              </svg>
+            </div>
+            <div
+              data-pencil-name="資格・免許内容"
+              style="align-items: flex-start; box-sizing: border-box; display: flex; flex-direction: column; flex: 1 1 0; gap: 8px; height: fit-content; justify-content: flex-start"
+            >
+              <div
+                data-pencil-name="資格・免許"
+                style='box-sizing: border-box; color: #3F5A3A; font-family: "Zen Maru Gothic", system-ui, sans-serif; font-size: 20px; font-style: normal; font-weight: 700; letter-spacing: 0px; line-height: normal; text-align: left; width: 100%'
+              >
+                資格・免許
+              </div>
+              <div
+                data-pencil-name="資格・免許2列一覧"
+                style="align-items: flex-start; box-sizing: border-box; display: flex; flex-direction: row; flex-shrink: 0; gap: 32px; height: fit-content; justify-content: flex-start; width: 100%"
+              >
+                <div
+                  data-pencil-name="資格・免許 左列"
+                  style='box-sizing: border-box; color: #3A3A3A; flex: 1 1 0; font-family: "Zen Kaku Gothic New", system-ui, sans-serif; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: 0px; line-height: 29px; text-align: left'
+                >
+                  普通自動車運転免許（MT）
+                  <br />
+                  フォークリフト
+                  <br />
+                  高所作業車
+                  <br />
+                  ガス溶接・溶断
+                </div>
+                <div
+                  data-pencil-name="資格・免許 右列"
+                  style='box-sizing: border-box; color: #3A3A3A; flex: 1 1 0; font-family: "Zen Kaku Gothic New", system-ui, sans-serif; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: 0px; line-height: 29px; text-align: left'
+                >
+                  小型建設機械
+                  <br />
+                  刈払機
+                  <br />
+                  古物商許可
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            data-pencil-name="出身地・趣味"
+            style="align-items: flex-start; box-sizing: border-box; display: flex; flex-direction: row; flex-shrink: 0; gap: 24px; height: fit-content; justify-content: flex-start; width: 100%"
+          >
+            <div
+              data-pencil-name="出身地カード"
+              style="align-items: flex-start; background-color: #FFFFFF; border-radius: 18px; box-sizing: border-box; display: flex; flex-direction: row; flex: 1 1 0; gap: 18px; height: 257px; justify-content: flex-start; outline-offset: -0.5px; outline: 1px solid #E0E0E0; padding: 32px"
+            >
+              <div
+                data-pencil-name="出身地アイコン背景"
+                style="align-items: center; background-color: #FFFAF0; border-radius: 21px; box-sizing: border-box; display: flex; flex-direction: row; flex-shrink: 0; gap: 0px; height: 42px; justify-content: center; width: 42px"
+              >
+                <svg
+                  data-pencil-name="出身地アイコン"
+                  data-icon-name="map-pin"
+                  data-icon-set="lucide"
+                  viewBox="0 0 13.99993896484375 14"
+                  preserveAspectRatio="xMidYMid meet"
+                  xmlns="http://www.w3.org/2000/svg"
+                  style="box-sizing: border-box; flex-shrink: 0; height: 20px; width: 20px"
+                >
+                  <path
+                    d="M6.71973 0.60156q-0.81006 0.02734-1.56885 0.31446-0.75537 0.28711-1.41162 0.80664-0.19824 0.15381-0.48535 0.44775-0.28711 0.29395-0.44092 0.48877-0.42041 0.57422-0.67334 1.17578-0.24951 0.60156-0.34863 1.31592-0.04102 0.23926-0.03418 0.68017 0.00684 0.44092 0.03418 0.69385 0.14014 0.88184 0.56054 1.79102 0.50586 1.07666 1.44922 2.27637 0.94678 1.19629 2.19092 2.31738 0.22559 0.19482 0.32129 0.27343 0.09912 0.0752 0.19824 0.11622 0.22217 0.11279 0.48877 0.11279 0.2666 0 0.48877-0.11279 0.11279-0.04101 0.19482-0.10254 0.08545-0.06494 0.31104-0.25977 0.96387-0.86816 1.79101-1.83203 0.82715-0.96728 1.37403-1.86621 0.75537-1.27148 0.98437-2.42676 0.23242-1.15527-0.06152-2.29004-0.35205-1.35693-1.35693-2.36523-0.36572-0.37939-0.74512-0.64258-0.37598-0.2666-0.8374-0.46484-1.12109-0.51611-2.42334-0.44776z m0.88183 1.18946q0.67334 0.09912 1.28174 0.42041 0.6084 0.32129 1.0835 0.82714 0.68701 0.71436 0.95361 1.66114 0.2666 0.94336 0.08203 1.90722-0.34863 1.72266-2.26611 3.92041-0.32129 0.36572-1.00147 1.03907-0.68018 0.66992-0.73486 0.66992-0.05469 0-0.73486-0.66992-0.68018-0.67334-1.00147-1.03907-1.79102-2.05762-2.21142-3.70849-0.08545-0.32129-0.1128-0.69385-0.02734-0.37256 0-0.69385 0.07178-0.66992 0.34864-1.29199 0.28027-0.62549 0.75879-1.11426 0.51611-0.54688 1.20312-0.875 0.68701-0.33154 1.44238-0.38623 0.12646-0.01367 0.44776 0 0.32129 0.01367 0.46142 0.02735z m-0.85449 1.72265q-0.7417 0.08545-1.28857 0.57422-0.5708 0.50244-0.7417 1.26123-0.04102 0.15381-0.04102 0.42041 0 0.26318 0.02734 0.43408 0.11279 0.72803 0.63233 1.25782 0.44775 0.46143 1.06299 0.62548 0.61523 0.16064 1.22363-0.00683 0.6084-0.1709 1.05957-0.63233 0.50244-0.5332 0.62891-1.24414 0.01367-0.1709 0.01367-0.43408 0-0.2666-0.04102-0.40674-0.1709-0.77246-0.7417-1.2749-0.46484-0.40674-1.0664-0.5332-0.15381-0.02734-0.3794-0.04102-0.22217-0.01367-0.34863 0z m0.51953 1.18946q0.29395 0.05811 0.54688 0.30761 0.18115 0.18457 0.26318 0.37256 0.08545 0.18799 0.08545 0.44092 0 0.5332-0.39307 0.88183-0.32129 0.29395-0.76904 0.29395-0.44775 0-0.76904-0.29395-0.44775-0.40674-0.3794-1.0083 0.01367-0.2085 0.09571-0.36914 0.08545-0.16406 0.25293-0.33154 0.1709-0.16748 0.35205-0.24268 0.18115-0.07861 0.43408-0.07861 0.16748 0 0.28027 0.02735z"
+                    fill="#5FA246"
+                  ></path>
+                </svg>
+              </div>
+              <div
+                data-pencil-name="出身地内容"
+                style="align-items: flex-start; box-sizing: border-box; display: flex; flex-direction: column; flex: 1 1 0; gap: 8px; height: fit-content; justify-content: flex-start"
+              >
+                <div
+                  data-pencil-name="出身地"
+                  style='box-sizing: border-box; color: #3F5A3A; font-family: "Zen Maru Gothic", system-ui, sans-serif; font-size: 20px; font-style: normal; font-weight: 700; letter-spacing: 0px; line-height: normal; text-align: left; width: 100%'
+                >
+                  出身地
+                </div>
+                <div
+                  data-pencil-name="出身地本文"
+                  style='box-sizing: border-box; color: #3A3A3A; font-family: "Zen Kaku Gothic New", system-ui, sans-serif; font-size: 15px; font-style: normal; font-weight: 400; letter-spacing: 0px; line-height: 26px; text-align: left; width: 100%'
+                >
+                  岐阜県美濃加茂市
+                  <br />
+                  <br />
+                  地元・美濃加茂市を中心に、地域の皆さまにとって身近で頼れる存在を目指しています。
+                </div>
+              </div>
+            </div>
+            <div
+              data-pencil-name="趣味カード"
+              style="align-items: flex-start; background-color: #FFFFFF; border-radius: 18px; box-sizing: border-box; display: flex; flex-direction: row; flex: 1 1 0; gap: 18px; height: 257px; justify-content: flex-start; outline-offset: -0.5px; outline: 1px solid #E0E0E0; padding: 32px"
+            >
+              <div
+                data-pencil-name="趣味アイコン背景"
+                style="align-items: center; background-color: #FFFAF0; border-radius: 21px; box-sizing: border-box; display: flex; flex-direction: row; flex-shrink: 0; gap: 0px; height: 42px; justify-content: center; width: 42px"
+              >
+                <svg
+                  data-pencil-name="趣味アイコン"
+                  data-icon-name="heart"
+                  data-icon-set="lucide"
+                  viewBox="0 0 13.99993896484375 14"
+                  preserveAspectRatio="xMidYMid meet"
+                  xmlns="http://www.w3.org/2000/svg"
+                  style="box-sizing: border-box; flex-shrink: 0; height: 20px; width: 20px"
+                >
+                  <path
+                    d="M9.37891 1.75q-0.64258 0.04102-1.24414 0.30078-0.60156 0.25977-1.04932 0.68018l-0.08545 0.06836-0.11279-0.09571q-0.40674-0.35205-0.88184-0.57422-0.51611-0.25293-1.13476-0.35205-0.16748-0.02734-0.51954-0.0205-0.34863 0.00684-0.52978 0.03418-1.24414 0.19824-2.11231 1.0664-1.0083 1.0083-1.10742 2.41992-0.08203 0.98096 0.39307 1.94825 0.19482 0.37598 0.44092 0.72119 0.24609 0.3418 0.67675 0.80322 0.21191 0.23926 1.97559 1.94824 1.76367 1.70557 1.87647 1.79102 0.44775 0.33496 1.03564 0.33496 0.58789 0 1.03564-0.33496 0.11279-0.08545 1.88331-1.80811 1.77051-1.72266 1.98242-1.93115 0.41699-0.46143 0.66308-0.80322 0.24609-0.34521 0.44092-0.72119 0.35205-0.70068 0.3999-1.43555 0.04785-0.73486-0.18798-1.46289-0.19824-0.61865-0.61866-1.14844-0.41699-0.5332-0.97754-0.86816-0.49219-0.30762-1.08691-0.45459-0.59473-0.14697-1.15527-0.10596z m0.71435 1.20313q0.32129 0.05811 0.66309 0.21874 0.34521 0.16064 0.61181 0.38282 0.30762 0.2666 0.53663 0.67334 0.23242 0.40674 0.30419 0.82715 0.02734 0.18115 0.02735 0.46826 0 0.28711-0.02735 0.45459-0.14014 0.72803-0.74169 1.4834-0.29395 0.36572-0.66651 0.73828-0.36914 0.36914-1.84228 1.79785l-1.29883 1.24414q-0.31104 0.29395-0.43408 0.36572-0.08545 0.05469-0.19825 0.05469l-0.05468 0q-0.11279 0-0.21192-0.05469-0.10938-0.07178-0.43408-0.37939-0.23584-0.2085-1.07666-1.02198l-0.2085-0.20849q-1.28857-1.24756-1.66113-1.60986-0.36914-0.36572-0.59473-0.63233-0.43408-0.48877-0.67334-0.90918-0.23584-0.42041-0.32128-0.86816-0.02734-0.16748-0.02735-0.44776 0-0.28027 0.02735-0.44775 0.11279-0.61523 0.50244-1.13135 0.39307-0.51953 0.93994-0.77246 0.50586-0.22559 1.03564-0.25293 0.40674-0.01367 0.76905 0.08545 0.36572 0.0957 0.65283 0.2666 0.28711 0.16748 0.59472 0.46143 0.21191 0.19482 0.34864 0.2666 0.14014 0.06836 0.36572 0.06836 0.22559 0 0.37256-0.06836 0.14697-0.07178 0.35547-0.28027 0.30762-0.29395 0.58789-0.46143 0.28027-0.1709 0.64258-0.2666 0.56055-0.15723 1.13476-0.04443z"
+                    fill="#5FA246"
+                  ></path>
+                </svg>
+              </div>
+              <div
+                data-pencil-name="趣味内容"
+                style="align-items: flex-start; box-sizing: border-box; display: flex; flex-direction: column; flex: 1 1 0; gap: 8px; height: fit-content; justify-content: flex-start"
+              >
+                <div
+                  data-pencil-name="趣味"
+                  style='box-sizing: border-box; color: #3F5A3A; font-family: "Zen Maru Gothic", system-ui, sans-serif; font-size: 20px; font-style: normal; font-weight: 700; letter-spacing: 0px; line-height: normal; text-align: left; width: 100%'
+                >
+                  趣味
+                </div>
+                <div
+                  data-pencil-name="趣味本文"
+                  style='box-sizing: border-box; color: #3A3A3A; font-family: "Zen Kaku Gothic New", system-ui, sans-serif; font-size: 15px; font-style: normal; font-weight: 400; letter-spacing: 0px; line-height: 26px; text-align: left; width: 100%'
+                >
+                  筋トレ
+                  <br />
+                  リバーカヤック
+                  <br />
+                  ラフティング
+                  <br />
+                  車中泊
+                  <br />
+                  <br />
+                  体を動かすことや自然の中で過ごすことが好きです。
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        data-pencil-name="仕事で大切にしていること"
+        style="align-items: flex-start; background-color: #E8833A; box-sizing: border-box; display: flex; flex-direction: column; flex-shrink: 0; gap: 32px; height: fit-content; justify-content: flex-start; padding: 80px 120px; width: 100%"
+      >
+        <div
+          data-pencil-name="大切にしていること見出し"
+          style='box-sizing: border-box; color: #FFFFFF; font-family: "Zen Maru Gothic", system-ui, sans-serif; font-size: 30px; font-style: normal; font-weight: 700; letter-spacing: 0px; line-height: normal; text-align: center; width: 100%'
+        >
+          仕事で大切にしていること
+        </div>
+        <div
+          data-pencil-name="大切にしていること一覧"
+          style="align-items: flex-start; box-sizing: border-box; display: flex; flex-direction: row; flex-shrink: 0; gap: 24px; height: fit-content; justify-content: flex-start; width: 100%"
+        >
+          <div
+            data-pencil-name="お困りごとに寄り添うカード"
+            style="align-items: center; background-color: #FFFFFF; border-radius: 16px; box-sizing: border-box; display: flex; flex-direction: column; flex: 1 1 0; gap: 18px; height: 220px; justify-content: center; padding: 30px"
+          >
+            <div
+              data-pencil-name="お困りごとに寄り添うアイコン背景"
+              style="align-items: center; background-color: #FFFAF0; border-radius: 24px; box-sizing: border-box; display: flex; flex-direction: row; flex-shrink: 0; gap: 0px; height: 48px; justify-content: center; width: 48px"
+            >
+              <svg
+                data-pencil-name="お困りごとに寄り添うアイコン"
+                data-icon-name="hand-heart"
+                data-icon-set="lucide"
+                viewBox="0 0 13.99993896484375 14"
+                preserveAspectRatio="xMidYMid meet"
+                xmlns="http://www.w3.org/2000/svg"
+                style="box-sizing: border-box; flex-shrink: 0; height: 23px; width: 23px"
+              >
+                <path
+                  d="M7.64258 1.20313q-0.66992 0.11279-1.16211 0.60156-0.64258 0.65967-0.64258 1.5415 0 0.4751 0.17432 0.90235 0.17432 0.42725 0.55371 0.90234l0.08545 0.09912-0.46485 0q-0.4751 0-0.69384 0.03418-0.21533 0.03418-0.42383 0.1333-0.25293 0.12646-0.3794 0.2666-0.06836 0.06836-1.49023 1.44238-1.42188 1.37061-1.43555 1.37745-0.01367 0.00684-0.14697-0.11621-0.1333-0.12646-0.23242-0.17432-0.0957-0.05127-0.24951-0.0376-0.22559 0.01367-0.38623 0.17432-0.16064 0.16064-0.16065 0.3999l0 0.04102q0 0.11279 0.05469 0.19824 0.08545 0.12305 0.40674 0.46142l1.46972 1.46973q1.31592 1.31592 1.58936 1.58252 0.27344 0.2666 0.34521 0.29395 0.2085 0.06836 0.42383-0.01368 0.21875-0.08545 0.31787-0.28027 0.04102-0.09912 0.04102-0.24609 0-0.14697-0.0376-0.23584-0.03418-0.09229-0.14355-0.20508l-0.1128-0.12647 0.16748-0.1538q0.18115-0.14014 0.30762-0.26661l0.04102-0.04101q0.07178-0.08545 0.14697-0.10596 0.07861-0.02051 0.33154-0.03418l1.24414-0.01367q1.08008 0 1.29541-0.01367 0.21875-0.01367 0.45459-0.07178l0-0.01367q0.2666-0.05469 0.53321-0.19483 0.19482-0.09912 0.3623-0.22217 0.1709-0.12646 0.42041-0.37939l1.51416-1.44238q1.18945-1.14844 1.27832-1.26123 0.09229-0.11279 0.18115-0.28711 0.09229-0.17432 0.13672-0.31445 0.18115-0.60156-0.07177-1.18262-0.25293-0.58105-0.79639-0.86133-0.11279-0.05469-0.1128-0.06152 0-0.00684 0.05469-0.10596 0.12646-0.22559 0.23242-0.48193 0.10596-0.25977 0.13331-0.47168 0.02734-0.15381 0.02734-0.36231 0-0.2085-0.02734-0.36572-0.11279-0.68359-0.61524-1.17578-0.63233-0.62891-1.52783-0.62891-0.65625 0-1.18945 0.33496l-0.12647 0.08545-0.16748-0.09912q-0.36572-0.22217-0.7998-0.29394-0.14014-0.02734-0.36573-0.02735-0.22217 0-0.3623 0.02735z m0.64599 1.1621q0.2085 0.05811 0.4751 0.29395 0.15381 0.12646 0.23584 0.17773 0.08545 0.04785 0.21192 0.0752 0.35205 0.05469 0.68701-0.25977 0.33496-0.31445 0.75537-0.31445 0.29394 0 0.52978 0.15381 0.23926 0.15381 0.3794 0.42041 0.07178 0.12646 0.09228 0.32471 0.02051 0.19482-0.0205 0.34863-0.05811 0.23584-0.23926 0.52978-0.16748 0.25293-0.39307 0.48536-0.22217 0.229-1.34326 1.26464l-0.32129 0.30762-0.82715-0.75537q-0.81006-0.76904-0.95019-0.90918-0.19824-0.21191-0.33155-0.44092-0.12988-0.23242-0.18798-0.42724-0.02734-0.12646-0.02735-0.30762 0-0.18115 0.04102-0.28027 0.19824-0.60156 0.86816-0.71436 0.14014-0.01367 0.36572 0.02734z m3.65381 3.5q0.22217 0.11279 0.29053 0.34522 0.07178 0.229-0.05127 0.45459-0.04443 0.0957-1.36035 1.35693l-1.4834 1.41504q-0.19482 0.19482-0.37256 0.29395-0.17432 0.0957-0.41015 0.15381-0.08545 0.01367-0.36573 0.02734l-2.51904 0.02734q-0.19482 0-0.30762 0.02735-0.42041 0.12647-0.68701 0.39306-0.09912 0.09912-0.33496 0.30762l-0.23926 0.19482-0.75537-0.75537q-0.75537-0.75537-0.75537-0.7622 0-0.00684 1.32959-1.29541l1.49707-1.44239q0.09912-0.0957 0.14014-0.12304 0.04102-0.03076 0.11621-0.04444 0.07861-0.01367 1.07324-0.01367l0.99463 0 0.08545 0.04102q0.28027 0.14014 0.32812 0.43408 0.04785 0.29395-0.17431 0.51953-0.08545 0.08203-0.15039 0.11279-0.06152 0.02734-0.22901 0.02735-0.12646 0.01367-0.56054 0.01367l-0.75538 0.01367-0.09912 0.04102q-0.23584 0.11279-0.32129 0.35205-0.08203 0.23584 0.02735 0.46142 0.04443 0.06836 0.11963 0.14014 0.07861 0.06836 0.16064 0.11279l0.09912 0.04102 1.58252 0 0.16748-0.04102q0.34863-0.09912 0.60157-0.29394 0.11279-0.08545 1.41503-1.28858l0.18116-0.16748q0.68701-0.63232 0.86816-0.7998 0.2666-0.23584 0.3794-0.29395 0.08203-0.04102 0.19482-0.04101l0.04102 0q0.15381 0.01367 0.22558 0.05468l0.01367 0z"
+                  fill="#E8833A"
+                ></path>
+              </svg>
+            </div>
+            <div
+              data-pencil-name="お困りごとに寄り添うテキスト"
+              style="align-items: center; box-sizing: border-box; display: flex; flex-direction: column; flex-shrink: 0; gap: 10px; height: fit-content; justify-content: flex-start; width: 100%"
+            >
+              <div
+                data-pencil-name="お困りごとに寄り添う"
+                style='box-sizing: border-box; color: #3F5A3A; font-family: "Zen Maru Gothic", system-ui, sans-serif; font-size: 21px; font-style: normal; font-weight: 700; letter-spacing: 0px; line-height: normal; text-align: center; width: 100%'
+              >
+                お困りごとに寄り添う
+              </div>
+              <div
+                data-pencil-name="お困りごとに寄り添う説明"
+                style='box-sizing: border-box; color: #7A7A7A; font-family: "Zen Kaku Gothic New", system-ui, sans-serif; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: 0px; line-height: 28px; text-align: center; width: 100%'
+              >
+                お客様一人ひとりのお話を伺い、状況に合わせて対応します。
+              </div>
+            </div>
+          </div>
+          <div
+            data-pencil-name="丁寧で誠実な対応カード"
+            style="align-items: center; background-color: #FFFFFF; border-radius: 16px; box-sizing: border-box; display: flex; flex-direction: column; flex: 1 1 0; gap: 18px; height: 220px; justify-content: center; padding: 30px"
+          >
+            <div
+              data-pencil-name="丁寧で誠実な対応アイコン背景"
+              style="align-items: center; background-color: #FFFAF0; border-radius: 24px; box-sizing: border-box; display: flex; flex-direction: row; flex-shrink: 0; gap: 0px; height: 48px; justify-content: center; width: 48px"
+            >
+              <svg
+                data-pencil-name="丁寧で誠実な対応アイコン"
+                data-icon-name="sparkles"
+                data-icon-set="lucide"
+                viewBox="0 0 13.99993896484375 14"
+                preserveAspectRatio="xMidYMid meet"
+                xmlns="http://www.w3.org/2000/svg"
+                style="box-sizing: border-box; flex-shrink: 0; height: 23px; width: 23px"
+              >
+                <path
+                  d="M6.84619 0.58789q-0.28027 0.04102-0.54687 0.22559-0.29395 0.2085-0.40674 0.57422-0.02734 0.08203-0.3418 1.75683-0.31445 1.67139-0.35889 1.76367-0.04102 0.08887-0.10937 0.16065-0.07178 0.08203-0.15381 0.11279-0.11279 0.04102-0.4751 0.12305l-1.28857 0.23926q-1.68164 0.32129-1.77734 0.34863-0.23926 0.07178-0.44434 0.27002-0.20166 0.19482-0.29395 0.44092-0.08887 0.24268-0.06152 0.50244 0.02734 0.25635 0.16748 0.4956 0.09912 0.16748 0.27344 0.30762 0.17432 0.14014 0.35889 0.19824 0.0957 0.02734 1.76367 0.34863l1.28515 0.25293q0.37939 0.06836 0.50586 0.10938 0.08203 0.04443 0.15381 0.11279 0.05469 0.08545 0.09912 0.16748 0.04102 0.12646 0.10938 0.50586l0.23926 1.24414q0.32129 1.68164 0.34863 1.76367 0.15381 0.46484 0.58789 0.67335 0.2666 0.14014 0.51953 0.14013 0.25293 0 0.51953-0.14013 0.43408-0.2085 0.58789-0.67335 0.02734-0.08203 0.3418-1.74658 0.31445-1.66797 0.3418-1.72265 0.02734-0.11279 0.12646-0.2085 0.09912-0.09912 0.21191-0.14355 0.06836-0.02734 1.73291-0.3418 1.66797-0.31445 1.75-0.3418 0.46484-0.15381 0.67335-0.58789 0.2666-0.51953 0-1.03906-0.09912-0.2085-0.28028-0.36231-0.18115-0.15381-0.39307-0.22558-0.0957-0.02734-1.77734-0.34863l-1.23047-0.23926q-0.37939-0.06836-0.50586-0.10938-0.0957-0.03076-0.15381-0.08545-0.10938-0.11279-0.1538-0.23925-0.02734-0.06836-0.3418-1.73291-0.31445-1.66797-0.3418-1.75-0.14014-0.46484-0.60498-0.68702-0.14014-0.07178-0.31445-0.09912-0.17432-0.02734-0.3418-0.01367z m4.73047 0.01367q-0.12305 0.01367-0.24268 0.09912-0.11963 0.08203-0.1914 0.19483-0.04102 0.08545-0.05469 0.20508-0.01367 0.11621-0.01367 0.35546l0 0.29395-0.36572 0q-0.26318 0.01367-0.32813 0.02051-0.06152 0.00684-0.1333 0.03418-0.2666 0.12646-0.31445 0.42041-0.04785 0.29395 0.14697 0.50586 0.08545 0.08203 0.18115 0.14013 0.08545 0.02734 0.14697 0.03418 0.06494 0.00684 0.31788 0.02051l0.34863 0 0 0.34863q0.01367 0.25293 0.02051 0.31788 0.00683 0.06152 0.03418 0.14697 0.05811 0.0957 0.14013 0.18115 0.21191 0.19482 0.50586 0.14697 0.29395-0.04785 0.42041-0.31445 0.02734-0.08545 0.03418-0.14014 0.00684-0.05811 0.02051-0.32129l0-0.36572 0.29395 0q0.32129 0 0.45458-0.03418 0.1333-0.03418 0.25293-0.15381 0.11963-0.11963 0.15381-0.31445 0.03418-0.19824-0.04785-0.35205-0.04443-0.08203-0.12305-0.15039-0.0752-0.07178-0.1538-0.10596-0.07519-0.0376-0.14014-0.04443-0.06152-0.00684-0.32813-0.02051l-0.3623 0 0-0.34863q0-0.23926-0.00684-0.30762-0.00684-0.07178-0.03418-0.12646-0.08545-0.21191-0.25293-0.30762-0.16748-0.09912-0.37939-0.05811z m-4.26904 2.7583q0.23926 1.26123 0.29394 1.55518 0.05811 0.29395 0.1128 0.42041 0.12646 0.30762 0.38281 0.56738 0.25977 0.25635 0.56738 0.38281 0.12646 0.05469 0.41358 0.1128 0.28711 0.05469 1.54833 0.29394 1.56885 0.29395 1.57569 0.30762 0.00684 0.01367-1.60303 0.31445-1.60986 0.30078-1.72266 0.32813-0.39307 0.09912-0.72119 0.40674-0.32813 0.30762-0.46826 0.70068-0.04443 0.09912-0.09912 0.43408l-0.32129 1.63721q-0.25293 1.37402-0.2666 1.37402-0.01367 0-0.30762-1.55517-0.23926-1.2749-0.29736-1.56202-0.05469-0.28711-0.10938-0.41357-0.09912-0.23584-0.30078-0.46484-0.20166-0.23242-0.41357-0.35889-0.14014-0.09912-0.2666-0.14014-0.16748-0.04102-0.57422-0.12646l-1.28516-0.25293q-1.6543-0.30762-1.64062-0.32129 0.01367-0.01367 1.60986-0.30762l1.51416-0.29394q0.25293-0.05811 0.38965-0.1128 0.29395-0.11279 0.56738-0.37597 0.27344-0.2666 0.3999-0.57422 0.05469-0.12646 0.10938-0.41358 0.05811-0.28711 0.29736-1.56201 0.29395-1.55518 0.30762-1.55517 0.01367 0 0.30762 1.55517z m-5.33203 6.59326q-0.31104 0.07178-0.57764 0.23926-0.26318 0.16748-0.46143 0.42041-0.34863 0.4751-0.34863 1.05615 0 0.58105 0.3418 1.04249 0.34521 0.46143 0.91943 0.6289 0.64258 0.18457 1.25781-0.10937 0.32471-0.15381 0.56055-0.44092 0.23926-0.28711 0.35205-0.65283 0.02734-0.11279 0.03418-0.18116 0.00684-0.06836 0.02051-0.28027 0-0.25293-0.02051-0.3623-0.02051-0.11279-0.10596-0.32471-0.15381-0.36231-0.46826-0.63574-0.31445-0.27344-0.70752-0.38623-0.15381-0.02734-0.3999-0.03418-0.24268-0.00684-0.39648 0.0205z m0.60156 1.18946q0.24951 0.11279 0.31787 0.38623 0.07178 0.27344-0.0957 0.48193-0.12646 0.15381-0.29395 0.21192-0.16748 0.05469-0.33496 0-0.25293-0.07178-0.37939-0.33497-0.04102-0.09912-0.03418-0.23242 0.00684-0.1333 0.04785-0.23242 0.09912-0.22217 0.32129-0.29736 0.22559-0.07861 0.45117 0.01709z"
+                  fill="#E8833A"
+                ></path>
+              </svg>
+            </div>
+            <div
+              data-pencil-name="丁寧で誠実な対応テキスト"
+              style="align-items: center; box-sizing: border-box; display: flex; flex-direction: column; flex-shrink: 0; gap: 10px; height: fit-content; justify-content: flex-start; width: 100%"
+            >
+              <div
+                data-pencil-name="丁寧で誠実な対応"
+                style='box-sizing: border-box; color: #3F5A3A; font-family: "Zen Maru Gothic", system-ui, sans-serif; font-size: 21px; font-style: normal; font-weight: 700; letter-spacing: 0px; line-height: normal; text-align: center; width: 100%'
+              >
+                丁寧で誠実な対応
+              </div>
+              <div
+                data-pencil-name="丁寧で誠実な対応説明"
+                style='box-sizing: border-box; color: #7A7A7A; font-family: "Zen Kaku Gothic New", system-ui, sans-serif; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: 0px; line-height: 28px; text-align: center; width: 100%'
+              >
+                小さなご依頼にも、一つひとつ丁寧に取り組みます。
+              </div>
+            </div>
+          </div>
+          <div
+            data-pencil-name="地域の身近な存在にカード"
+            style="align-items: center; background-color: #FFFFFF; border-radius: 16px; box-sizing: border-box; display: flex; flex-direction: column; flex: 1 1 0; gap: 18px; height: 220px; justify-content: center; padding: 30px"
+          >
+            <div
+              data-pencil-name="地域の身近な存在にアイコン背景"
+              style="align-items: center; background-color: #FFFAF0; border-radius: 24px; box-sizing: border-box; display: flex; flex-direction: row; flex-shrink: 0; gap: 0px; height: 48px; justify-content: center; width: 48px"
+            >
+              <svg
+                data-pencil-name="地域の身近な存在にアイコン"
+                data-icon-name="house-heart"
+                data-icon-set="lucide"
+                viewBox="0 0 13.99993896484375 14"
+                preserveAspectRatio="xMidYMid meet"
+                xmlns="http://www.w3.org/2000/svg"
+                style="box-sizing: border-box; flex-shrink: 0; height: 23px; width: 23px"
+              >
+                <path
+                  d="M6.81885 0.60156q-0.47852 0.02734-0.85449 0.32129-0.12646 0.09912-2.21143 1.89014l-1.60986 1.38769q-0.44775 0.38965-0.58789 0.56055-0.11279 0.10938-0.19825 0.28027l0 0.01368q-0.08203 0.15381-0.12646 0.30761l-0.05469 0.15381 0.01367 5.4585q0 0.43408 0.02735 0.51953 0.14014 0.48877 0.46826 0.82031 0.33154 0.32813 0.82031 0.46826 0.08545 0.02734 0.71436 0.02735l3.78027 0.01367 3.78027-0.01367q0.62891 0 0.71436-0.02735 0.48877-0.14014 0.81689-0.46826 0.33154-0.33154 0.47168-0.82031 0.02734-0.08545 0.02735-0.51953l0.01367-5.4585-0.05469-0.15381q-0.04443-0.15381-0.12646-0.30761l0-0.01368q-0.08545-0.1709-0.18457-0.28027-0.14014-0.1709-0.5879-0.54687l-3.78027-3.24707q-0.52979-0.43408-1.27148-0.36573z m0.43408 1.2168q0.08203 0.04443 2.11914 1.78076 2.03711 1.73633 2.1499 1.85938l0.02735 0.03076q0.07178 0.06836 0.08545 0.16748 0.01367 0.12646 0.02734 0.58789l0 4.96972-0.04102 0.09913q-0.14014 0.27685-0.43408 0.33496-0.09912 0.02734-4.18701 0.02734-4.08789 0-4.18701-0.02734-0.29395-0.05811-0.43408-0.33496l-0.04102-0.09913 0-4.99706q0.01367-0.44775 0.04102-0.5879 0.01367-0.09912 0.08545-0.1538l0.05468-0.05811q0.08545-0.08203 2.08496-1.79785 2.00293-1.71582 2.08838-1.77051 0.11279-0.08545 0.27344-0.09228 0.16064-0.00684 0.28711 0.06152z m-1.60986 3.45898q-0.51953 0.09912-0.9126 0.43409-0.38965 0.33496-0.55713 0.84082-0.05811 0.16748-0.07178 0.28027-0.01367 0.11279-0.01367 0.32129 0 0.2085 0.02734 0.35889 0.02734 0.14697 0.09571 0.32812 0.07178 0.18115 0.14355 0.28027 0.08203 0.12646 0.30762 0.37598l0.71435 0.78613q0.51611 0.55713 0.68702 0.7417 0.2085 0.22217 0.33496 0.30762 0.08203 0.05469 0.23926 0.11279 0.0957 0.02734 0.15722 0.03418 0.06494 0.00684 0.20508 0.00684 0.14014 0 0.20166-0.00684 0.06494-0.00684 0.16064-0.03418 0.15723-0.0581 0.23926-0.11279 0.12646-0.08545 0.35205-0.30762 0.16748-0.18457 0.6836-0.7417 0.85449-0.93994 0.93994-1.05273 0.29395-0.41699 0.32812-0.94336 0.03418-0.52637-0.20166-1.00147-0.08545-0.18115-0.25976-0.37597-0.17432-0.19824-0.35889-0.32471-0.42041-0.29395-0.93994-0.32812-0.51611-0.03418-0.97754 0.20166l-0.16748 0.08545-0.12646-0.06836q-0.22217-0.11279-0.40674-0.16065-0.18115-0.05127-0.43409-0.0581-0.24951-0.00684-0.38964 0.0205z m0.64257 1.20313q0.11279 0.05811 0.25293 0.19824 0.14014 0.14014 0.27344 0.18799 0.1333 0.04785 0.28711 0.02051 0.10938-0.01367 0.17774-0.05469 0.07178-0.04102 0.18457-0.15381 0.18115-0.18115 0.36572-0.22559 0.40332-0.11279 0.69726 0.18458 0.21191 0.2085 0.21875 0.4956 0.00684 0.28711-0.18798 0.50928-0.15381 0.1709-0.84766 0.92627-0.69385 0.75537-0.70752 0.75537-0.01367 0-0.64258-0.70068l-0.89892-0.98096q-0.14014-0.15381-0.18799-0.33496-0.04785-0.18115 0.00683-0.37598 0.09912-0.29395 0.3794-0.43408 0.08203-0.05811 0.13672-0.06494 0.05811-0.00684 0.18457-0.00684 0.12646 0 0.17431 0.01367 0.05127 0.01367 0.1333 0.04102z"
+                  fill="#E8833A"
+                ></path>
+              </svg>
+            </div>
+            <div
+              data-pencil-name="地域の身近な存在にテキスト"
+              style="align-items: center; box-sizing: border-box; display: flex; flex-direction: column; flex-shrink: 0; gap: 10px; height: fit-content; justify-content: flex-start; width: 100%"
+            >
+              <div
+                data-pencil-name="地域の身近な存在に"
+                style='box-sizing: border-box; color: #3F5A3A; font-family: "Zen Maru Gothic", system-ui, sans-serif; font-size: 21px; font-style: normal; font-weight: 700; letter-spacing: 0px; line-height: normal; text-align: center; width: 100%'
+              >
+                地域の身近な存在に
+              </div>
+              <div
+                data-pencil-name="地域の身近な存在に説明"
+                style='box-sizing: border-box; color: #7A7A7A; font-family: "Zen Kaku Gothic New", system-ui, sans-serif; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: 0px; line-height: 28px; text-align: center; width: 100%'
+              >
+                困ったときに気軽に頼っていただける便利屋を目指しています。
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        data-pencil-name="お客様へのメッセージ"
+        style="align-items: center; background-color: #FFFAF0; box-sizing: border-box; display: flex; flex-direction: row; flex-shrink: 0; gap: 48px; height: fit-content; justify-content: flex-start; padding: 80px 270px; width: 100%"
+      >
+        <div
+          data-pencil-name="メッセージ写真フレーム"
+          style="background-image: url('../public/44_photo_staff_smiling_river.png'); background-position: center; background-repeat: no-repeat; background-size: contain; border-radius: 18px; box-sizing: border-box; flex-shrink: 0; height: 203px; overflow: hidden; width: 360px"
+        ></div>
+        <div
+          data-pencil-name="お客様メッセージ情報"
+          style="align-items: flex-start; box-sizing: border-box; display: flex; flex-direction: column; flex: 1 1 0; gap: 20px; height: fit-content; justify-content: center"
+        >
+          <div
+            data-pencil-name="お客様へのメッセージ見出し"
+            style='box-sizing: border-box; color: #3F5A3A; font-family: "Zen Maru Gothic", system-ui, sans-serif; font-size: 30px; font-style: normal; font-weight: 700; letter-spacing: 0px; line-height: 45px; text-align: left; width: 100%'
+          >
+            どんな小さなことでも、お気軽にご相談ください
+          </div>
+          <div
+            data-pencil-name="お客様へのメッセージ本文"
+            style='box-sizing: border-box; color: #3A3A3A; font-family: "Zen Kaku Gothic New", system-ui, sans-serif; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: 0px; line-height: 28px; text-align: left; width: 100%'
+          >
+            『こんなことを頼んでもいいのかな？』と思うような内容でも大丈夫です。まずはお困りごとをお聞かせください。
+          </div>
+        </div>
+      </div>
+      <div
+        data-pencil-name="お問い合わせCTA"
+        style="align-items: center; background-color: #3E7FB0; box-sizing: border-box; display: flex; flex-direction: column; flex-shrink: 0; gap: 22px; height: fit-content; justify-content: flex-start; padding: 68px 120px; width: 100%"
+      >
+        <div
+          data-pencil-name="問い合わせイラスト"
+          style="align-items: center; box-sizing: border-box; display: flex; flex-direction: row; flex-shrink: 0; gap: 0px; height: 86px; justify-content: center; width: 94px"
+        >
+          <div
+            data-pencil-name="電話キャラクター"
+            style="background-image: url('../public/06_character_phone_yellow.png'); background-position: center; background-repeat: no-repeat; background-size: contain; box-sizing: border-box; flex-shrink: 0; height: 82px; width: 90px"
+          ></div>
+        </div>
+        <div
+          data-pencil-name="問い合わせ見出し"
+          style='box-sizing: border-box; color: #FFFFFF; font-family: "Zen Maru Gothic", system-ui, sans-serif; font-size: 32px; font-style: normal; font-weight: 700; letter-spacing: 0px; line-height: normal; text-align: center; width: 900px'
+        >
+          まち助へお気軽にご相談ください
+        </div>
+        <div
+          data-pencil-name="問い合わせ本文"
+          style='box-sizing: border-box; color: #FFFFFF; font-family: "Zen Kaku Gothic New", system-ui, sans-serif; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: 0px; line-height: 28px; text-align: center; width: 760px'
+        >
+          相談・お見積もりはお気軽にお問い合わせください。
+        </div>
+        <div
+          data-pencil-name="無料相談CTA"
+          style="align-items: center; background-color: #FFFFFF; border-radius: 29px; box-shadow: 0px 3px 8px 0px #7A7A7A; box-sizing: border-box; display: flex; flex-direction: row; flex-shrink: 0; gap: 9px; height: 58px; justify-content: center; width: 400px"
+        >
+          <svg
+            data-pencil-name="CTAメッセージアイコン"
+            data-icon-name="message-circle"
+            data-icon-set="lucide"
+            viewBox="0 0 13.99993896484375 14"
+            preserveAspectRatio="xMidYMid meet"
+            xmlns="http://www.w3.org/2000/svg"
+            style="box-sizing: border-box; flex-shrink: 0; height: 21px; width: 21px"
+          >
+            <path
+              d="M6.80518 0.58789q-0.5332 0.01367-1.10059 0.1333-0.56738 0.11963-1.06982 0.31445-1.3877 0.56055-2.396 1.67481-1.0083 1.11084-1.41162 2.55322-0.30762 1.09375-0.22559 2.21485 0.08545 1.11768 0.54688 2.15332l0.01367 0.04101q0.06836 0.14014 0.07519 0.22559 0.01025 0.08203-0.04785 0.29394-0.04102 0.15381-0.20849 0.66992l-0.05811 0.14014q-0.30762 0.98096-0.33496 1.1211-0.01367 0.16748 0.02734 0.37255 0.04443 0.20166 0.14014 0.35547 0.05811 0.09912 0.17432 0.21875 0.11963 0.11621 0.21875 0.17432 0.16748 0.0957 0.3623 0.14014 0.19824 0.04101 0.3794 0.02734 0.12646-0.02734 1.14843-0.32129l0.14014-0.04443q0.54688-0.15381 0.70068-0.19483 0.22217-0.05469 0.29737-0.04785 0.07861 0.00684 0.20508 0.06152l0.02734 0.01368q0.88184 0.37939 1.97559 0.50586 0.16748 0.02734 0.59472 0.02734 0.42725 0 0.62207-0.02734 0.85449-0.08545 1.64405-0.3794 0.79297-0.29395 1.47998-0.78271 0.93652-0.65967 1.5791-1.60987 0.646-0.95361 0.92627-2.05761 0.28027-1.10742 0.15381-2.23877-0.12647-1.13477-0.646-2.17383-0.66992-1.35693-1.90381-2.27979-1.23047-0.92627-2.72754-1.17578-0.63232-0.11279-1.30224-0.09912z m0.58789 1.17578q1.38428 0.11279 2.5122 0.86133 1.12793 0.74854 1.77051 1.98242 0.40674 0.79639 0.5332 1.75 0.02734 0.22217 0.02735 0.64258 0 0.42041-0.02735 0.65967-0.16748 1.24414-0.85449 2.26611-0.68701 1.02197-1.76367 1.63721-0.57422 0.32471-1.24756 0.50586-0.66992 0.18115-1.32959 0.18115-1.07666 0-2.12597-0.44775-0.19824-0.08545-0.31788-0.11963-0.11621-0.03418-0.28711-0.04785-0.23584-0.01367-0.45458 0.02734-0.21533 0.04102-1.04249 0.28027-1.0083 0.29395-1.01513 0.28711-0.00684-0.00684 0.30078-0.95703 0.30762-0.95361 0.32129-1.10742 0.07178-0.44775-0.14014-0.9126l-0.14014-0.34863q-0.38965-0.96729-0.3623-2.03711 0.02734-1.06982 0.46143-2.02344 0.44775-0.99463 1.25097-1.72265 0.80664-0.72803 1.82178-1.0835 1.01514-0.35547 2.10889-0.27344z"
+              fill="#3E7FB0"
+            ></path>
+          </svg>
+          <div
+            data-pencil-name="CTAテキスト"
+            style='box-sizing: border-box; color: #3E7FB0; font-family: "Zen Maru Gothic", system-ui, sans-serif; font-size: 17px; font-style: normal; font-weight: 700; letter-spacing: 0px; line-height: normal; text-align: left; white-space: nowrap'
+          >
+            まち助に相談してみる
+          </div>
+        </div>
+      </div>
+      <div
+        data-pencil-name="PCフッター"
+        style="background-color: #4A3B2C; background-image: url('../public/Codex 画像 2026年8月26日 19_17_27.png'); background-position: center; background-repeat: no-repeat; background-size: contain; box-sizing: border-box; flex-shrink: 0; height: 540px; overflow: hidden; position: relative; width: 1440px"
+      >
+        <div
+          data-pencil-name="フッターロゴ"
+          style="background-image: url('../public/49_logo_white_horizontal.png'); background-position: center; background-repeat: no-repeat; background-size: contain; box-sizing: border-box; height: 245px; left: 185px; position: absolute; top: 122px; width: 412px; z-index: 0"
+        ></div>
+        <div
+          data-pencil-name="フッター区切り線"
+          style="background-color: #FFFFFF; box-sizing: border-box; height: 210px; left: 720px; position: absolute; top: 122px; width: 1px; z-index: 1"
+        ></div>
+        <div
+          data-pencil-name="フッター情報"
+          style="align-items: center; box-sizing: border-box; display: flex; flex-direction: column; gap: 16px; height: 220px; justify-content: flex-start; left: 877px; position: absolute; top: 117px; width: 389px; z-index: 2"
+        >
+          <div
+            data-pencil-name="フッター住所"
+            style='box-sizing: border-box; color: #C9C2B8; font-family: "Kosugi Maru", system-ui, sans-serif; font-size: 23px; font-style: normal; font-weight: 400; letter-spacing: 0px; line-height: 31px; text-align: center; width: 100%'
+          >
+            〒505-0056
+            <br />
+            岐阜県美濃加茂市
+            <br />
+            加茂野町市橋
+          </div>
+          <div
+            data-pencil-name="フッター営業時間"
+            style='box-sizing: border-box; color: #C9C2B8; font-family: "Kosugi Maru", system-ui, sans-serif; font-size: 23px; font-style: normal; font-weight: 700; letter-spacing: 0px; line-height: normal; text-align: left; white-space: nowrap'
+          >
+            営業時間 9:00〜17:00
+          </div>
+          <div
+            data-pencil-name="フッター電話"
+            style="align-items: center; box-sizing: border-box; display: flex; flex-direction: row; flex-shrink: 0; gap: 4px; height: fit-content; justify-content: flex-start; width: fit-content"
+          >
+            <svg
+              data-pencil-name="電話アイコン"
+              data-icon-name="phone"
+              data-icon-set="lucide"
+              viewBox="0 0 13.99993896484375 14"
+              preserveAspectRatio="xMidYMid meet"
+              xmlns="http://www.w3.org/2000/svg"
+              style="box-sizing: border-box; flex-shrink: 0; height: 25px; width: 25px"
+            >
+              <path
+                d="M2.15674 0.60156q-0.29395 0.02734-0.58789 0.16748-0.29395 0.14014-0.50586 0.36573-0.30762 0.32129-0.43408 0.78271-0.02734 0.12646-0.03418 0.21191-0.00684 0.08203-0.00684 0.36231 0.01367 1.65088 0.53662 3.26074 0.52637 1.60986 1.49365 2.98389 0.5332 0.7417 1.2168 1.42871 0.68701 0.68359 1.42871 1.2168 1.37402 0.96729 2.99072 1.49365 1.6167 0.52295 3.25391 0.53662 0.28027 0 0.3623-0.00684 0.08545-0.00683 0.21192-0.03418 0.25293-0.07178 0.44092-0.18115 0.18799-0.11279 0.36914-0.29394 0.18457-0.18457 0.29394-0.37256 0.11279-0.18799 0.18457-0.44092l0.04102-0.16748 0-1.0083q0.01367-0.67334 0-0.92627-0.01367-0.30762-0.05127-0.46826-0.03418-0.16064-0.11621-0.35547-0.18115-0.36572-0.50586-0.61524-0.32129-0.25293-0.72803-0.33838-0.10938-0.01367-0.29394-0.02734l-0.92285 0q-0.84082 0-1.0459 0.01367-0.20166 0.01367-0.38282 0.07178-0.28027 0.08203-0.49218 0.25293-0.2085 0.16748-0.417 0.44434l-0.14013 0.17089-0.11279-0.04443q-0.22217-0.10938-0.54688-0.31103-0.32129-0.20508-0.51611-0.35889-1.07666-0.81348-1.80469-1.91748-0.09912-0.15723-0.2666-0.45117-0.16748-0.29395-0.18457-0.32813-0.01367-0.03418 0.15722-0.16064 0.52979-0.39307 0.69727-0.93653 0.07178-0.18457 0.07861-0.3999 0.00684-0.21875 0.00684-1.10058l0-1.10401-0.05469-0.15381q-0.11279-0.36572-0.35205-0.64599-0.23584-0.28027-0.56055-0.44776-0.29395-0.14014-0.6289-0.16748-0.16748-0.02734-1.02881-0.02734-0.86133 0-1.04248 0.02734z m2.17041 1.20313q0.08203 0.04443 0.15722 0.12304 0.07861 0.0752 0.11963 0.16065 0.04443 0.08203 0.05811 0.30078 0.01367 0.21533 0 0.91602l0 0.71435q-0.01367 0.2085-0.03418 0.28027-0.02051 0.06836-0.07861 0.13672l-0.01368 0q-0.05469 0.08545-0.25976 0.23243-0.20166 0.14697-0.29395 0.25292-0.08887 0.10254-0.16064 0.24952-0.06836 0.14697-0.09912 0.25293-0.02734 0.10596-0.02735 0.27343 0 0.19482 0.06836 0.38623 0.07178 0.18799 0.29737 0.56739 1.20313 2.1123 3.30175 3.30175 0.36572 0.21191 0.55372 0.2837 0.19141 0.06836 0.38623 0.06836 0.28027-0.01367 0.5332-0.12647 0.12305-0.07178 0.229-0.16064 0.10596-0.09228 0.2461-0.27344 0.16748-0.22559 0.25293-0.28027l0-0.01368q0.08203-0.05811 0.14355-0.07861 0.06494-0.02051 0.27344-0.03418l0.72803 0q0.72803-0.01367 0.93652 0 0.21191 0.01367 0.29736 0.07178 0.16748 0.0957 0.25293 0.26318l0.04102 0.09912 0 1.02198q0 0.7417 0 0.88867 0 0.14697-0.02735 0.20508-0.12646 0.26318-0.37939 0.33496-0.15381 0.05469-0.74854 0.01367-0.59473-0.04102-1.1416-0.14014-0.96387-0.16748-1.90381-0.53662-0.93652-0.37256-1.75-0.89209-1.37061-0.89551-2.38574-2.16699-1.01514-1.2749-1.56885-2.81641-0.55371-1.5415-0.56738-3.13769 0-0.26318 0-0.31787 0-0.05811 0.04102-0.12989 0.08545-0.18115 0.22558-0.24951 0.08203-0.05811 0.16065-0.07178 0.07861-0.01367 0.30078-0.02734l1.73633 0.01367 0.09912 0.04102z"
+                fill="#FFFFFF"
+              ></path>
+            </svg>
+            <div
+              data-pencil-name="電話番号"
+              style='box-sizing: border-box; color: #FFFFFF; font-family: "Kosugi Maru", system-ui, sans-serif; font-size: 26px; font-style: normal; font-weight: 700; letter-spacing: 0px; line-height: normal; text-align: left; white-space: nowrap'
+            >
+              090-2343-9557
+            </div>
+          </div>
+          <div
+            data-pencil-name="フッターメール"
+            style="align-items: center; box-sizing: border-box; display: flex; flex-direction: row; flex-shrink: 0; gap: 4px; height: fit-content; justify-content: flex-start; width: fit-content"
+          >
+            <svg
+              data-pencil-name="メールアイコン"
+              data-icon-name="mail"
+              data-icon-set="lucide"
+              viewBox="0 0 13.99993896484375 14"
+              preserveAspectRatio="xMidYMid meet"
+              xmlns="http://www.w3.org/2000/svg"
+              style="box-sizing: border-box; flex-shrink: 0; height: 25px; width: 25px"
+            >
+              <path
+                d="M2.05762 1.77734q-0.28027 0.04102-0.53321 0.16748-0.34863 0.19824-0.58789 0.50586-0.23584 0.30762-0.32129 0.70069-0.01367 0.10938-0.02734 0.66992l0 3.17871 0 3.17871q0.01367 0.56055 0.02734 0.66992 0.11279 0.5332 0.50245 0.90577 0.39307 0.36914 0.92627 0.46826 0.16748 0.02734 4.95605 0.02734 4.78857 0 4.95605-0.02734 0.5332-0.09912 0.92286-0.46826 0.39307-0.37256 0.50586-0.90577 0.01367-0.10938 0.02734-0.66992l0-3.17871 0-3.17871q-0.01367-0.56055-0.02734-0.66992-0.12647-0.54688-0.53321-0.92285-0.40674-0.37939-0.95019-0.46485-0.1709-0.01367-4.93897-0.01367-4.76465 0-4.90478 0.02734z m9.81298 1.17579q0.09912 0.04443 0.18116 0.12304 0.08545 0.0752 0.12646 0.16065 0.04443 0.08203 0.05127 0.12988 0.00684 0.04785 0.00684 0.18799l0 0.21191-2.46436 1.58252q-2.46436 1.56543-2.53613 1.60303-0.06836 0.03418-0.16748 0.03418l-0.02734 0.01367q-0.0957 0.01367-0.2085-0.04102-0.15381-0.07178-0.65967-0.37939l-4.40918-2.81299 0-0.21191q0-0.14014 0.00684-0.18799 0.00684-0.04785 0.04101-0.12305 0.0376-0.07861 0.12647-0.16064 0.09229-0.08545 0.16748-0.1128 0.07861-0.03076 0.70752-0.04443l4.18701 0 4.18701 0q0.61523 0 0.68359 0.02735z m-5.63964 5.02783q0.22217 0.10938 0.46142 0.15381 0.09912 0.02734 0.30762 0.02734 0.2085 0 0.30762-0.02734 0.30762-0.05811 0.54687-0.19825 0.14014-0.08203 2.26612-1.42529l2.12939-1.36035-0.01367 5.50293-0.04102 0.09912q-0.11279 0.2085-0.3247 0.29395l-0.09571 0.02734-9.5498 0-0.09571-0.02734q-0.21191-0.08545-0.3247-0.29395l-0.04102-0.09912-0.01367-5.50293 2.17041 1.37402q2.17041 1.38428 2.31055 1.45606z"
+                fill="#FFFFFF"
+              ></path>
+            </svg>
+            <div
+              data-pencil-name="メールアドレス"
+              style='box-sizing: border-box; color: #FFFFFF; font-family: "Kosugi Maru", system-ui, sans-serif; font-size: 20px; font-style: normal; font-weight: 400; letter-spacing: 0px; line-height: normal; text-align: left; white-space: nowrap'
+            >
+              machisuke.takato@gmail.com
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
