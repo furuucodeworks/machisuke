@@ -80,6 +80,43 @@
       .site-header.is-menu-open {
         opacity: 1;
       }
+      @media (hover: hover) and (pointer: fine) {
+        .header-logo {
+          transition: opacity 0.2s ease;
+        }
+        .header-logo:hover {
+          opacity: 0.72;
+        }
+        .header-line {
+          transition: transform 0.2s ease, filter 0.2s ease;
+        }
+        .header-line:hover {
+          transform: scale(1.05);
+          filter: brightness(1.08);
+        }
+        #menu-toggle {
+          transition: opacity 0.2s ease;
+        }
+        #menu-toggle:hover {
+          opacity: 0.6;
+        }
+        nav[aria-label="メインメニュー"] a,
+        nav[aria-label="モバイルメニュー"] a {
+          transition: color 0.2s ease;
+        }
+        nav[aria-label="メインメニュー"] a:hover,
+        nav[aria-label="モバイルメニュー"] a:hover {
+          color: #E8833A;
+        }
+        footer a[href^="tel:"],
+        footer a[href^="mailto:"] {
+          transition: opacity 0.2s ease;
+        }
+        footer a[href^="tel:"]:hover,
+        footer a[href^="mailto:"]:hover {
+          opacity: 0.72;
+        }
+      }
       @media (min-width: 1024px) {
         .header-line {
           width: clamp(140px, 13.89vw, 200px);
@@ -590,7 +627,7 @@
         </p>
         <a
           href="contact.html"
-          class="flex h-14 w-full items-center justify-center gap-[9px] rounded-[28px] bg-white shadow-[0_3px_8px_0_#7A7A7A] md:h-14 md:w-[380px] lg:h-[58px] lg:w-[400px] lg:rounded-[29px]"
+          class="flex h-14 w-full items-center justify-center gap-[9px] rounded-[28px] bg-white shadow-[0_3px_8px_0_#7A7A7A] transition duration-200 hover:-translate-y-0.5 hover:shadow-[0_6px_14px_0_rgba(74,59,44,0.28)] md:h-14 md:w-[380px] lg:h-[58px] lg:w-[400px] lg:rounded-[29px]"
         >
           <svg viewBox="0 0 14 14" class="h-[21px] w-[21px] shrink-0 text-[#3E7FB0]" aria-hidden="true"><use href="#svc-message" /></svg>
           <span class="font-display text-base font-bold text-machisuke-blue lg:text-[17px]">無料で相談・見積もりをする</span>

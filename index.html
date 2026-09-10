@@ -80,6 +80,43 @@
       .site-header.is-menu-open {
         opacity: 1;
       }
+      @media (hover: hover) and (pointer: fine) {
+        .header-logo {
+          transition: opacity 0.2s ease;
+        }
+        .header-logo:hover {
+          opacity: 0.72;
+        }
+        .header-line {
+          transition: transform 0.2s ease, filter 0.2s ease;
+        }
+        .header-line:hover {
+          transform: scale(1.05);
+          filter: brightness(1.08);
+        }
+        #menu-toggle {
+          transition: opacity 0.2s ease;
+        }
+        #menu-toggle:hover {
+          opacity: 0.6;
+        }
+        nav[aria-label="メインメニュー"] a,
+        nav[aria-label="モバイルメニュー"] a {
+          transition: color 0.2s ease;
+        }
+        nav[aria-label="メインメニュー"] a:hover,
+        nav[aria-label="モバイルメニュー"] a:hover {
+          color: #E8833A;
+        }
+        footer a[href^="tel:"],
+        footer a[href^="mailto:"] {
+          transition: opacity 0.2s ease;
+        }
+        footer a[href^="tel:"]:hover,
+        footer a[href^="mailto:"]:hover {
+          opacity: 0.72;
+        }
+      }
       @media (min-width: 1024px) {
         .header-line {
           width: clamp(140px, 13.89vw, 200px);
@@ -138,6 +175,20 @@
         height: 1em;
         flex-shrink: 0;
       }
+      .font-display {
+        font-family: "Zen Maru Gothic", system-ui, sans-serif;
+      }
+      .font-body {
+        font-family: "Zen Kaku Gothic New", system-ui, sans-serif;
+      }
+      .font-label {
+        font-family: "Kosugi Maru", system-ui, sans-serif;
+      }
+      .text-machisuke-green { color: #5FA246; }
+      .btn-outline-green {
+        outline: 2px solid #5FA246;
+        outline-offset: -1px;
+      }
       .intro-char-heart {
         left: -2.2%;
         top: -3.9cqw;
@@ -161,11 +212,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Zen+Maru+Gothic:wght@400;500;700;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Kosugi+Maru:wght@400&family=Zen+Kaku+Gothic+New:wght@400;700&family=Zen+Maru+Gothic:wght@500;700&display=swap"
       rel="stylesheet"
     />
   </head>
-  <body class="m-0 bg-[#FFFAF0] font-label text-machisuke-text">
+  <body class="m-0 bg-[#FFFAF0] text-machisuke-text">
     <header class="site-header sticky top-0 z-50 shadow-[0_1px_0_rgba(0,0,0,0.06)]">
       <div class="header-bar flex w-full items-center justify-between">
         <a href="index.html" class="header-logo relative block shrink-0">
@@ -253,7 +304,7 @@
         />
         <a
           href="https://lin.ee/twtIlMiJ"
-          class="absolute left-[11%] top-[60%] z-10 h-[17%] w-[39%]"
+          class="absolute left-[11%] top-[60%] z-10 h-[17%] w-[39%] transition duration-200 hover:scale-[1.04] hover:brightness-110"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -274,7 +325,7 @@
               alt=""
               class="intro-char-heart absolute z-0 object-contain"
             />
-            <h2 class="intro-title relative z-[1] flex-1 text-center font-label font-extrabold">
+            <h2 class="intro-title relative z-[1] flex-1 text-center font-display font-bold">
               地域の暮らしを、<br class="md:hidden" />やさしくサポート。
             </h2>
             <img
@@ -283,10 +334,10 @@
               class="intro-leaf pointer-events-none absolute z-[1] object-contain"
             />
           </div>
-          <p class="intro-text relative z-[2] text-center font-label font-bold">
+          <p class="intro-text relative z-[2] text-center font-body font-normal">
             草刈り・不用品回収・家具の移動・力仕事・軽作業など、<br />日常のさまざまなお困りごとをお手伝いする、地域密着の便利屋です。
           </p>
-          <p class="intro-text relative z-[3] text-center font-label font-bold">
+          <p class="intro-text relative z-[3] text-center font-body font-normal">
             「これくらい頼んでいいのかな？」と思うことも、<br />どうぞお気軽にご相談ください。
           </p>
           <img
@@ -301,7 +352,7 @@
       <section
         class="relative flex w-full flex-col items-center gap-3.5 bg-[#FFFAF0] px-5 py-6 md:gap-6 md:px-[60px] md:py-12 lg:gap-7 lg:p-16"
       >
-        <h2 class="whitespace-nowrap text-center font-label text-[17px] font-extrabold text-machisuke-text md:text-2xl lg:text-[30px]">
+        <h2 class="whitespace-nowrap text-center font-display text-[17px] font-bold text-machisuke-text md:text-2xl lg:text-[30px]">
           こんなお困りごとはありませんか？
         </h2>
         <div class="relative w-full overflow-visible md:w-[648px] lg:w-[900px]">
@@ -321,12 +372,14 @@
             class="pointer-events-none absolute bottom-[-30px] right-[-14px] z-[4] h-[61px] w-[48px] object-contain md:bottom-[-70px] md:right-[-39px] md:h-[140px] md:w-[110px] lg:bottom-[-90px] lg:right-[-62px] lg:h-[180px] lg:w-[140px]"
           />
         </div>
-        <a href="services.html" class="relative z-10 block h-[47px] w-[255px] md:h-[55px] md:w-[300px] lg:h-[62px] lg:w-[340px]">
-          <img
-            src="public/60_service_pricing_button.png"
-            alt="サービス内容と料金について"
-            class="h-full w-full object-contain"
-          />
+        <a
+          href="services.html"
+          class="btn-outline-green relative z-10 flex h-[54px] w-[255px] items-center justify-center gap-2 rounded-[27px] bg-white transition duration-200 hover:-translate-y-0.5 hover:shadow-[0_6px_14px_0_rgba(74,59,44,0.28)] md:h-14 md:w-[380px] md:rounded-[28px]"
+        >
+          <span class="font-display text-sm font-bold text-[#5FA246]">サービス内容と料金について</span>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#5FA246" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 shrink-0" aria-hidden="true">
+            <path d="m9 18 6-6-6-6" />
+          </svg>
         </a>
       </section>
 
@@ -337,7 +390,7 @@
         <div
           class="flex w-full flex-col items-center gap-[9px] rounded-[21px] bg-[#E8833A] p-[10.5px] md:gap-4 md:rounded-[26px] md:p-5 lg:w-[1000px] lg:gap-5 lg:rounded-[32px] lg:p-[26px]"
         >
-          <h2 class="whitespace-nowrap text-center font-label text-[17px] font-extrabold text-white md:text-lg lg:text-[22px]">
+          <h2 class="whitespace-nowrap text-center font-display text-[17px] font-bold text-white md:text-lg lg:text-[22px]">
             まち助が選ばれる理由
           </h2>
           <div class="flex w-full flex-col gap-[7.5px] md:flex-row md:gap-3 lg:gap-4">
@@ -351,10 +404,10 @@
                   class="h-12 w-12 shrink-0 object-contain md:h-[53px] md:w-[53px] lg:h-[62px] lg:w-[62px]"
                 />
                 <div class="flex flex-1 flex-col items-start gap-1.5 md:w-full md:items-center">
-                  <h3 class="w-full text-left font-label text-[13px] font-extrabold text-[#E8833A] md:text-center lg:text-sm">
+                  <h3 class="w-full text-left font-display text-[13px] font-bold text-[#E8833A] md:text-center lg:text-sm">
                     地域密着
                   </h3>
-                  <p class="w-full text-left font-label text-[8px] font-bold text-[#7A7A7A] md:text-center md:text-[10px] lg:text-[11px]">
+                  <p class="w-full text-left font-body text-[8px] font-bold text-[#7A7A7A] md:text-center md:text-[10px] lg:text-[11px]">
                     <span class="md:hidden">地域密着だからすぐ<br />に駆けつけます！</span>
                     <span class="hidden md:block lg:hidden">地域密着だから<br />すぐに<br />駆けつけます！</span>
                     <span class="hidden lg:block">地域密着だからすぐに駆けつけます！</span>
@@ -370,10 +423,10 @@
                   class="h-12 w-12 shrink-0 object-contain md:h-[53px] md:w-[53px] lg:h-[62px] lg:w-[62px]"
                 />
                 <div class="flex flex-1 flex-col items-start gap-1.5 md:w-full md:items-center">
-                  <h3 class="w-full text-left font-label text-[13px] font-extrabold text-[#E8833A] md:text-center lg:text-sm">
+                  <h3 class="w-full text-left font-display text-[13px] font-bold text-[#E8833A] md:text-center lg:text-sm">
                     親切・丁寧
                   </h3>
-                  <p class="w-full text-left font-label text-[8px] font-bold text-[#7A7A7A] md:text-center md:text-[10px] lg:text-[11px]">
+                  <p class="w-full text-left font-body text-[8px] font-bold text-[#7A7A7A] md:text-center md:text-[10px] lg:text-[11px]">
                     <span class="lg:hidden">一つひとつの<br />ご依頼を大切に<br />対応します！</span>
                     <span class="hidden lg:inline">一つひとつのご依頼を大切に対応します！</span>
                   </p>
@@ -390,10 +443,10 @@
                   class="h-12 w-12 shrink-0 object-contain md:h-[53px] md:w-[53px] lg:h-[62px] lg:w-[62px]"
                 />
                 <div class="flex flex-1 flex-col items-start gap-1.5 md:w-full md:items-center">
-                  <h3 class="w-full text-left font-label text-[13px] font-extrabold text-[#E8833A] md:text-center lg:text-sm">
+                  <h3 class="w-full text-left font-display text-[13px] font-bold text-[#E8833A] md:text-center lg:text-sm">
                     明朗料金
                   </h3>
-                  <p class="w-full text-left font-label text-[8px] font-bold text-[#7A7A7A] md:text-center md:text-[10px] lg:text-[11px]">
+                  <p class="w-full text-left font-body text-[8px] font-bold text-[#7A7A7A] md:text-center md:text-[10px] lg:text-[11px]">
                     <span class="md:hidden">事前にお見積もりを<br />提示し安心の<br />料金設定！</span>
                     <span class="hidden md:block lg:hidden">事前にお見積もりを提示し<br />安心の料金設定！</span>
                     <span class="hidden lg:block">事前にお見積もりを提示し安心の料金設定！</span>
@@ -409,10 +462,10 @@
                   class="h-12 w-12 shrink-0 object-contain md:h-[53px] md:w-[53px] lg:h-[62px] lg:w-[62px]"
                 />
                 <div class="flex flex-1 flex-col items-start gap-1.5 md:w-full md:items-center">
-                  <h3 class="w-full text-left font-label text-[13px] font-extrabold text-[#E8833A] md:text-center lg:text-sm">
+                  <h3 class="w-full text-left font-display text-[13px] font-bold text-[#E8833A] md:text-center lg:text-sm">
                     安心・信頼
                   </h3>
-                  <p class="w-full text-left font-label text-[8px] font-bold text-[#7A7A7A] md:text-center md:text-[10px] lg:text-[11px]">
+                  <p class="w-full text-left font-body text-[8px] font-bold text-[#7A7A7A] md:text-center md:text-[10px] lg:text-[11px]">
                     <span class="md:hidden">誠実な対応で安心<br />して任せられます！</span>
                     <span class="hidden md:block lg:hidden">誠実な対応で<br />安心して<br />任せられます！</span>
                     <span class="hidden lg:block">誠実な対応で安心して任せられます！</span>
@@ -430,11 +483,11 @@
                   class="h-12 w-12 shrink-0 object-contain md:h-[53px] md:w-[53px] lg:h-[62px] lg:w-[62px]"
                 />
                 <div class="flex flex-1 flex-col items-start gap-1.5 md:w-full md:items-center">
-                  <h3 class="w-full text-left font-label text-[13px] font-extrabold text-[#E8833A] md:text-center lg:text-sm">
+                  <h3 class="w-full text-left font-display text-[13px] font-bold text-[#E8833A] md:text-center lg:text-sm">
                     <span class="md:hidden lg:inline">小さなご依頼大歓迎</span>
                     <span class="hidden md:inline lg:hidden">小さな<br />ご依頼大歓迎</span>
                   </h3>
-                  <p class="w-full text-left font-label text-[8px] font-bold text-[#7A7A7A] md:text-center md:text-[10px] lg:text-[11px]">
+                  <p class="w-full text-left font-body text-[8px] font-bold text-[#7A7A7A] md:text-center md:text-[10px] lg:text-[11px]">
                     「これくらい頼んでいいかな？」そんなご相談もお気軽に！
                   </p>
                 </div>
@@ -442,12 +495,14 @@
             </div>
           </div>
         </div>
-        <a href="about.html" class="block h-[46px] w-[255px] md:h-[54px] md:w-[300px] lg:h-16 lg:w-[360px]">
-          <img
-            src="public/61_about_machisuke_button.png"
-            alt="まち助について"
-            class="h-full w-full object-contain"
-          />
+        <a
+          href="about.html"
+          class="btn-outline-green flex h-[54px] w-[255px] items-center justify-center gap-2 rounded-[27px] bg-white transition duration-200 hover:-translate-y-0.5 hover:shadow-[0_6px_14px_0_rgba(74,59,44,0.28)] md:h-14 md:w-[380px] md:rounded-[28px]"
+        >
+          <span class="font-display text-sm font-bold text-[#5FA246]">まち助について</span>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#5FA246" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 shrink-0" aria-hidden="true">
+            <path d="m9 18 6-6-6-6" />
+          </svg>
         </a>
       </section>
 
@@ -456,10 +511,10 @@
         class="flex w-full flex-col items-center gap-3.5 bg-[#FFFAF0] px-4 pb-[34px] pt-[25px] md:gap-5 md:px-[50px] md:pb-[52px] md:pt-10 lg:gap-6 lg:px-16 lg:pb-16 lg:pt-14"
       >
         <div class="flex flex-col items-center gap-1 md:gap-1.5">
-          <h2 class="whitespace-nowrap text-center font-label text-[17px] font-extrabold text-machisuke-text md:text-2xl lg:text-[30px]">
+          <h2 class="whitespace-nowrap text-center font-display text-[17px] font-bold text-machisuke-text md:text-2xl lg:text-[30px]">
             対応エリア
           </h2>
-          <p class="whitespace-nowrap text-center font-label text-[10px] font-bold text-machisuke-text md:text-sm lg:text-lg">
+          <p class="whitespace-nowrap text-center font-body text-[10px] font-bold text-machisuke-text md:text-sm lg:text-lg">
             岐阜県の中濃地域を中心に対応しています！
           </p>
         </div>
@@ -468,7 +523,7 @@
           alt="対応エリアマップ（美濃加茂市・可児市・御嵩町・八百津町）"
           class="h-[179px] w-[336px] rounded-[10px] object-contain md:h-[306px] md:w-[576px] md:rounded-[14px] lg:h-[409px] lg:w-[768px]"
         />
-        <p class="w-full text-center font-label text-[10px] font-bold text-machisuke-text md:text-sm lg:text-lg">
+        <p class="w-full text-center font-body text-[10px] font-bold text-machisuke-text md:text-sm lg:text-lg">
           美濃加茂市・可児市・御嵩町・八百津町<br />
           周辺エリアに対応しています！
         </p>
@@ -484,7 +539,7 @@
           />
           <a
             href="https://lin.ee/twtIlMiJ"
-            class="absolute left-[22.2%] top-[29.2%] z-10 h-[41%] w-[55.5%] rounded-full"
+            class="absolute left-[22.2%] top-[29.2%] z-10 h-[41%] w-[55.5%] rounded-full transition duration-200 hover:bg-white/25"
             target="_blank"
             rel="noopener noreferrer"
           >

@@ -80,6 +80,64 @@
       .site-header.is-menu-open {
         opacity: 1;
       }
+      @media (hover: hover) and (pointer: fine) {
+        .header-logo {
+          transition: opacity 0.2s ease;
+        }
+        .header-logo:hover {
+          opacity: 0.72;
+        }
+        .header-line {
+          transition: transform 0.2s ease, filter 0.2s ease;
+        }
+        .header-line:hover {
+          transform: scale(1.05);
+          filter: brightness(1.08);
+        }
+        #menu-toggle {
+          transition: opacity 0.2s ease;
+        }
+        #menu-toggle:hover {
+          opacity: 0.6;
+        }
+        nav[aria-label="メインメニュー"] a,
+        nav[aria-label="モバイルメニュー"] a {
+          transition: color 0.2s ease;
+        }
+        nav[aria-label="メインメニュー"] a:hover,
+        nav[aria-label="モバイルメニュー"] a:hover {
+          color: #E8833A;
+        }
+        footer a[href^="tel:"],
+        footer a[href^="mailto:"] {
+          transition: opacity 0.2s ease;
+        }
+        footer a[href^="tel:"]:hover,
+        footer a[href^="mailto:"]:hover {
+          opacity: 0.72;
+        }
+        .contact-file-ui,
+        .contact-radio-ui,
+        .contact-check-mark {
+          transition: background-color 0.2s ease, outline-color 0.2s ease;
+        }
+        label:hover .contact-file-ui {
+          background: #F7F1E4;
+          outline-color: #5FA246;
+        }
+        label:hover .contact-radio:not(:checked) + .contact-radio-ui {
+          background: #FFFAF0;
+        }
+        label:hover .contact-check-mark {
+          outline-color: #5FA246;
+        }
+        a.bg-machisuke-green:hover {
+          background-color: #3D7A32;
+        }
+        a.bg-machisuke-orange:hover {
+          background-color: #C96E28;
+        }
+      }
       @media (min-width: 1024px) {
         .header-line {
           width: clamp(140px, 13.89vw, 200px);
@@ -417,7 +475,7 @@
               href="https://lin.ee/twtIlMiJ"
               target="_blank"
               rel="noopener noreferrer"
-              class="flex h-[54px] w-full items-center justify-center gap-2 rounded-[27px] bg-machisuke-green md:h-14 md:rounded-[28px] lg:h-[58px] lg:rounded-[29px]"
+              class="flex h-[54px] w-full items-center justify-center gap-2 rounded-[27px] bg-machisuke-green transition-colors duration-200 hover:bg-[#3D7A32] md:h-14 md:rounded-[28px] lg:h-[58px] lg:rounded-[29px]"
             >
               <svg viewBox="0 0 14 14" class="h-5 w-5 shrink-0 text-white" aria-hidden="true"><use href="#contact-message" /></svg>
               <span class="font-display text-base font-bold text-white">LINEでお問い合わせ</span>
@@ -438,7 +496,7 @@
             <p class="font-body text-[13px] font-normal text-machisuke-text-gray lg:text-sm">営業時間 9:00〜17:00</p>
             <a
               href="tel:09023439557"
-              class="flex h-[54px] w-full items-center justify-center gap-2 rounded-[27px] bg-machisuke-orange md:h-14 md:rounded-[28px] lg:h-[58px] lg:rounded-[29px]"
+              class="flex h-[54px] w-full items-center justify-center gap-2 rounded-[27px] bg-machisuke-orange transition-colors duration-200 hover:bg-[#C96E28] md:h-14 md:rounded-[28px] lg:h-[58px] lg:rounded-[29px]"
             >
               <svg viewBox="0 0 14 14" class="h-5 w-5 shrink-0 text-white" aria-hidden="true"><use href="#contact-phone" /></svg>
               <span class="font-display text-base font-bold text-white">電話をかける</span>
@@ -623,7 +681,7 @@
           </div>
 
           <button
-            class="flex h-14 w-full items-center justify-center gap-[9px] rounded-[28px] border-0 bg-machisuke-blue md:h-14 md:w-[400px] lg:h-[58px] lg:rounded-[29px]"
+            class="flex h-14 w-full cursor-pointer items-center justify-center gap-[9px] rounded-[28px] border-0 bg-machisuke-blue transition-colors duration-200 hover:bg-[#336A94] md:h-14 md:w-[400px] lg:h-[58px] lg:rounded-[29px]"
             type="submit"
           >
             <span class="font-display text-base font-bold text-white lg:text-[17px]">入力内容を確認する</span>
