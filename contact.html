@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>お問い合わせ｜便利屋まち助</title>
+    <meta
+      name="description"
+      content="小さなお困りごとも、お気軽にご相談ください。お問い合わせフォーム・電話・LINEから、ご都合のよい方法をお選びいただけます。"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "machisuke-orange": "#E8833A",
+              "machisuke-green": "#5FA246",
+              "machisuke-green-dark": "#4A8A38",
+              "machisuke-title-green": "#3F5A3A",
+              "machisuke-cream": "#FAF4DF",
+              "machisuke-cream-light": "#FFFAF0",
+              "machisuke-card-warm-white": "#FFFAF0",
+              "machisuke-white": "#FFFFFF",
+              "machisuke-brown-footer": "#4A3B2C",
+              "machisuke-footer-label": "#EDEDED",
+              "machisuke-footer-address": "#C9C2B8",
+              "machisuke-text": "#3A3A3A",
+              "machisuke-text-gray": "#7A7A7A",
+              "machisuke-blue": "#3E7FB0",
+              "machisuke-border-light": "#E0E0E0",
+              "machisuke-logo-red": "#A8302A",
+            },
+            fontFamily: {
+              display: ['"Zen Maru Gothic"', "sans-serif"],
+              body: ['"Zen Kaku Gothic New"', "sans-serif"],
+              label: ['"Kosugi Maru"', "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .header-bar {
+        padding: clamp(8px, 2.67vw, 20px) clamp(12px, 4.27vw, 64px);
+      }
+      .header-logo {
+        width: clamp(80px, 23.44vw, 180px);
+        height: auto;
+        aspect-ratio: 180 / 71;
+      }
+      .header-logo-mark {
+        width: 45.71%;
+        height: 100%;
+      }
+      .header-logo-word {
+        left: 42.29%;
+        top: 0;
+        width: 57.72%;
+        height: 100%;
+      }
+      .header-actions {
+        gap: clamp(8px, 2.67vw, 20px);
+      }
+      .header-line {
+        width: clamp(88px, 31.73vw, 140px);
+        height: clamp(30px, 10.93vw, 48px);
+      }
+      .header-menu {
+        width: clamp(18px, 5.87vw, 26px);
+        height: clamp(18px, 5.87vw, 26px);
+      }
+      .site-header {
+        background-color: #FFFAF0;
+        transition: opacity 0.2s ease;
+      }
+      .site-header.is-scrolled {
+        opacity: 0.7;
+      }
+      .site-header.is-menu-open {
+        opacity: 1;
+      }
+      @media (min-width: 1024px) {
+        .header-line {
+          width: clamp(140px, 13.89vw, 200px);
+          height: clamp(48px, 4.58vw, 66px);
+        }
+      }
+      html,
+      body {
+        background-color: #FFFAF0;
+      }
+      .footer-mobile-logo {
+        width: clamp(100px, 29.6vw, 159px);
+        height: auto;
+        aspect-ratio: 159 / 88;
+      }
+      .footer-mobile-rule {
+        height: clamp(52px, 16vw, 88px);
+      }
+      .footer-contact {
+        gap: clamp(2px, 1vw, 6px);
+        padding-inline: clamp(4px, 1.6vw, 8px);
+      }
+      .footer-contact-text {
+        font-size: clamp(6.5px, 2vw, 9px);
+        line-height: 1.3;
+      }
+      .footer-contact-phone {
+        font-size: clamp(8px, 2.6vw, 12px);
+        line-height: 1.3;
+      }
+      .footer-contact-icon {
+        width: 1em;
+        height: 1em;
+        flex-shrink: 0;
+      }
+      .font-display {
+        font-family: "Zen Maru Gothic", system-ui, sans-serif;
+      }
+      .font-body {
+        font-family: "Zen Kaku Gothic New", system-ui, sans-serif;
+      }
+      .font-label {
+        font-family: "Kosugi Maru", system-ui, sans-serif;
+      }
+      .text-machisuke-orange { color: #E8833A; }
+      .text-machisuke-green { color: #5FA246; }
+      .text-machisuke-title-green { color: #3F5A3A; }
+      .text-machisuke-text { color: #3A3A3A; }
+      .text-machisuke-text-gray { color: #7A7A7A; }
+      .text-machisuke-blue { color: #3E7FB0; }
+      .text-machisuke-border-light { color: #E0E0E0; }
+      .bg-machisuke-orange { background-color: #E8833A; }
+      .bg-machisuke-green { background-color: #5FA246; }
+      .bg-machisuke-blue { background-color: #3E7FB0; }
+      .border-machisuke-border-light { border-color: #E0E0E0; }
+      .contact-outline-gray {
+        outline: 1px solid #E0E0E0;
+        outline-offset: -0.5px;
+      }
+      .contact-outline-orange {
+        outline: 1px solid #E8833A;
+        outline-offset: -0.5px;
+      }
+      .contact-field {
+        width: 100%;
+        border: 0;
+        background: transparent;
+        color: #3A3A3A;
+        font-family: "Zen Kaku Gothic New", system-ui, sans-serif;
+        font-size: 13px;
+        outline: none;
+      }
+      .contact-field::placeholder {
+        color: #7A7A7A;
+      }
+      .contact-radio {
+        position: absolute;
+        opacity: 0;
+        pointer-events: none;
+      }
+      .contact-radio-ui {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+        height: 46px;
+        padding: 0 14px;
+        border-radius: 11px;
+        background: #FFFFFF;
+        outline: 1px solid #E0E0E0;
+        outline-offset: -0.5px;
+        cursor: pointer;
+      }
+      .contact-radio-mark {
+        box-sizing: border-box;
+        width: 18px;
+        height: 18px;
+        flex-shrink: 0;
+        border-radius: 50%;
+        background: #FFFFFF;
+        outline: 2px solid #E0E0E0;
+        outline-offset: -1px;
+      }
+      .contact-radio:focus-visible + .contact-radio-ui {
+        outline: 2px solid #5FA246;
+      }
+      .contact-radio:checked + .contact-radio-ui {
+        background: #FFFAF0;
+        outline: 1px solid #5FA246;
+      }
+      .contact-radio:checked + .contact-radio-ui .contact-radio-mark {
+        background: radial-gradient(circle, #5FA246 0 4.5px, #FFFFFF 4.5px 6.5px, #5FA246 6.5px);
+        outline: none;
+      }
+      .contact-check {
+        position: absolute;
+        opacity: 0;
+        pointer-events: none;
+      }
+      .contact-check-mark {
+        box-sizing: border-box;
+        width: 22px;
+        height: 22px;
+        flex-shrink: 0;
+        border-radius: 5px;
+        background: #FFFFFF;
+        outline: 2px solid #E0E0E0;
+        outline-offset: -1px;
+      }
+      .contact-check:focus-visible + .contact-check-mark {
+        outline: 2px solid #5FA246;
+      }
+      .contact-check:checked + .contact-check-mark {
+        background: #5FA246;
+        outline: 2px solid #5FA246;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='%23FFFFFF' stroke-width='2' d='M3 8.5 6.5 12 13 4'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      .contact-file {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+      .contact-file-ui {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 7px;
+        width: 100%;
+        height: 108px;
+        border-radius: 11px;
+        background: #FFFAF0;
+        outline: 1px solid #E0E0E0;
+        outline-offset: -0.5px;
+        cursor: pointer;
+      }
+      .contact-file:focus-visible + .contact-file-ui {
+        outline: 2px solid #5FA246;
+      }
+      symbol path {
+        fill: currentColor;
+      }
+      @media (min-width: 768px) {
+        .contact-radio-ui {
+          height: 52px;
+        }
+        .contact-file-ui {
+          height: 120px;
+        }
+      }
+      @media (min-width: 1024px) {
+        .contact-radio-ui {
+          height: 56px;
+        }
+        .contact-file-ui {
+          height: 140px;
+        }
+      }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kosugi+Maru:wght@400&family=Zen+Kaku+Gothic+New:wght@400;700&family=Zen+Maru+Gothic:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="m-0 bg-[#FFFAF0] text-machisuke-text">
+    <svg xmlns="http://www.w3.org/2000/svg" class="absolute h-0 w-0 overflow-hidden" aria-hidden="true">
+      <symbol id="contact-message" viewBox="0 0 14 14">
+        <path d="M6.80518 0.58789q-0.5332 0.01367-1.10059 0.1333-0.56738 0.11963-1.06982 0.31445-1.3877 0.56055-2.396 1.67481-1.0083 1.11084-1.41162 2.55322-0.30762 1.09375-0.22559 2.21485 0.08545 1.11768 0.54688 2.15332l0.01367 0.04101q0.06836 0.14014 0.07519 0.22559 0.01025 0.08203-0.04785 0.29394-0.04102 0.15381-0.20849 0.66992l-0.05811 0.14014q-0.30762 0.98096-0.33496 1.1211-0.01367 0.16748 0.02734 0.37255 0.04443 0.20166 0.14014 0.35547 0.05811 0.09912 0.17432 0.21875 0.11963 0.11621 0.21875 0.17432 0.16748 0.0957 0.3623 0.14014 0.19824 0.04101 0.3794 0.02734 0.12646-0.02734 1.14843-0.32129l0.14014-0.04443q0.54688-0.15381 0.70068-0.19483 0.22217-0.05469 0.29737-0.04785 0.07861 0.00684 0.20508 0.06152l0.02734 0.01368q0.88184 0.37939 1.97559 0.50586 0.16748 0.02734 0.59472 0.02734 0.42725 0 0.62207-0.02734 0.85449-0.08545 1.64405-0.3794 0.79297-0.29395 1.47998-0.78271 0.93652-0.65967 1.5791-1.60987 0.646-0.95361 0.92627-2.05761 0.28027-1.10742 0.15381-2.23877-0.12647-1.13477-0.646-2.17383-0.66992-1.35693-1.90381-2.27979-1.23047-0.92627-2.72754-1.17578-0.63232-0.11279-1.30224-0.09912z m0.58789 1.17578q1.38428 0.11279 2.5122 0.86133 1.12793 0.74854 1.77051 1.98242 0.40674 0.79639 0.5332 1.75 0.02734 0.22217 0.02735 0.64258 0 0.42041-0.02735 0.65967-0.16748 1.24414-0.85449 2.26611-0.68701 1.02197-1.76367 1.63721-0.57422 0.32471-1.24756 0.50586-0.66992 0.18115-1.32959 0.18115-1.07666 0-2.12597-0.44775-0.19824-0.08545-0.31788-0.11963-0.11621-0.03418-0.28711-0.04785-0.23584-0.01367-0.45458 0.02734-0.21533 0.04102-1.04249 0.28027-1.0083 0.29395-1.01513 0.28711-0.00684-0.00684 0.30078-0.95703 0.30762-0.95361 0.32129-1.10742 0.07178-0.44775-0.14014-0.9126l-0.14014-0.34863q-0.38965-0.96729-0.3623-2.03711 0.02734-1.06982 0.46143-2.02344 0.44775-0.99463 1.25097-1.72265 0.80664-0.72803 1.82178-1.0835 1.01514-0.35547 2.10889-0.27344z" />
+      </symbol>
+      <symbol id="contact-phone" viewBox="0 0 14 14">
+        <path d="M2.15674 0.60156q-0.29395 0.02734-0.58789 0.16748-0.29395 0.14014-0.50586 0.36573-0.30762 0.32129-0.43408 0.78271-0.02734 0.12646-0.03418 0.21191-0.00684 0.08203-0.00684 0.36231 0.01367 1.65088 0.53662 3.26074 0.52637 1.60986 1.49365 2.98389 0.5332 0.7417 1.2168 1.42871 0.68701 0.68359 1.42871 1.2168 1.37402 0.96729 2.99072 1.49365 1.6167 0.52295 3.25391 0.53662 0.28027 0 0.3623-0.00684 0.08545-0.00683 0.21192-0.03418 0.25293-0.07178 0.44092-0.18115 0.18799-0.11279 0.36914-0.29394 0.18457-0.18457 0.29394-0.37256 0.11279-0.18799 0.18457-0.44092l0.04102-0.16748 0-1.0083q0.01367-0.67334 0-0.92627-0.01367-0.30762-0.05127-0.46826-0.03418-0.16064-0.11621-0.35547-0.18115-0.36572-0.50586-0.61524-0.32129-0.25293-0.72803-0.33838-0.10938-0.01367-0.29394-0.02734l-0.92285 0q-0.84082 0-1.0459 0.01367-0.20166 0.01367-0.38282 0.07178-0.28027 0.08203-0.49218 0.25293-0.2085 0.16748-0.417 0.44434l-0.14013 0.17089-0.11279-0.04443q-0.22217-0.10938-0.54688-0.31103-0.32129-0.20508-0.51611-0.35889-1.07666-0.81348-1.80469-1.91748-0.09912-0.15723-0.2666-0.45117-0.16748-0.29395-0.18457-0.32813-0.01367-0.03418 0.15722-0.16064 0.52979-0.39307 0.69727-0.93653 0.07178-0.18457 0.07861-0.3999 0.00684-0.21875 0.00684-1.10058l0-1.10401-0.05469-0.15381q-0.11279-0.36572-0.35205-0.64599-0.23584-0.28027-0.56055-0.44776-0.29395-0.14014-0.6289-0.16748-0.16748-0.02734-1.02881-0.02734-0.86133 0-1.04248 0.02734z m2.17041 1.20313q0.08203 0.04443 0.15722 0.12304 0.07861 0.0752 0.11963 0.16065 0.04443 0.08203 0.05811 0.30078 0.01367 0.21533 0 0.91602l0 0.71435q-0.01367 0.2085-0.03418 0.28027-0.02051 0.06836-0.07861 0.13672l-0.01368 0q-0.05469 0.08545-0.25976 0.23243-0.20166 0.14697-0.29395 0.25292-0.08887 0.10254-0.16064 0.24952-0.06836 0.14697-0.09912 0.25293-0.02734 0.10596-0.02735 0.27343 0 0.19482 0.06836 0.38623 0.07178 0.18799 0.29737 0.56739 1.20313 2.1123 3.30175 3.30175 0.36572 0.21191 0.55372 0.2837 0.19141 0.06836 0.38623 0.06836 0.28027-0.01367 0.5332-0.12647 0.12305-0.07178 0.229-0.16064 0.10596-0.09228 0.2461-0.27344 0.16748-0.22559 0.25293-0.28027l0-0.01368q0.08203-0.05811 0.14355-0.07861 0.06494-0.02051 0.27344-0.03418l0.72803 0q0.72803-0.01367 0.93652 0 0.21191 0.01367 0.29736 0.07178 0.16748 0.0957 0.25293 0.26318l0.04102 0.09912 0 1.02198q0 0.7417 0 0.88867 0 0.14697-0.02735 0.20508-0.12646 0.26318-0.37939 0.33496-0.15381 0.05469-0.74854 0.01367-0.59473-0.04102-1.1416-0.14014-0.96387-0.16748-1.90381-0.53662-0.93652-0.37256-1.75-0.89209-1.37061-0.89551-2.38574-2.16699-1.01514-1.2749-1.56885-2.81641-0.55371-1.5415-0.56738-3.13769 0-0.26318 0-0.31787 0-0.05811 0.04102-0.12989 0.08545-0.18115 0.22558-0.24951 0.08203-0.05811 0.16065-0.07178 0.07861-0.01367 0.30078-0.02734l1.73633 0.01367 0.09912 0.04102z" />
+      </symbol>
+      <symbol id="contact-user" viewBox="0 0 14 14">
+        <path d="M6.59326 1.20313q-0.81006 0.11279-1.42871 0.61865-0.61523 0.50244-0.89551 1.24414-0.18115 0.48877-0.18115 1.02197 0 0.28027 0.04102 0.50586 0.04443 0.22217 0.14013 0.48877 0.15381 0.46143 0.46826 0.84766 0.31787 0.38281 0.7212 0.63574 0.36572 0.22559 0.73486 0.32471 0.37256 0.0957 0.80664 0.0957 0.22559 0 0.3623-0.01367 0.14014-0.01367 0.35206-0.05811 0.60156-0.15381 1.104-0.55713 0.50586-0.40674 0.7998-0.98096 0.19482-0.39307 0.26661-0.88183 0.02734-0.14014 0.02734-0.40674 0-0.2666-0.02734-0.40674-0.09912-0.65625-0.46485-1.20312-0.3623-0.54688-0.93652-0.89551-0.43408-0.2666-0.98096-0.36572-0.15381-0.02734-0.45459-0.03418-0.30078-0.00684-0.45459 0.02051z m0.60156 1.14843q0.40674 0.02734 0.78272 0.28711 0.37939 0.25977 0.58105 0.65967 0.20508 0.39648 0.18457 0.88184-0.02051 0.48193-0.28711 0.86132-0.15381 0.23584-0.37939 0.41358-0.22217 0.17432-0.46143 0.27002-0.19482 0.05811-0.2871 0.07861-0.08887 0.02051-0.32813 0.02051-0.23926 0-0.33154-0.02051-0.08887-0.02051-0.28369-0.07861-0.39307-0.14014-0.68018-0.46826-0.28711-0.32813-0.3999-0.73487-0.10938-0.46143 0.01367-0.90918 0.12646-0.44775 0.45459-0.76904 0.33154-0.32471 0.79297-0.45117 0.08545-0.02734 0.24609-0.04785 0.16064-0.02051 0.21533-0.00684l0.16748 0.01367z m-2.35156 5.85156q-0.96387 0.14014-1.65088 0.82715-0.54688 0.54688-0.75537 1.31592-0.07178 0.23926-0.08545 0.44092-0.01367 0.20166-0.01367 0.82031l0 0.76904 0.04102 0.1128q0.05811 0.0957 0.14013 0.18115 0.21191 0.19482 0.50586 0.14697 0.29395-0.04785 0.42041-0.31445l0.04102-0.09912 0.01367-0.79639q0.01367-0.61865 0.02734-0.77246 0.01367-0.15381 0.07178-0.34863 0.14014-0.37939 0.46826-0.68018 0.32813-0.30078 0.73487-0.41357 0.15381-0.04102 0.53662-0.05469 0.38623-0.01367 1.66113-0.01367 1.2749 0 1.65771 0.01367 0.38623 0.01367 0.54004 0.05469 0.42041 0.11279 0.75538 0.43066 0.33838 0.31445 0.46142 0.71778 0.05811 0.16748 0.06494 0.3247 0.00684 0.15381 0.02051 0.7417l0.01367 0.79639 0.04102 0.09912q0.12646 0.2666 0.42041 0.31445 0.29395 0.04785 0.50586-0.14697 0.08203-0.08545 0.14013-0.18115l0.04102-0.1128 0-0.76904q0-0.61865-0.01367-0.82031-0.01367-0.20166-0.08545-0.44092-0.08203-0.32129-0.23584-0.61523-0.2666-0.51953-0.73828-0.90235-0.46826-0.38623-1.02539-0.54004l-0.04444-0.01367q-0.16748-0.05811-0.29394-0.07178-0.15381-0.01367-0.56055-0.01367l-1.60986-0.01367q-2.05762 0-2.21143 0.02734z" />
+      </symbol>
+      <symbol id="contact-mail" viewBox="0 0 14 14">
+        <path d="M2.05762 1.77734q-0.28027 0.04102-0.53321 0.16748-0.34863 0.19824-0.58789 0.50586-0.23584 0.30762-0.32129 0.70069-0.01367 0.10938-0.02734 0.66992l0 3.17871 0 3.17871q0.01367 0.56055 0.02734 0.66992 0.11279 0.5332 0.50245 0.90577 0.39307 0.36914 0.92627 0.46826 0.16748 0.02734 4.95605 0.02734 4.78857 0 4.95605-0.02734 0.5332-0.09912 0.92286-0.46826 0.39307-0.37256 0.50586-0.90577 0.01367-0.10938 0.02734-0.66992l0-3.17871 0-3.17871q-0.01367-0.56055-0.02734-0.66992-0.12647-0.54688-0.53321-0.92285-0.40674-0.37939-0.95019-0.46485-0.1709-0.01367-4.93897-0.01367-4.76465 0-4.90478 0.02734z m9.81298 1.17579q0.09912 0.04443 0.18116 0.12304 0.08545 0.0752 0.12646 0.16065 0.04443 0.08203 0.05127 0.12988 0.00684 0.04785 0.00684 0.18799l0 0.21191-2.46436 1.58252q-2.46436 1.56543-2.53613 1.60303-0.06836 0.03418-0.16748 0.03418l-0.02734 0.01367q-0.0957 0.01367-0.2085-0.04102-0.15381-0.07178-0.65967-0.37939l-4.40918-2.81299 0-0.21191q0-0.14014 0.00684-0.18799 0.00684-0.04785 0.04101-0.12305 0.0376-0.07861 0.12647-0.16064 0.09229-0.08545 0.16748-0.1128 0.07861-0.03076 0.70752-0.04443l4.18701 0 4.18701 0q0.61523 0 0.68359 0.02735z m-5.63964 5.02783q0.22217 0.10938 0.46142 0.15381 0.09912 0.02734 0.30762 0.02734 0.2085 0 0.30762-0.02734 0.30762-0.05811 0.54687-0.19825 0.14014-0.08203 2.26612-1.42529l2.12939-1.36035-0.01367 5.50293-0.04102 0.09912q-0.11279 0.2085-0.3247 0.29395l-0.09571 0.02734-9.5498 0-0.09571-0.02734q-0.21191-0.08545-0.3247-0.29395l-0.04102-0.09912-0.01367-5.50293 2.17041 1.37402q2.17041 1.38428 2.31055 1.45606z" />
+      </symbol>
+      <symbol id="contact-upload" viewBox="0 0 14 14">
+        <path d="M6.80518 1.18945q-0.07178 0.02734-0.13672 0.07862-0.06152 0.04785-1.5586 1.54492-1.02197 1.0083-1.26806 1.2749-0.24268 0.2666-0.28711 0.33496-0.10938 0.23926-0.01367 0.46485 0.09912 0.22217 0.32128 0.32128 0.22559 0.0957 0.46485-0.01367 0.06836-0.03076 0.24951-0.20508 0.18457-0.17432 0.85449-0.83056l0.99463-0.99463 0 5.75244 0.04102 0.08545q0.04443 0.06836 0.12646 0.15381 0.08545 0.08203 0.16065 0.12646 0.07861 0.04102 0.24609 0.04102 0.16748 0 0.24268-0.04102 0.07861-0.04443 0.16064-0.12646 0.08545-0.08545 0.12988-0.15381l0.04102-0.08545 0-5.75244 0.99463 0.99463q0.66992 0.65625 0.85107 0.83056 0.18457 0.17432 0.25293 0.20508 0.23926 0.10938 0.46143 0.01367 0.22559-0.09912 0.32129-0.32128 0.09912-0.22559-0.01026-0.46485-0.04443-0.06836-0.29736-0.33496-0.24951-0.2666-1.28516-1.30225-1.52783-1.52441-1.60644-1.55859-0.0752-0.0376-0.22901-0.05127-0.15381-0.01367-0.22216 0.01367z m-5.20899 7q-0.25293 0.08545-0.37939 0.30762l-0.04102 0.08545 0.01367 2.60449q0 0.23584 0.02735 0.30762 0.14014 0.48877 0.46826 0.82031 0.33154 0.32813 0.82031 0.46826 0.08545 0.02734 0.71436 0.02735l3.78027 0.01367 3.78027-0.01367q0.62891 0 0.71436-0.02735 0.48877-0.14014 0.81689-0.46826 0.33154-0.33154 0.47168-0.82031 0.02734-0.07178 0.02735-0.30762l0.01367-2.60449-0.04102-0.08545q-0.09912-0.16748-0.28027-0.2666-0.05811-0.02734-0.09912-0.04102-0.04102-0.01367-0.15381-0.01367-0.11279 0-0.15381 0.01367-0.04101 0.01367-0.09912 0.04102-0.18115 0.09912-0.28027 0.2666l-0.04102 0.08545-0.01367 2.63183-0.04102 0.09913q-0.14014 0.27685-0.43408 0.33496-0.09912 0.02734-4.18701 0.02734-4.08789 0-4.18701-0.02734-0.29395-0.05811-0.43408-0.33496l-0.04102-0.09913-0.01367-2.63183-0.04102-0.08545q-0.09912-0.18115-0.28027-0.2666-0.08545-0.04102-0.22559-0.04785-0.14014-0.00684-0.18115 0.00683z" />
+      </symbol>
+      <symbol id="contact-info" viewBox="0 0 14 14">
+        <path d="M6.69238 0.60156q-1.16211 0.04102-2.22851 0.50586-1.06299 0.46143-1.90381 1.26807-0.8374 0.80322-1.34326 1.85254-0.48877 1.0083-0.60157 2.15674-0.02734 0.19482-0.02734 0.61523 0 0.42041 0.02734 0.61523 0.11279 1.14844 0.60157 2.15674 0.65967 1.40137 1.89697 2.33789 1.24072 0.93652 2.75146 1.20313 0.5332 0.09912 1.13477 0.09912 0.75537 0 1.43213-0.15381 0.68018-0.15381 1.35351-0.4751 1.26123-0.61865 2.16358-1.70215 0.90234-1.0835 1.25439-2.44384 0.29395-1.11768 0.18116-2.25244-0.11279-1.13477-0.60157-2.17041-0.58789-1.20313-1.62011-2.08497-1.02881-0.88184-2.31397-1.2749-1.0083-0.30762-2.15674-0.25293z m0.96729 1.18946q1.07666 0.14014 1.99267 0.68017 0.91602 0.54004 1.56201 1.4082 0.82715 1.104 1.00831 2.54639 0.01367 0.16748 0.01367 0.57422 0 0.40674-0.01367 0.57422-0.14014 1.16211-0.7212 2.12939-0.58105 0.96387-1.53466 1.62354-0.4751 0.33496-1.04932 0.56055-0.57422 0.22217-1.18945 0.30761-0.25293 0.04102-0.72803 0.04102-0.4751 0-0.72803-0.04102-1.07666-0.15381-1.95849-0.68701-0.88184-0.5332-1.52784-1.3877-0.82715-1.104-1.0083-2.54638-0.01367-0.16748-0.01367-0.57422 0-0.40674 0.01367-0.57422 0.14014-1.12109 0.66993-2.05078 0.5332-0.92969 1.43212-1.58936 0.54346-0.40674 1.20655-0.66992 0.6665-0.2666 1.32617-0.3247l0.25293-0.02735q0.0957-0.01367 0.4751 0 0.37939 0.01367 0.51953 0.02735z m-0.75879 2.31054q-0.18115 0.02734-0.32129 0.16748-0.2085 0.21191-0.15381 0.50586 0.05469 0.29395 0.32129 0.42041 0.09912 0.04102 0.25293 0.04102 0.25293 0 0.42041-0.16748 0.12646-0.12646 0.15381-0.30762 0.05469-0.29395-0.15723-0.50244-0.2085-0.21191-0.51611-0.15723z m-0.05469 2.33789q-0.25293 0.08545-0.37939 0.30762l-0.04102 0.08545 0 2.46436q0 0.18115 0.03418 0.2666 0.0376 0.08203 0.11963 0.16748 0.08545 0.08203 0.18799 0.1333 0.10596 0.04785 0.23242 0.04785 0.12646 0 0.229-0.04785 0.10596-0.05127 0.18799-0.1333 0.08545-0.08545 0.11963-0.16748 0.0376-0.08545 0.0376-0.2666l0-2.46436-0.04102-0.08545q-0.09912-0.18115-0.28027-0.2666-0.08545-0.04102-0.22559-0.04785-0.14014-0.00684-0.18115 0.00683z" />
+      </symbol>
+      <symbol id="contact-arrow" viewBox="0 0 14 14">
+        <path d="M6.90088 2.35156q-0.18115 0.02734-0.32129 0.16748-0.11279 0.11279-0.14697 0.28028-0.03418 0.16748 0.02051 0.32129 0.02734 0.08545 0.25976 0.3247 0.23242 0.23584 1.36377 1.37061 1.58252 1.58252 1.58252 1.59619 0 0.01367-3.45557 0.01367l-3.44531 0-0.08545 0.04102q-0.22217 0.11279-0.30078 0.33838-0.0752 0.22217 0.00684 0.43408 0.05811 0.0957 0.14013 0.18115 0.08545 0.08203 0.16748 0.11963 0.08545 0.03418 0.53321 0.03418l3.01123 0q3.42822 0 3.42822 0.01367 0 0.01367-1.58252 1.59619-1.13135 1.13477-1.36377 1.37402-0.23242 0.23584-0.25976 0.3213-0.05469 0.15381-0.02051 0.32128 0.03418 0.16748 0.14697 0.28028 0.18115 0.18115 0.42041 0.18115l0.04102 0q0.11279 0 0.19824-0.05469 0.14014-0.09912 0.51611-0.46484l1.68164-1.67822q2.1123-2.10205 2.15332-2.18409 0.07178-0.12646 0.07178-0.28027 0-0.15381-0.07178-0.28027-0.04102-0.08203-2.1499-2.18067-2.10547-2.10205-2.17725-2.13623-0.06836-0.0376-0.23584-0.06494-0.04102 0-0.12646 0.01367z" />
+      </symbol>
+    </svg>
+
+    <header class="site-header sticky top-0 z-50 shadow-[0_1px_0_rgba(0,0,0,0.06)]">
+      <div class="header-bar flex w-full items-center justify-between">
+        <a href="index.html" class="header-logo relative block shrink-0">
+          <img
+            src="public/01_house_logo_mark.png"
+            alt=""
+            class="header-logo-mark absolute left-0 top-0 object-contain"
+          />
+          <img
+            src="public/02_machisuke_wordmark.png"
+            alt="便利屋まち助"
+            class="header-logo-word absolute object-contain"
+          />
+        </a>
+
+        <nav class="hidden flex-1 items-center justify-center gap-5 lg:flex" aria-label="メインメニュー">
+          <a href="index.html" class="whitespace-nowrap font-body text-[15px] font-medium text-machisuke-text">ホーム</a>
+          <span class="font-body text-[14px] font-normal text-machisuke-border-light" aria-hidden="true">｜</span>
+          <a href="services.html" class="whitespace-nowrap font-body text-[15px] font-medium text-machisuke-text">サービス内容・料金</a>
+          <span class="font-body text-[14px] font-normal text-machisuke-border-light" aria-hidden="true">｜</span>
+          <a href="about.html" class="whitespace-nowrap font-body text-[15px] font-medium text-machisuke-text">まち助について</a>
+          <span class="font-body text-[14px] font-normal text-machisuke-border-light" aria-hidden="true">｜</span>
+          <a href="works.html" class="whitespace-nowrap font-body text-[15px] font-medium text-machisuke-text">実績</a>
+          <span class="font-body text-[14px] font-normal text-machisuke-border-light" aria-hidden="true">｜</span>
+          <a href="faq.html" class="whitespace-nowrap font-body text-[15px] font-medium text-machisuke-text">FAQ</a>
+          <span class="font-body text-[14px] font-normal text-machisuke-border-light" aria-hidden="true">｜</span>
+          <a href="contact.html" class="whitespace-nowrap font-body text-[15px] font-medium text-machisuke-text" aria-current="page">お問い合わせ</a>
+        </nav>
+
+        <div class="header-actions flex shrink-0 items-center">
+          <a href="https://lin.ee/twtIlMiJ" class="header-line block" target="_blank" rel="noopener noreferrer">
+            <img
+              src="public/05_line_button_compact.png"
+              alt="LINEで気軽に相談する"
+              class="h-full w-full object-contain"
+            />
+          </a>
+          <button
+            id="menu-toggle"
+            type="button"
+            class="cursor-pointer border-0 bg-transparent p-0 lg:hidden"
+            aria-controls="mobile-menu"
+            aria-expanded="false"
+            aria-label="メニューを開く"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#3A3A3A"
+              stroke-width="2.2"
+              stroke-linecap="round"
+              class="header-menu"
+            >
+              <path d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <nav
+        id="mobile-menu"
+        class="hidden border-t border-machisuke-border-light bg-transparent px-6 py-4 lg:hidden"
+        aria-label="モバイルメニュー"
+      >
+        <ul class="flex flex-col gap-3 font-body text-[15px] font-medium text-machisuke-text">
+          <li><a href="index.html" class="block py-1">ホーム</a></li>
+          <li><a href="services.html" class="block py-1">サービス内容・料金</a></li>
+          <li><a href="about.html" class="block py-1">まち助について</a></li>
+          <li><a href="works.html" class="block py-1">実績</a></li>
+          <li><a href="faq.html" class="block py-1">FAQ</a></li>
+          <li><a href="contact.html" class="block py-1" aria-current="page">お問い合わせ</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="overflow-x-hidden">
+      <section class="flex w-full flex-col items-center gap-3.5 bg-[#FFFAF0] px-5 pb-7 pt-[30px] md:gap-4 md:px-11 md:pb-10 md:pt-[42px] lg:gap-[18px] lg:px-[120px] lg:py-14">
+        <p class="rounded-[20px] bg-machisuke-green px-4 py-[7px] font-label text-xs font-bold tracking-[1px] text-white lg:px-[18px] lg:py-2 lg:text-[13px]">
+          CONTACT
+        </p>
+        <h1 class="font-display text-[29px] font-bold text-machisuke-title-green md:text-4xl lg:text-[42px]">
+          お問い合わせ
+        </h1>
+        <p class="w-full text-center font-display text-[19px] font-bold leading-7 text-machisuke-orange md:w-[620px] md:text-[22px] md:leading-8 lg:w-[900px] lg:text-2xl lg:leading-[35px]">
+          小さなお困りごとも、<br class="md:hidden" />お気軽にご相談ください
+        </p>
+        <p class="w-full text-center font-body text-[13px] font-normal leading-[23px] text-machisuke-text-gray md:w-[600px] md:text-[15px] md:leading-[26px] lg:w-[760px] lg:text-base lg:leading-7">
+          お問い合わせフォーム・電話・LINEから、ご都合のよい方法をお選びいただけます。
+        </p>
+      </section>
+
+      <section class="flex w-full flex-col gap-[18px] bg-[#FFFAF0] px-5 py-[34px] md:items-center md:gap-5 md:px-11 md:py-[52px] lg:gap-7 lg:px-[120px] lg:py-20">
+        <h2 class="flex items-center gap-2.5 font-display text-[22px] font-bold text-machisuke-title-green md:w-[680px] md:gap-3 md:text-[26px] lg:w-[1200px] lg:gap-3.5 lg:text-3xl">
+          <span class="inline-block h-7 w-[5px] shrink-0 rounded-[3px] bg-machisuke-orange md:h-8 lg:h-9 lg:w-1.5" aria-hidden="true"></span>
+          お問い合わせ方法
+        </h2>
+        <p class="font-body text-sm font-normal leading-[25px] text-machisuke-text md:w-[680px] md:text-base md:leading-[29px] lg:w-[1200px]">
+          ご相談内容やご都合に合わせて、お問い合わせ方法をお選びください。
+        </p>
+        <div class="flex w-full flex-col gap-3 md:w-[680px] md:flex-row md:gap-5 lg:w-[1200px] lg:gap-6">
+          <article class="contact-outline-gray flex w-full flex-col gap-3 rounded-[18px] bg-white p-[18px] md:h-[326px] md:flex-1 md:justify-between md:gap-3.5 md:p-[26px] lg:h-[390px] lg:gap-[18px] lg:p-[38px]">
+            <div class="flex items-center gap-2.5">
+              <div class="flex h-[42px] w-[42px] shrink-0 items-center justify-center rounded-[21px] bg-[#FFFAF0]">
+                <svg viewBox="0 0 14 14" class="h-[22px] w-[22px] text-machisuke-green" aria-hidden="true"><use href="#contact-message" /></svg>
+              </div>
+              <h3 class="font-display text-lg font-bold text-machisuke-title-green md:text-xl lg:text-2xl">LINEで相談する</h3>
+            </div>
+            <p class="font-body text-sm font-normal leading-[25px] text-machisuke-text md:text-[15px] md:leading-[26px] lg:text-base lg:leading-7">
+              写真を送りながら相談したい方や、手軽にお問い合わせしたい方におすすめです。
+            </p>
+            <p class="font-body text-[13px] font-normal text-machisuke-text-gray lg:text-sm">
+              内容を確認後、順次ご返信します。
+            </p>
+            <a
+              href="https://lin.ee/twtIlMiJ"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex h-[54px] w-full items-center justify-center gap-2 rounded-[27px] bg-machisuke-green md:h-14 md:rounded-[28px] lg:h-[58px] lg:rounded-[29px]"
+            >
+              <svg viewBox="0 0 14 14" class="h-5 w-5 shrink-0 text-white" aria-hidden="true"><use href="#contact-message" /></svg>
+              <span class="font-display text-base font-bold text-white">LINEでお問い合わせ</span>
+            </a>
+          </article>
+
+          <article class="contact-outline-gray flex w-full flex-col gap-3 rounded-[18px] bg-white p-[18px] md:h-[326px] md:flex-1 md:justify-between md:gap-3.5 md:p-[26px] lg:h-[390px] lg:gap-[18px] lg:p-[38px]">
+            <div class="flex items-center gap-2.5">
+              <div class="flex h-[42px] w-[42px] shrink-0 items-center justify-center rounded-[21px] bg-[#FFFAF0]">
+                <svg viewBox="0 0 14 14" class="h-[22px] w-[22px] text-machisuke-orange" aria-hidden="true"><use href="#contact-phone" /></svg>
+              </div>
+              <h3 class="font-display text-lg font-bold text-machisuke-title-green md:text-xl lg:text-2xl">電話で相談する</h3>
+            </div>
+            <p class="font-body text-sm font-normal leading-[25px] text-machisuke-text md:text-[15px] md:leading-[26px] lg:text-base lg:leading-7">
+              お急ぎの方や、直接話しながら相談したい方はこちらからお問い合わせください。
+            </p>
+            <p class="font-display text-[25px] font-bold text-machisuke-orange md:text-xl lg:text-2xl">090-2343-9557</p>
+            <p class="font-body text-[13px] font-normal text-machisuke-text-gray lg:text-sm">営業時間 9:00〜17:00</p>
+            <a
+              href="tel:09023439557"
+              class="flex h-[54px] w-full items-center justify-center gap-2 rounded-[27px] bg-machisuke-orange md:h-14 md:rounded-[28px] lg:h-[58px] lg:rounded-[29px]"
+            >
+              <svg viewBox="0 0 14 14" class="h-5 w-5 shrink-0 text-white" aria-hidden="true"><use href="#contact-phone" /></svg>
+              <span class="font-display text-base font-bold text-white">電話をかける</span>
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <section class="flex w-full flex-col gap-[18px] bg-[#FFFAF0] px-5 py-[34px] md:items-center md:gap-5 md:px-11 md:py-[52px] lg:gap-7 lg:px-[120px] lg:py-20">
+        <h2 class="flex items-center gap-2.5 font-display text-[22px] font-bold text-machisuke-title-green md:w-[680px] md:gap-3 md:text-[26px] lg:w-[1000px] lg:gap-3.5 lg:text-3xl">
+          <span class="inline-block h-7 w-[5px] shrink-0 rounded-[3px] bg-machisuke-orange md:h-8 lg:h-9 lg:w-1.5" aria-hidden="true"></span>
+          お問い合わせフォーム
+        </h2>
+        <p class="font-body text-sm font-normal leading-[25px] text-machisuke-text md:w-[680px] md:text-base md:leading-[29px] lg:w-[1000px]">
+          下記の項目をご入力ください。内容を確認後、折り返しご連絡します。
+        </p>
+
+        <div class="contact-outline-orange flex w-full items-start gap-2.5 rounded-2xl bg-[#FFFAF0] p-[15px] md:hidden">
+          <svg viewBox="0 0 14 14" class="mt-0.5 h-5 w-5 shrink-0 text-machisuke-orange" aria-hidden="true"><use href="#contact-message" /></svg>
+          <p class="min-w-0 flex-1 font-body text-sm font-normal leading-[25px] text-machisuke-text">
+            ご相談内容が具体的に決まっていなくても大丈夫です。『こんなことを頼めるのかな？』という段階から、お気軽にお問い合わせください。
+          </p>
+        </div>
+
+        <form
+          id="contact-form"
+          class="contact-outline-gray flex w-full flex-col gap-5 rounded-[18px] bg-white p-[18px] md:w-[680px] md:items-center md:gap-[22px] md:p-9 lg:w-[1000px] lg:gap-[26px] lg:p-[52px]"
+          action="#"
+          method="post"
+        >
+          <div class="contact-outline-orange hidden w-full items-start gap-2.5 rounded-2xl bg-[#FFFAF0] p-[22px] md:flex lg:p-[26px]">
+            <svg viewBox="0 0 14 14" class="mt-0.5 h-5 w-5 shrink-0 text-machisuke-orange" aria-hidden="true"><use href="#contact-message" /></svg>
+            <p class="min-w-0 flex-1 font-body text-[15px] font-normal leading-[26px] text-machisuke-text lg:text-base lg:leading-7">
+              ご相談内容が具体的に決まっていなくても大丈夫です。『こんなことを頼めるのかな？』という段階から、お気軽にお問い合わせください。
+            </p>
+          </div>
+
+          <div class="flex w-full flex-col gap-5 md:flex-row md:gap-5 lg:gap-6">
+            <div class="flex w-full flex-col gap-2 md:flex-1">
+              <div class="flex items-center gap-2">
+                <label for="contact-name" class="font-body text-sm font-bold text-machisuke-text md:text-[15px] lg:text-base">お名前</label>
+                <span class="rounded-[10px] bg-machisuke-orange px-2 py-[3px] font-label text-[10px] font-bold text-white">必須</span>
+              </div>
+              <div class="contact-outline-gray flex h-[50px] items-center gap-[9px] rounded-[11px] bg-white px-3.5 md:h-[52px] lg:h-14">
+                <svg viewBox="0 0 14 14" class="h-[18px] w-[18px] shrink-0 text-machisuke-text-gray" aria-hidden="true"><use href="#contact-user" /></svg>
+                <input
+                  id="contact-name"
+                  class="contact-field min-w-0 flex-1"
+                  type="text"
+                  name="name"
+                  autocomplete="name"
+                  required
+                  placeholder="例）まち助 太郎"
+                />
+              </div>
+            </div>
+            <div class="flex w-full flex-col gap-2 md:flex-1">
+              <div class="flex items-center gap-2">
+                <label for="contact-tel" class="font-body text-sm font-bold text-machisuke-text md:text-[15px] lg:text-base">電話番号</label>
+                <span class="rounded-[10px] bg-[#FFFAF0] px-2 py-[3px] font-label text-[10px] font-bold text-machisuke-text-gray">任意</span>
+              </div>
+              <div class="contact-outline-gray flex h-[50px] items-center gap-[9px] rounded-[11px] bg-white px-3.5 md:h-[52px] lg:h-14">
+                <svg viewBox="0 0 14 14" class="h-[18px] w-[18px] shrink-0 text-machisuke-text-gray" aria-hidden="true"><use href="#contact-phone" /></svg>
+                <input
+                  id="contact-tel"
+                  class="contact-field min-w-0 flex-1"
+                  type="tel"
+                  name="tel"
+                  autocomplete="tel"
+                  placeholder="例）090-0000-0000"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="flex w-full flex-col gap-5 lg:flex-row lg:gap-6">
+            <div class="flex w-full flex-col gap-2 lg:flex-1">
+              <div class="flex items-center gap-2">
+                <label for="contact-email" class="font-body text-sm font-bold text-machisuke-text md:text-[15px] lg:text-base">メールアドレス</label>
+                <span class="rounded-[10px] bg-machisuke-orange px-2 py-[3px] font-label text-[10px] font-bold text-white">必須</span>
+              </div>
+              <div class="contact-outline-gray flex h-[50px] items-center gap-[9px] rounded-[11px] bg-white px-3.5 md:h-[52px] lg:h-14">
+                <svg viewBox="0 0 14 14" class="h-[18px] w-[18px] shrink-0 text-machisuke-text-gray" aria-hidden="true"><use href="#contact-mail" /></svg>
+                <input
+                  id="contact-email"
+                  class="contact-field min-w-0 flex-1"
+                  type="email"
+                  name="email"
+                  autocomplete="email"
+                  required
+                  placeholder="例）example@email.com"
+                />
+              </div>
+            </div>
+            <fieldset class="flex w-full flex-col gap-2 border-0 p-0 lg:flex-1">
+              <legend class="mb-2 flex w-full items-center gap-2 p-0">
+                <span class="font-body text-sm font-bold text-machisuke-text md:text-[15px] lg:text-base">ご希望の返信方法</span>
+                <span class="rounded-[10px] bg-[#FFFAF0] px-2 py-[3px] font-label text-[10px] font-bold text-machisuke-text-gray">任意</span>
+              </legend>
+              <div class="flex w-full flex-col gap-2 md:flex-row md:gap-3">
+                <label class="relative block min-w-0 flex-1">
+                  <input class="contact-radio" type="radio" name="reply_method" value="phone" checked />
+                  <span class="contact-radio-ui">
+                    <span class="contact-radio-mark" aria-hidden="true"></span>
+                    <span class="font-body text-sm font-bold text-machisuke-text">電話</span>
+                  </span>
+                </label>
+                <label class="relative block min-w-0 flex-1">
+                  <input class="contact-radio" type="radio" name="reply_method" value="email" />
+                  <span class="contact-radio-ui">
+                    <span class="contact-radio-mark" aria-hidden="true"></span>
+                    <span class="font-body text-sm font-bold text-machisuke-text">メール</span>
+                  </span>
+                </label>
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="flex w-full flex-col gap-2">
+            <div class="flex items-center gap-2">
+              <label for="contact-message" class="font-body text-sm font-bold text-machisuke-text md:text-[15px] lg:text-base">お問い合わせ内容</label>
+              <span class="rounded-[10px] bg-machisuke-orange px-2 py-[3px] font-label text-[10px] font-bold text-white">必須</span>
+            </div>
+            <div class="contact-outline-gray flex min-h-[122px] items-start rounded-[11px] bg-white p-3.5 md:min-h-[164px] lg:min-h-[200px]">
+              <textarea
+                id="contact-message"
+                class="contact-field min-h-[94px] w-full resize-y md:min-h-[136px] lg:min-h-[172px]"
+                name="message"
+                required
+                placeholder="お困りごとの内容をご入力ください"
+              ></textarea>
+            </div>
+          </div>
+
+          <div class="flex w-full flex-col gap-2">
+            <div class="flex items-center gap-2">
+              <label for="contact-photo" class="font-body text-sm font-bold text-machisuke-text md:text-[15px] lg:text-base">写真の添付</label>
+              <span class="rounded-[10px] bg-[#FFFAF0] px-2 py-[3px] font-label text-[10px] font-bold text-machisuke-text-gray">任意</span>
+            </div>
+            <label class="relative block w-full">
+              <input
+                id="contact-photo"
+                class="contact-file"
+                type="file"
+                name="photo"
+                accept="image/*"
+              />
+              <span class="contact-file-ui">
+                <svg viewBox="0 0 14 14" class="h-[25px] w-[25px] text-machisuke-green" aria-hidden="true"><use href="#contact-upload" /></svg>
+                <span class="font-display text-sm font-bold text-machisuke-title-green">写真を選択・添付</span>
+                <span id="contact-photo-name" class="font-body text-xs font-normal text-machisuke-text-gray">作業場所やお困りごとの写真</span>
+              </span>
+            </label>
+          </div>
+
+          <div class="flex w-full flex-col gap-2">
+            <label class="flex w-full items-center gap-2.5">
+              <input
+                id="contact-privacy"
+                class="contact-check"
+                type="checkbox"
+                name="privacy"
+                value="agreed"
+                required
+              />
+              <span class="contact-check-mark" aria-hidden="true"></span>
+              <span class="flex min-w-0 flex-1 flex-wrap items-center gap-[7px]">
+                <span class="font-body text-[13px] font-bold text-machisuke-text md:text-[15px] lg:text-base">個人情報の取り扱いに同意する</span>
+                <span class="rounded-[9px] bg-machisuke-orange px-[7px] py-0.5 font-label text-[9px] font-bold text-white">必須</span>
+              </span>
+            </label>
+            <p class="pl-8 font-body text-[13px] font-normal leading-[22px] text-machisuke-text-gray">
+              お預かりしたお名前、電話番号、メールアドレス、お問い合わせ内容、添付写真は、ご返信とご依頼対応のみに使用します。目的以外の利用や、第三者への提供は行いません。
+            </p>
+          </div>
+
+          <div class="flex w-full items-start gap-2 rounded-[11px] bg-[#FFFAF0] p-3">
+            <svg viewBox="0 0 14 14" class="mt-0.5 h-[17px] w-[17px] shrink-0 text-machisuke-blue" aria-hidden="true"><use href="#contact-info" /></svg>
+            <p class="min-w-0 flex-1 font-body text-[13px] font-normal leading-[22px] text-machisuke-text-gray">
+              返信時期や連絡方法についての正式な案内が入ります。
+            </p>
+          </div>
+
+          <button
+            class="flex h-14 w-full items-center justify-center gap-[9px] rounded-[28px] border-0 bg-machisuke-blue md:h-14 md:w-[400px] lg:h-[58px] lg:rounded-[29px]"
+            type="submit"
+          >
+            <span class="font-display text-base font-bold text-white lg:text-[17px]">入力内容を確認する</span>
+            <svg viewBox="0 0 14 14" class="h-[19px] w-[19px] shrink-0 text-white" aria-hidden="true"><use href="#contact-arrow" /></svg>
+          </button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="relative overflow-x-hidden bg-[#4A3B2C]">
+      <div class="relative md:hidden">
+        <img
+          src="public/69_footer_bg_mobile.png"
+          alt=""
+          class="block h-auto w-full"
+        />
+        <div class="absolute inset-x-0 top-0 bottom-[30%] z-10">
+          <div
+            class="footer-mobile-rule pointer-events-none absolute left-1/2 top-1/2 w-0.5 -translate-x-1/2 -translate-y-1/2 bg-white"
+            aria-hidden="true"
+          ></div>
+          <div class="grid h-full grid-cols-2 items-center">
+            <div class="flex items-center justify-center">
+              <img
+                src="public/49_logo_white_horizontal.png"
+                alt="便利屋まち助"
+                class="footer-mobile-logo object-contain"
+              />
+            </div>
+            <div class="footer-contact flex min-w-0 flex-col items-center justify-center">
+              <p class="footer-contact-text text-center font-label font-bold text-[#C9C2B8]">
+                〒505-0056<br />
+                岐阜県美濃加茂市加茂野町市橋
+              </p>
+              <p class="footer-contact-text whitespace-nowrap text-center font-label font-bold text-[#C9C2B8]">
+                営業時間 9:00〜17:00
+              </p>
+              <a href="tel:09023439557" class="footer-contact-phone flex items-center justify-center gap-[0.3em]">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="footer-contact-icon">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.81.32 1.6.57 2.36a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.72-1.14a2 2 0 0 1 2.11-.45c.76.25 1.55.44 2.36.57A2 2 0 0 1 22 16.92z" />
+                </svg>
+                <span class="whitespace-nowrap font-label font-bold text-white">090-2343-9557</span>
+              </a>
+              <a href="mailto:machisuke.takato@gmail.com" class="footer-contact-text flex items-center justify-center gap-[0.3em]">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="footer-contact-icon">
+                  <rect width="20" height="16" x="2" y="4" rx="2" />
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                </svg>
+                <span class="whitespace-nowrap font-label font-bold text-white">machisuke.takato@gmail.com</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative hidden md:block">
+        <img
+          src="public/70_footer_bg_tablet_pc.png"
+          alt=""
+          class="block h-auto w-full"
+        />
+        <div class="absolute inset-x-0 top-0 bottom-[30%] z-10">
+          <div
+            class="pointer-events-none absolute left-1/2 top-1/2 h-[90px] w-0.5 -translate-x-1/2 -translate-y-1/2 bg-white lg:hidden"
+            aria-hidden="true"
+          ></div>
+          <div
+            class="pointer-events-none absolute left-1/3 top-1/2 hidden h-[135px] w-[3px] -translate-x-1/2 -translate-y-1/2 bg-white lg:block"
+            aria-hidden="true"
+          ></div>
+          <div
+            class="pointer-events-none absolute left-2/3 top-1/2 hidden h-[135px] w-[3px] -translate-x-1/2 -translate-y-1/2 bg-white lg:block"
+            aria-hidden="true"
+          ></div>
+          <div class="grid h-full grid-cols-2 items-center lg:grid-cols-3">
+            <div class="flex items-center justify-center">
+              <img
+                src="public/49_logo_white_horizontal.png"
+                alt="便利屋まち助"
+                class="h-[140px] w-[252px] object-contain lg:h-[210px] lg:w-[min(378px,85%)]"
+              />
+            </div>
+            <div class="flex min-w-0 flex-col items-center justify-center gap-2 px-2 lg:gap-3">
+              <p class="text-center font-label text-[13px] font-bold text-[#C9C2B8] lg:text-base">
+                〒505-0056<br />
+                岐阜県美濃加茂市加茂野町市橋
+              </p>
+              <p class="whitespace-nowrap text-center font-label text-[13px] font-bold text-[#C9C2B8] lg:text-base">
+                営業時間 9:00〜17:00
+              </p>
+              <a href="tel:09023439557" class="flex items-center justify-center gap-1.5 lg:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.81.32 1.6.57 2.36a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.72-1.14a2 2 0 0 1 2.11-.45c.76.25 1.55.44 2.36.57A2 2 0 0 1 22 16.92z" />
+                </svg>
+                <span class="whitespace-nowrap font-label text-base font-bold text-white">090-2343-9557</span>
+              </a>
+              <a href="mailto:machisuke.takato@gmail.com" class="flex items-center justify-center gap-1.5 lg:gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 lg:h-5 lg:w-5">
+                  <rect width="20" height="16" x="2" y="4" rx="2" />
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                </svg>
+                <span class="whitespace-nowrap font-label text-[13px] font-bold text-white lg:text-base">machisuke.takato@gmail.com</span>
+              </a>
+            </div>
+            <div class="hidden flex-col items-center justify-center gap-1.5 px-4 lg:flex">
+              <p class="whitespace-nowrap text-center font-label text-base font-bold text-[#C9C2B8]">
+                代表番号：
+              </p>
+              <a href="tel:09023439557" class="flex items-center justify-center gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-[30px] w-[30px] shrink-0">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.81.32 1.6.57 2.36a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.72-1.14a2 2 0 0 1 2.11-.45c.76.25 1.55.44 2.36.57A2 2 0 0 1 22 16.92z" />
+                </svg>
+                <span class="whitespace-nowrap font-label text-[30px] font-bold text-white">090-2343-9557</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        var header = document.querySelector(".site-header");
+        if (header) {
+          var scrolled = false;
+          var updateHeader = function () {
+            var next = window.scrollY > 8;
+            if (next === scrolled) return;
+            scrolled = next;
+            header.classList.toggle("is-scrolled", scrolled);
+          };
+          window.addEventListener("scroll", updateHeader, { passive: true });
+          updateHeader();
+        }
+
+        var toggle = document.getElementById("menu-toggle");
+        var menu = document.getElementById("mobile-menu");
+        if (toggle && menu) {
+          toggle.addEventListener("click", function () {
+            var isHidden = menu.classList.toggle("hidden");
+            toggle.setAttribute("aria-expanded", String(!isHidden));
+            toggle.setAttribute("aria-label", isHidden ? "メニューを開く" : "メニューを閉じる");
+            if (header) header.classList.toggle("is-menu-open", !isHidden);
+          });
+          menu.querySelectorAll("a").forEach(function (link) {
+            link.addEventListener("click", function () {
+              menu.classList.add("hidden");
+              toggle.setAttribute("aria-expanded", "false");
+              toggle.setAttribute("aria-label", "メニューを開く");
+              if (header) header.classList.remove("is-menu-open");
+            });
+          });
+        }
+
+        var form = document.getElementById("contact-form");
+        if (form) {
+          form.addEventListener("submit", function (event) {
+            event.preventDefault();
+          });
+        }
+
+        var photo = document.getElementById("contact-photo");
+        var photoName = document.getElementById("contact-photo-name");
+        if (photo && photoName) {
+          photo.addEventListener("change", function () {
+            var file = photo.files && photo.files[0];
+            photoName.textContent = file ? file.name : "作業場所やお困りごとの写真";
+          });
+        }
+      })();
+    </script>
+  </body>
+</html>
