@@ -185,6 +185,8 @@
         font-family: "Kosugi Maru", system-ui, sans-serif;
       }
       .text-machisuke-green { color: #5FA246; }
+      .text-machisuke-blue { color: #3E7FB0; }
+      .bg-machisuke-blue { background-color: #3E7FB0; }
       .btn-outline-green {
         outline: 2px solid #5FA246;
         outline-offset: -1px;
@@ -212,7 +214,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Kosugi+Maru:wght@400&family=Zen+Kaku+Gothic+New:wght@400;700&family=Zen+Maru+Gothic:wght@500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Kosugi+Maru:wght@400&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Zen+Maru+Gothic:wght@500;700&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -396,7 +398,7 @@
           <div class="flex w-full flex-col gap-[7.5px] md:flex-row md:gap-3 lg:gap-4">
             <div class="flex gap-[7.5px] md:contents">
               <article
-                class="flex flex-1 items-center gap-2 rounded-[9px] bg-[#FFFAF0] p-3 md:h-[177px] md:flex-col md:justify-center md:rounded-xl md:p-3.5 lg:h-[175px] lg:rounded-2xl lg:p-[14px]"
+                class="flex flex-1 items-center gap-2 rounded-[9px] bg-white p-3 md:h-[177px] md:flex-col md:justify-center md:rounded-xl md:p-3.5 lg:h-[175px] lg:rounded-2xl lg:p-[14px]"
               >
                 <img
                   src="public/18_character_friendly_worker.png"
@@ -415,7 +417,7 @@
                 </div>
               </article>
               <article
-                class="flex flex-1 items-center gap-2 rounded-[9px] bg-[#FFFAF0] p-3 md:h-[177px] md:flex-col md:justify-center md:rounded-xl md:p-3.5 lg:h-[175px] lg:rounded-2xl lg:p-[14px]"
+                class="flex flex-1 items-center gap-2 rounded-[9px] bg-white p-3 md:h-[177px] md:flex-col md:justify-center md:rounded-xl md:p-3.5 lg:h-[175px] lg:rounded-2xl lg:p-[14px]"
               >
                 <img
                   src="public/15_icon_heart_in_hands.png"
@@ -435,7 +437,7 @@
             </div>
             <div class="flex gap-[7.5px] md:contents">
               <article
-                class="flex flex-1 items-center gap-2 rounded-[9px] bg-[#FFFAF0] p-3 md:h-[177px] md:flex-col md:justify-center md:rounded-xl md:p-3.5 lg:h-[175px] lg:rounded-2xl lg:p-[14px]"
+                class="flex flex-1 items-center gap-2 rounded-[9px] bg-white p-3 md:h-[177px] md:flex-col md:justify-center md:rounded-xl md:p-3.5 lg:h-[175px] lg:rounded-2xl lg:p-[14px]"
               >
                 <img
                   src="public/16_icon_yen_calculator.png"
@@ -454,7 +456,7 @@
                 </div>
               </article>
               <article
-                class="flex flex-1 items-center gap-2 rounded-[9px] bg-[#FFFAF0] p-3 md:h-[177px] md:flex-col md:justify-center md:rounded-xl md:p-3.5 lg:h-[175px] lg:rounded-2xl lg:p-[14px]"
+                class="flex flex-1 items-center gap-2 rounded-[9px] bg-white p-3 md:h-[177px] md:flex-col md:justify-center md:rounded-xl md:p-3.5 lg:h-[175px] lg:rounded-2xl lg:p-[14px]"
               >
                 <img
                   src="public/12_character_thumbs_up.png"
@@ -475,7 +477,7 @@
             </div>
             <div class="flex md:contents">
               <article
-                class="flex flex-1 items-center gap-2 rounded-[9px] bg-[#FFFAF0] p-3 md:h-[177px] md:flex-col md:justify-center md:rounded-xl md:p-3.5 lg:h-[175px] lg:rounded-2xl lg:p-[14px]"
+                class="flex flex-1 items-center gap-2 rounded-[9px] bg-white p-3 md:h-[177px] md:flex-col md:justify-center md:rounded-xl md:p-3.5 lg:h-[175px] lg:rounded-2xl lg:p-[14px]"
               >
                 <img
                   src="public/06_character_phone_yellow.png"
@@ -529,23 +531,27 @@
         </p>
       </section>
 
-      <!-- CtaWrap -->
-      <section class="flex w-full flex-col items-center bg-[#FFFAF0] py-2.5 md:py-[18px] lg:py-8">
-        <div class="relative w-full md:w-[480px] lg:w-[900px]">
-          <img
-            src="public/65_line_cta_banner_blue.png"
-            alt="小さなご依頼も大歓迎！LINEで気軽に相談する。相談・見積りだけでもOK！"
-            class="block h-auto w-full"
-          />
-          <a
-            href="https://lin.ee/twtIlMiJ"
-            class="absolute left-[22.2%] top-[29.2%] z-10 h-[41%] w-[55.5%] rounded-full transition duration-200 hover:bg-white/25"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <span class="sr-only">LINEで気軽に相談する</span>
-          </a>
-        </div>
+      <section class="flex w-full flex-col items-center gap-[15px] bg-machisuke-blue px-5 pb-7 pt-8 md:gap-[18px] md:p-11 lg:gap-[22px] lg:px-[120px] lg:py-[68px]">
+        <img
+          src="public/06_character_phone_yellow.png"
+          alt=""
+          class="h-[82px] w-[90px] object-contain"
+        />
+        <h2 class="w-full text-center font-display text-[23px] font-bold text-white md:w-[620px] md:text-[28px] lg:w-[900px] lg:text-[32px]">
+          小さなご依頼も大歓迎！
+        </h2>
+        <p class="w-full text-center font-body text-sm font-normal leading-[25px] text-white md:w-[560px] md:text-base md:leading-7 lg:w-[774px]">
+          相談・お見積もりだけでも大丈夫です。LINEからお気軽にご相談ください。
+        </p>
+        <a
+          href="contact.html"
+          class="flex h-14 w-full items-center justify-center gap-[9px] rounded-[28px] bg-white shadow-[0_3px_8px_0_#7A7A7A] transition duration-200 hover:-translate-y-0.5 hover:shadow-[0_6px_14px_0_rgba(74,59,44,0.28)] md:h-14 md:w-[380px] lg:h-[58px] lg:w-[400px] lg:rounded-[29px]"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-[21px] w-[21px] shrink-0 text-machisuke-blue" aria-hidden="true">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+          </svg>
+          <span class="font-display text-base font-bold text-machisuke-blue lg:text-[17px]">気軽に相談する</span>
+        </a>
       </section>
     </main>
 
