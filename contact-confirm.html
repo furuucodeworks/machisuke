@@ -105,9 +105,32 @@
         nav[aria-label="モバイルメニュー"] a {
           transition: color 0.2s ease;
         }
+        nav[aria-label="メインメニュー"] a,
+        nav[aria-label="モバイルメニュー"] a {
+          position: relative;
+          display: inline-block;
+          padding-bottom: 2px;
+        }
+        nav[aria-label="メインメニュー"] a::after,
+        nav[aria-label="モバイルメニュー"] a::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          height: 2px;
+          background-color: #E8833A;
+          transform: scaleX(0);
+          transform-origin: center;
+          transition: transform 0.2s ease;
+        }
         nav[aria-label="メインメニュー"] a:hover,
         nav[aria-label="モバイルメニュー"] a:hover {
           color: #E8833A;
+        }
+        nav[aria-label="メインメニュー"] a:hover::after,
+        nav[aria-label="モバイルメニュー"] a:hover::after {
+          transform: scaleX(1);
         }
         footer a[href^="tel:"] {
           transition: opacity 0.2s ease;
@@ -558,22 +581,14 @@
         <img
           src="public/70_footer_bg_tablet_pc.png"
           alt=""
-          class="block h-auto w-full"
+          class="block h-[252px] w-full object-cover object-bottom lg:h-[321px]"
         />
         <div class="absolute inset-x-0 top-0 bottom-[30%] z-10">
           <div
-            class="pointer-events-none absolute left-1/2 top-1/2 h-[90px] w-0.5 -translate-x-1/2 -translate-y-1/2 bg-white lg:hidden"
+            class="pointer-events-none absolute left-1/2 top-1/2 h-[90px] w-0.5 -translate-x-1/2 -translate-y-1/2 bg-white lg:h-[135px] lg:w-[3px]"
             aria-hidden="true"
           ></div>
-          <div
-            class="pointer-events-none absolute left-1/3 top-1/2 hidden h-[135px] w-[3px] -translate-x-1/2 -translate-y-1/2 bg-white lg:block"
-            aria-hidden="true"
-          ></div>
-          <div
-            class="pointer-events-none absolute left-2/3 top-1/2 hidden h-[135px] w-[3px] -translate-x-1/2 -translate-y-1/2 bg-white lg:block"
-            aria-hidden="true"
-          ></div>
-          <div class="grid h-full grid-cols-2 items-center lg:grid-cols-3">
+          <div class="grid h-full grid-cols-2 items-center">
             <div class="flex items-center justify-center">
               <img
                 src="public/49_logo_white_horizontal.png"
@@ -589,22 +604,11 @@
               <p class="whitespace-nowrap text-center font-label text-[13px] font-bold text-[#C9C2B8] lg:text-base">
                 営業時間 9:00〜17:00
               </p>
-              <a href="tel:09023439557" class="flex items-center justify-center gap-1.5 lg:hidden">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4">
+              <a href="tel:09023439557" class="flex items-center justify-center gap-1.5 lg:gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 lg:h-5 lg:w-5">
                   <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.81.32 1.6.57 2.36a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.72-1.14a2 2 0 0 1 2.11-.45c.76.25 1.55.44 2.36.57A2 2 0 0 1 22 16.92z" />
                 </svg>
-                <span class="whitespace-nowrap font-label text-base font-bold text-white">090-2343-9557</span>
-              </a>
-            </div>
-            <div class="hidden flex-col items-center justify-center gap-1.5 px-4 lg:flex">
-              <p class="whitespace-nowrap text-center font-label text-base font-bold text-[#C9C2B8]">
-                代表番号：
-              </p>
-              <a href="tel:09023439557" class="flex items-center justify-center gap-3">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-[30px] w-[30px] shrink-0">
-                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.81.32 1.6.57 2.36a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.72-1.14a2 2 0 0 1 2.11-.45c.76.25 1.55.44 2.36.57A2 2 0 0 1 22 16.92z" />
-                </svg>
-                <span class="whitespace-nowrap font-label text-[30px] font-bold text-white">090-2343-9557</span>
+                <span class="whitespace-nowrap font-label text-base font-bold text-white lg:text-xl">090-2343-9557</span>
               </a>
             </div>
           </div>
@@ -692,12 +696,14 @@
             return contact.clearDraft();
           }).then(function () {
             window.location.href = "contact-thanks.html";
-          }).catch(function () {
+          }).catch(function (error) {
             sendButton.disabled = false;
             sendButton.removeAttribute("aria-busy");
             sendButton.querySelector("span").textContent = "この内容で送信する";
             if (errorEl) {
-              errorEl.textContent = "送信できませんでした。時間をおいて再度お試しください。お急ぎの場合はお電話またはLINEをご利用ください。";
+              errorEl.textContent = error && error.code === "activation"
+                ? "初回送信のため、machisuke.takato@gmail.com に確認メールを送りました。メール内の「Activate Form」を押したあと、もう一度このボタンを押してください。届かない場合は迷惑メールもご確認ください。"
+                : "送信できませんでした。時間をおいて再度お試しください。お急ぎの場合はお電話またはLINEをご利用ください。";
               errorEl.classList.remove("hidden");
             }
           });

@@ -99,6 +99,10 @@
     formData.append("_template", "table");
     formData.append("_captcha", "false");
     formData.append("_replyto", data.email);
+    formData.append("_url", window.location.href);
+    formData.append("name", data.name);
+    formData.append("email", data.email);
+    formData.append("message", data.message);
     formData.append("お名前", data.name);
     formData.append("電話番号", data.tel || "未入力");
     formData.append("メールアドレス", data.email);
@@ -113,8 +117,14 @@
       body: formData,
     }).then(function (response) {
       return response.json().then(function (json) {
+        var message = String(json && json.message ? json.message : "");
+        if (/activat/i.test(message)) {
+          var error = new Error(message);
+          error.code = "activation";
+          throw error;
+        }
         if (!response.ok || json.success === false || json.success === "false") {
-          throw new Error(json.message || "送信に失敗しました。");
+          throw new Error(message || "送信に失敗しました。");
         }
         return json;
       }, function () {
