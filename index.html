@@ -146,8 +146,34 @@
           height: clamp(48px, 4.58vw, 66px);
         }
       }
+      @media (min-width: 1024px) and (max-width: 1279.98px) {
+        .header-bar {
+          padding-inline: 20px;
+        }
+        .header-logo {
+          width: 132px;
+        }
+        .header-line {
+          width: 112px;
+          height: 40px;
+        }
+        .header-actions {
+          gap: 12px;
+        }
+        nav[aria-label="メインメニュー"] {
+          gap: 8px;
+        }
+        nav[aria-label="メインメニュー"] a {
+          font-size: 13px;
+        }
+        nav[aria-label="メインメニュー"] > span {
+          display: none;
+        }
+      }
+
       html,
       body {
+        overflow-x: clip;
         background-color: #fffaf0;
       }
       .intro-wrap {
@@ -266,7 +292,7 @@
         </a>
 
         <nav
-          class="hidden flex-1 items-center justify-center gap-5 lg:flex"
+          class="hidden min-w-0 flex-1 items-center justify-center gap-5 lg:flex"
           aria-label="メインメニュー"
         >
           <a
@@ -458,11 +484,11 @@
         class="relative flex w-full flex-col items-center gap-3.5 bg-[#FFFAF0] px-5 py-6 md:gap-6 md:px-[60px] md:py-12 lg:gap-7 lg:p-16"
       >
         <h2
-          class="whitespace-nowrap text-center font-display text-[17px] font-bold text-machisuke-text md:text-2xl lg:text-[30px]"
+          class="text-center font-display text-[17px] font-bold text-machisuke-text md:text-2xl lg:text-[30px]"
         >
           こんなお困りごとはありませんか？
         </h2>
-        <div class="relative w-full overflow-visible md:w-[648px] lg:w-[900px]">
+        <div class="relative w-full max-w-[900px] overflow-visible">
           <img
             src="public/43_flyer_service_menu.jpeg"
             alt="サービスメニュー。屋内サポート、屋外サポート、力仕事・作業系、不用品回収、その他、オプションの料金例"
@@ -507,10 +533,10 @@
         class="flex w-full flex-col items-center gap-4 bg-[#FFFAF0] px-4 py-6 md:gap-6 md:px-[50px] md:py-10 lg:gap-8 lg:px-16 lg:py-14"
       >
         <div
-          class="flex w-full flex-col items-center gap-[9px] rounded-[21px] bg-[#E8833A] p-[10.5px] md:gap-4 md:rounded-[26px] md:p-5 lg:w-[1000px] lg:gap-5 lg:rounded-[32px] lg:p-[26px]"
+          class="flex w-full flex-col items-center gap-[9px] rounded-[21px] bg-[#E8833A] p-[10.5px] md:gap-4 md:rounded-[26px] md:p-5 lg:max-w-[1000px] lg:gap-5 lg:rounded-[32px] lg:p-[26px]"
         >
           <h2
-            class="whitespace-nowrap text-center font-display text-[17px] font-bold text-white md:text-lg lg:text-[22px]"
+            class="text-center font-display text-[17px] font-bold text-white md:text-lg lg:text-[22px]"
           >
             まち助が選ばれる理由
           </h2>
@@ -701,12 +727,12 @@
       >
         <div class="flex flex-col items-center gap-1 md:gap-1.5">
           <h2
-            class="whitespace-nowrap text-center font-display text-[17px] font-bold text-machisuke-text md:text-2xl lg:text-[30px]"
+            class="text-center font-display text-[17px] font-bold text-machisuke-text md:text-2xl lg:text-[30px]"
           >
             対応エリア
           </h2>
           <p
-            class="whitespace-nowrap text-center font-body text-[10px] font-bold text-machisuke-text md:text-sm lg:text-lg"
+            class="text-center font-body text-[10px] font-bold text-machisuke-text md:text-sm lg:text-lg"
           >
             岐阜県の中濃地域を中心に対応しています！
           </p>
@@ -714,7 +740,7 @@
         <img
           src="public/51_service_area_map_extended.png"
           alt="対応エリアマップ（美濃加茂市・可児市・御嵩町・八百津町）"
-          class="h-[179px] w-[336px] rounded-[10px] object-contain md:h-[306px] md:w-[576px] md:rounded-[14px] lg:h-[409px] lg:w-[768px]"
+          class="h-auto w-full max-w-[336px] rounded-[10px] object-contain md:max-w-[576px] md:rounded-[14px] lg:max-w-[768px]"
         />
         <p
           class="w-full text-center font-body text-[10px] font-bold text-machisuke-text md:text-sm lg:text-lg"
@@ -725,7 +751,7 @@
       </section>
 
       <section
-        class="flex w-full flex-col items-center gap-[15px] bg-machisuke-blue px-5 pb-7 pt-8 md:gap-[18px] md:p-11 lg:gap-[22px] lg:px-[120px] lg:py-[68px]"
+        class="flex w-full flex-col items-center gap-[15px] bg-machisuke-blue px-5 pb-7 pt-8 md:gap-[18px] md:p-11 lg:gap-[22px] lg:px-8 xl:px-[120px] lg:py-[68px]"
       >
         <img
           src="public/06_character_phone_yellow.png"
@@ -733,12 +759,12 @@
           class="h-[82px] w-[90px] object-contain"
         />
         <h2
-          class="w-full text-center font-display text-[23px] font-bold text-white md:w-[620px] md:text-[28px] lg:w-[900px] lg:text-[32px]"
+          class="w-full text-center font-display text-[23px] font-bold text-white md:max-w-[620px] md:text-[28px] lg:max-w-[900px] lg:text-[32px]"
         >
           小さなご依頼も大歓迎！
         </h2>
         <p
-          class="w-full text-center font-body text-sm font-normal leading-[25px] text-white md:w-[560px] md:text-base md:leading-7 lg:w-[774px]"
+          class="w-full text-center font-body text-sm font-normal leading-[25px] text-white md:max-w-[560px] md:text-base md:leading-7 lg:max-w-[774px]"
         >
           相談・お見積もりだけでも大丈夫です。LINEからお気軽にご相談ください。
         </p>

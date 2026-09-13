@@ -176,8 +176,34 @@
           height: clamp(48px, 4.58vw, 66px);
         }
       }
+      @media (min-width: 1024px) and (max-width: 1279.98px) {
+        .header-bar {
+          padding-inline: 20px;
+        }
+        .header-logo {
+          width: 132px;
+        }
+        .header-line {
+          width: 112px;
+          height: 40px;
+        }
+        .header-actions {
+          gap: 12px;
+        }
+        nav[aria-label="メインメニュー"] {
+          gap: 8px;
+        }
+        nav[aria-label="メインメニュー"] a {
+          font-size: 13px;
+        }
+        nav[aria-label="メインメニュー"] > span {
+          display: none;
+        }
+      }
+
       html,
       body {
+        overflow-x: clip;
         background-color: #FFFAF0;
       }
       .footer-mobile-logo {
@@ -408,7 +434,7 @@
           />
         </a>
 
-        <nav class="hidden flex-1 items-center justify-center gap-5 lg:flex" aria-label="メインメニュー">
+        <nav class="hidden min-w-0 flex-1 items-center justify-center gap-5 lg:flex" aria-label="メインメニュー">
           <a href="index.html" class="whitespace-nowrap font-body text-[15px] font-medium text-machisuke-text">ホーム</a>
           <span class="font-body text-[14px] font-normal text-machisuke-border-light" aria-hidden="true">｜</span>
           <a href="services.html" class="whitespace-nowrap font-body text-[15px] font-medium text-machisuke-text">サービス内容・料金</a>
@@ -470,20 +496,20 @@
     </header>
 
     <main class="overflow-x-hidden">
-      <section class="flex w-full flex-col items-center gap-3.5 bg-[#FFFAF0] px-5 pb-7 pt-[30px] md:gap-4 md:px-11 md:pb-10 md:pt-[42px] lg:gap-[18px] lg:px-[120px] lg:py-14">
+      <section class="flex w-full flex-col items-center gap-3.5 bg-[#FFFAF0] px-5 pb-7 pt-[30px] md:gap-4 md:px-11 md:pb-10 md:pt-[42px] lg:gap-[18px] lg:px-8 xl:px-[120px] lg:py-14">
         <p class="rounded-[20px] bg-machisuke-green px-4 py-[7px] font-label text-xs font-bold tracking-[1px] text-white lg:px-[18px] lg:py-2 lg:text-[13px]">
           CONTACT
         </p>
         <h1 class="font-display text-[29px] font-bold text-machisuke-title-green md:text-4xl lg:text-[42px]">
           入力内容の確認
         </h1>
-        <p class="w-full text-center font-body text-[13px] font-normal leading-[23px] text-machisuke-text-gray md:w-[600px] md:text-[15px] md:leading-[26px] lg:w-[760px] lg:text-base lg:leading-7">
+        <p class="w-full text-center font-body text-[13px] font-normal leading-[23px] text-machisuke-text-gray md:max-w-[600px] md:text-[15px] md:leading-[26px] lg:max-w-[760px] lg:text-base lg:leading-7">
           以下の内容で送信します。よろしければ「この内容で送信する」を押してください。
         </p>
       </section>
 
-      <section class="flex w-full flex-col gap-[18px] bg-[#FFFAF0] px-5 py-[34px] md:items-center md:gap-5 md:px-11 md:py-[52px] lg:gap-7 lg:px-[120px] lg:py-20">
-        <div class="contact-outline-gray flex w-full flex-col gap-5 rounded-[18px] bg-white p-[18px] md:w-[680px] md:gap-[22px] md:p-9 lg:w-[1000px] lg:gap-[26px] lg:p-[52px]">
+      <section class="flex w-full flex-col gap-[18px] bg-[#FFFAF0] px-5 py-[34px] md:items-center md:gap-5 md:px-11 md:py-[52px] lg:gap-7 lg:px-8 xl:px-[120px] lg:py-20">
+        <div class="contact-outline-gray flex w-full flex-col gap-5 rounded-[18px] bg-white p-[18px] md:max-w-[680px] md:gap-[22px] md:p-9 lg:max-w-[1000px] lg:gap-[26px] lg:p-[52px]">
           <div class="flex w-full flex-col gap-2">
             <p class="font-body text-sm font-bold text-machisuke-text md:text-[15px] lg:text-base">お名前</p>
             <p id="confirm-name" class="contact-outline-gray contact-confirm-value rounded-[11px] bg-white px-3.5 py-3.5 font-body text-sm text-machisuke-text md:text-[15px] lg:text-base"></p>

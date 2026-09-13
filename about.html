@@ -144,8 +144,34 @@
           height: clamp(48px, 4.58vw, 66px);
         }
       }
+      @media (min-width: 1024px) and (max-width: 1279.98px) {
+        .header-bar {
+          padding-inline: 20px;
+        }
+        .header-logo {
+          width: 132px;
+        }
+        .header-line {
+          width: 112px;
+          height: 40px;
+        }
+        .header-actions {
+          gap: 12px;
+        }
+        nav[aria-label="メインメニュー"] {
+          gap: 8px;
+        }
+        nav[aria-label="メインメニュー"] a {
+          font-size: 13px;
+        }
+        nav[aria-label="メインメニュー"] > span {
+          display: none;
+        }
+      }
+
       html,
       body {
+        overflow-x: clip;
         background-color: #FFFAF0;
       }
       .footer-mobile-logo {
@@ -307,7 +333,7 @@
           />
         </a>
 
-        <nav class="hidden flex-1 items-center justify-center gap-5 lg:flex" aria-label="メインメニュー">
+        <nav class="hidden min-w-0 flex-1 items-center justify-center gap-5 lg:flex" aria-label="メインメニュー">
           <a href="index.html" class="whitespace-nowrap font-body text-[15px] font-medium text-machisuke-text">ホーム</a>
           <span class="font-body text-[14px] font-normal text-machisuke-border-light" aria-hidden="true">｜</span>
           <a href="services.html" class="whitespace-nowrap font-body text-[15px] font-medium text-machisuke-text">サービス内容・料金</a>
@@ -369,19 +395,19 @@
     </header>
 
     <main class="overflow-x-hidden">
-      <section class="flex w-full flex-col items-center gap-3.5 bg-[#FFFAF0] px-5 pb-7 pt-[30px] md:gap-4 md:px-11 md:pb-[42px] md:pt-[42px] lg:gap-[18px] lg:px-[120px] lg:pb-14 lg:pt-14">
+      <section class="flex w-full flex-col items-center gap-3.5 bg-[#FFFAF0] px-5 pb-7 pt-[30px] md:gap-4 md:px-11 md:pb-[42px] md:pt-[42px] lg:gap-[18px] lg:px-8 xl:px-[120px] lg:pb-14 lg:pt-14">
         <p class="rounded-[20px] bg-machisuke-green px-4 py-[7px] font-label text-xs font-bold tracking-[1px] text-white lg:px-[18px] lg:py-2 lg:text-[13px]">
           ABOUT MACHI-SUKE
         </p>
         <h1 class="font-display text-[29px] font-bold text-machisuke-title-green md:text-4xl lg:text-[42px]">
           まち助について
         </h1>
-        <p class="w-full text-center font-display text-[19px] font-bold leading-7 text-machisuke-orange md:w-[620px] md:text-[22px] md:leading-8 lg:w-[900px] lg:text-2xl lg:leading-[35px]">
+        <p class="w-full text-center font-display text-[19px] font-bold leading-7 text-machisuke-orange md:max-w-[620px] md:text-[22px] md:leading-8 lg:max-w-[900px] lg:text-2xl lg:leading-[35px]">
           地域の皆さまにとって、<br class="lg:hidden" />身近で頼れる存在を目指しています。
         </p>
       </section>
 
-      <section class="flex w-full flex-col items-center gap-4 bg-[#FFFAF0] px-5 pb-8 pt-5 md:gap-5 md:px-11 md:py-[52px] lg:gap-6 lg:px-[120px] lg:py-20">
+      <section class="flex w-full flex-col items-center gap-4 bg-[#FFFAF0] px-5 pb-8 pt-5 md:gap-5 md:px-11 md:py-[52px] lg:gap-6 lg:px-8 xl:px-[120px] lg:py-20">
         <div class="about-outline-orange about-photo w-full max-w-[840px] shrink-0 rounded-[20px]">
           <img
             src="public/44_photo_staff_smiling_river.png"
@@ -401,12 +427,12 @@
         </div>
       </section>
 
-      <section class="flex w-full flex-col gap-5 bg-[#FFFAF0] px-5 py-[34px] md:gap-6 md:px-16 md:py-[52px] lg:items-center lg:gap-8 lg:px-[120px] lg:py-20">
-        <h2 class="flex items-center gap-2.5 font-display text-[22px] font-bold text-machisuke-title-green md:gap-3 md:text-[26px] lg:w-[840px] lg:gap-3.5 lg:text-3xl">
+      <section class="flex w-full flex-col gap-5 bg-[#FFFAF0] px-5 py-[34px] md:gap-6 md:px-16 md:py-[52px] lg:items-center lg:gap-8 lg:px-8 xl:px-[120px] lg:py-20">
+        <h2 class="flex items-center gap-2.5 font-display text-[22px] font-bold text-machisuke-title-green md:gap-3 md:text-[26px] lg:max-w-[840px] lg:gap-3.5 lg:text-3xl">
           <span class="inline-block h-7 w-[5px] shrink-0 rounded-[3px] bg-machisuke-orange md:h-8 lg:h-9 lg:w-1.5" aria-hidden="true"></span>
           まち助に込めた思い
         </h2>
-        <div class="flex w-full flex-col gap-[18px] md:gap-[22px] lg:w-[840px] lg:gap-6">
+        <div class="flex w-full flex-col gap-[18px] md:gap-[22px] lg:max-w-[840px] lg:gap-6">
           <p class="font-body text-sm font-normal leading-[26px] text-machisuke-text md:text-base md:leading-[30px] lg:leading-[29px]">
             こんにちは。 便利屋まち助の三品です。
           </p>
@@ -455,7 +481,7 @@
         </div>
       </section>
 
-      <section class="flex w-full flex-col gap-4 bg-[#FFFAF0] px-5 py-[34px] md:gap-5 md:px-11 md:py-[52px] lg:gap-7 lg:px-[120px] lg:py-20">
+      <section class="flex w-full flex-col gap-4 bg-[#FFFAF0] px-5 py-[34px] md:gap-5 md:px-11 md:py-[52px] lg:gap-7 lg:px-8 xl:px-[120px] lg:py-20">
         <h2 class="flex items-center gap-2.5 font-display text-[22px] font-bold text-machisuke-title-green md:text-[26px] lg:gap-3.5 lg:text-3xl">
           <span class="inline-block h-7 w-[5px] shrink-0 rounded-[3px] bg-machisuke-orange md:h-8 lg:h-9 lg:w-1.5" aria-hidden="true"></span>
           プロフィール
@@ -518,7 +544,7 @@
         </div>
       </section>
 
-      <section class="flex w-full flex-col gap-4 bg-machisuke-orange px-4 py-[34px] md:gap-6 md:px-11 md:py-[52px] lg:gap-8 lg:px-[120px] lg:py-20">
+      <section class="flex w-full flex-col gap-4 bg-machisuke-orange px-4 py-[34px] md:gap-6 md:px-11 md:py-[52px] lg:gap-8 lg:px-8 xl:px-[120px] lg:py-20">
         <h2 class="text-center font-display text-[23px] font-bold text-white md:text-[28px] lg:text-3xl">
           仕事で大切にしていること
         </h2>
@@ -553,7 +579,7 @@
         </div>
       </section>
 
-      <section class="flex w-full flex-col items-center gap-4 bg-[#FFFAF0] px-5 py-[34px] md:gap-5 md:px-11 md:py-[52px] lg:gap-6 lg:px-[120px] lg:py-20">
+      <section class="flex w-full flex-col items-center gap-4 bg-[#FFFAF0] px-5 py-[34px] md:gap-5 md:px-11 md:py-[52px] lg:gap-6 lg:px-8 xl:px-[120px] lg:py-20">
         <div class="about-photo-circle w-[220px] shrink-0 md:w-[280px] lg:w-[360px]">
           <img
             src="public/44_photo_staff_smiling_river.png"
@@ -570,7 +596,7 @@
         </div>
       </section>
 
-      <section class="flex w-full flex-col items-center gap-[15px] bg-machisuke-blue px-5 pb-7 pt-8 md:gap-[18px] md:p-11 lg:gap-[22px] lg:px-[120px] lg:py-[68px]">
+      <section class="flex w-full flex-col items-center gap-[15px] bg-machisuke-blue px-5 pb-7 pt-8 md:gap-[18px] md:p-11 lg:gap-[22px] lg:px-8 xl:px-[120px] lg:py-[68px]">
         <img
           src="public/06_character_phone_yellow.png"
           alt=""
