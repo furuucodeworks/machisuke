@@ -160,33 +160,34 @@
         }
       }
       @media (min-width: 1024px) {
-        .header-line {
-          width: clamp(140px, 13.89vw, 200px);
-          height: clamp(48px, 4.58vw, 66px);
-        }
-      }
-      @media (min-width: 1024px) and (max-width: 1279.98px) {
         .header-bar {
-          padding-inline: 20px;
+          --header-scale: min(1, 100vw / 1280px);
+          padding: calc(20px * var(--header-scale)) calc(48px * var(--header-scale));
         }
         .header-logo {
-          width: 132px;
+          width: calc(180px * var(--header-scale));
         }
         .header-line {
-          width: 112px;
-          height: 40px;
-        }
-        .header-actions {
-          gap: 12px;
+          width: calc(180px * var(--header-scale));
+          height: calc(60px * var(--header-scale));
         }
         nav[aria-label="メインメニュー"] {
-          gap: 8px;
+          gap: calc(20px * var(--header-scale));
         }
         nav[aria-label="メインメニュー"] a {
-          font-size: 13px;
+          font-size: calc(15px * var(--header-scale));
         }
         nav[aria-label="メインメニュー"] > span {
-          display: none;
+          font-size: calc(14px * var(--header-scale));
+        }
+      }
+      @media (min-width: 1440px) {
+        .header-bar {
+          padding: 20px 64px;
+        }
+        .header-line {
+          width: 200px;
+          height: 66px;
         }
       }
 
